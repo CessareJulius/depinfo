@@ -355,3 +355,33 @@ Stack Trace:
 #20 {main}
 
 
+2017-11-01 20:39:00 Error: Fatal Error (1): Trait 'BootstrapUI\View\UIViewTrait' not found in [/var/www/html/depinfo/src/View/AppView.php, line 28]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 223
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 105
+[main] - [internal], line ??
+
+
+
+2017-11-01 20:41:00 Error: [Cake\Core\Exception\MissingPluginException] Plugin bootstrapUI could not be found. in /var/www/html/depinfo/vendor/cakephp/cakephp/src/Core/Plugin.php on line 149
+Exception Attributes: array (
+  'plugin' => 'bootstrapUI',
+)
+Stack Trace:
+#0 /var/www/html/depinfo/config/bootstrap.php(219): Cake\Core\Plugin::load('bootstrapUI')
+#1 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/BaseApplication.php(59): require_once('/var/www/html/d...')
+#2 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Server.php(71): Cake\Http\BaseApplication->bootstrap()
+#3 /var/www/html/depinfo/webroot/index.php(40): Cake\Http\Server->run()
+#4 /var/www/html/depinfo/index.php(16): require('/var/www/html/d...')
+#5 {main}
+
+
+2017-11-01 20:42:42 Error: Fatal Error (1): Trait 'BootstrapUI\View\UIViewTrait' not found in [/var/www/html/depinfo/src/View/AppView.php, line 28]
+Request URL: /
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 223
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 105
+[main] - [internal], line ??
+
+
+
