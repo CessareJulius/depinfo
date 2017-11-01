@@ -1,0 +1,357 @@
+2017-11-01 20:21:28 Warning: Warning (512): SplFileInfo::openFile(/var/www/html/depinfo/tmp/cache/persistent/myapp_cake_core_translations_debug_kit_en__u_s): failed to open stream: Permission denied in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/Cache/Engine/FileEngine.php, line 397]
+Request URL: /
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+Cake\Cache\Engine\FileEngine::_setKey() - CORE/src/Cache/Engine/FileEngine.php, line 397
+Cake\Cache\Engine\FileEngine::read() - CORE/src/Cache/Engine/FileEngine.php, line 184
+DebugKit\Cache\Engine\DebugEngine::read() - ROOT/vendor/cakephp/debug_kit/src/Cache/Engine/DebugEngine.php, line 149
+Cake\I18n\TranslatorRegistry::get() - CORE/src/I18n/TranslatorRegistry.php, line 148
+Cake\I18n\I18n::getTranslator() - CORE/src/I18n/I18n.php, line 204
+__d - CORE/src/I18n/functions.php, line 88
+DebugKit\Panel\TimerPanel::DebugKit\Panel\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Panel/TimerPanel.php, line 53
+Cake\Event\EventManager::_callListener() - CORE/src/Event/EventManager.php, line 416
+Cake\Event\EventManager::dispatch() - CORE/src/Event/EventManager.php, line 393
+Cake\Controller\Controller::dispatchEvent() - CORE/src/Event/EventDispatcherTrait.php, line 110
+Cake\Controller\Controller::startupProcess() - CORE/src/Controller/Controller.php, line 502
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 114
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+require - ROOT/webroot/index.php, line 40
+[main] - ROOT/index.php, line 16
+
+
+
+2017-11-01 20:21:28 Warning: Warning (512): SplFileInfo::openFile(/var/www/html/depinfo/tmp/cache/persistent/myapp_cake_core_translations_default_en__u_s) [<a href='https://secure.php.net/splfileinfo.openfile'>splfileinfo.openfile</a>]: failed to open stream: Permission denied in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/Cache/Engine/FileEngine.php, line 397]
+Request URL: /
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+Cake\Cache\Engine\FileEngine::_setKey() - CORE/src/Cache/Engine/FileEngine.php, line 397
+Cake\Cache\Engine\FileEngine::read() - CORE/src/Cache/Engine/FileEngine.php, line 184
+DebugKit\Cache\Engine\DebugEngine::read() - ROOT/vendor/cakephp/debug_kit/src/Cache/Engine/DebugEngine.php, line 149
+Cake\I18n\TranslatorRegistry::get() - CORE/src/I18n/TranslatorRegistry.php, line 148
+Aura\Intl\TranslatorLocator::get() - ROOT/vendor/aura/intl/src/TranslatorLocator.php, line 188
+Cake\I18n\TranslatorRegistry::_getFromLoader() - CORE/src/I18n/TranslatorRegistry.php, line 272
+Cake\I18n\TranslatorRegistry::_getTranslator() - CORE/src/I18n/TranslatorRegistry.php, line 176
+Cake\I18n\TranslatorRegistry::get() - CORE/src/I18n/TranslatorRegistry.php, line 150
+Cake\I18n\I18n::getTranslator() - CORE/src/I18n/I18n.php, line 204
+__d - CORE/src/I18n/functions.php, line 88
+DebugKit\Panel\TimerPanel::DebugKit\Panel\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Panel/TimerPanel.php, line 53
+Cake\Event\EventManager::_callListener() - CORE/src/Event/EventManager.php, line 416
+Cake\Event\EventManager::dispatch() - CORE/src/Event/EventManager.php, line 393
+Cake\Controller\Controller::dispatchEvent() - CORE/src/Event/EventDispatcherTrait.php, line 110
+Cake\Controller\Controller::startupProcess() - CORE/src/Controller/Controller.php, line 502
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 114
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+require - ROOT/webroot/index.php, line 40
+[main] - ROOT/index.php, line 16
+
+
+
+2017-11-01 20:21:28 Warning: Warning (512): SplFileInfo::openFile(/var/www/html/depinfo/tmp/cache/persistent/myapp_cake_core_translations_default_en__u_s) [<a href='https://secure.php.net/splfileinfo.openfile'>splfileinfo.openfile</a>]: failed to open stream: Permission denied in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/Cache/Engine/FileEngine.php, line 397]
+Request URL: /
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+Cake\Cache\Engine\FileEngine::_setKey() - CORE/src/Cache/Engine/FileEngine.php, line 397
+Cake\Cache\Engine\FileEngine::write() - CORE/src/Cache/Engine/FileEngine.php, line 134
+DebugKit\Cache\Engine\DebugEngine::write() - ROOT/vendor/cakephp/debug_kit/src/Cache/Engine/DebugEngine.php, line 123
+Cake\I18n\TranslatorRegistry::get() - CORE/src/I18n/TranslatorRegistry.php, line 151
+Aura\Intl\TranslatorLocator::get() - ROOT/vendor/aura/intl/src/TranslatorLocator.php, line 188
+Cake\I18n\TranslatorRegistry::_getFromLoader() - CORE/src/I18n/TranslatorRegistry.php, line 272
+Cake\I18n\TranslatorRegistry::_getTranslator() - CORE/src/I18n/TranslatorRegistry.php, line 176
+Cake\I18n\TranslatorRegistry::get() - CORE/src/I18n/TranslatorRegistry.php, line 150
+Cake\I18n\I18n::getTranslator() - CORE/src/I18n/I18n.php, line 204
+__d - CORE/src/I18n/functions.php, line 88
+DebugKit\Panel\TimerPanel::DebugKit\Panel\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Panel/TimerPanel.php, line 53
+Cake\Event\EventManager::_callListener() - CORE/src/Event/EventManager.php, line 416
+Cake\Event\EventManager::dispatch() - CORE/src/Event/EventManager.php, line 393
+Cake\Controller\Controller::dispatchEvent() - CORE/src/Event/EventDispatcherTrait.php, line 110
+Cake\Controller\Controller::startupProcess() - CORE/src/Controller/Controller.php, line 502
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 114
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+require - ROOT/webroot/index.php, line 40
+[main] - ROOT/index.php, line 16
+
+
+
+2017-11-01 20:21:28 Warning: Warning (512): SplFileInfo::openFile(/var/www/html/depinfo/tmp/cache/persistent/myapp_cake_core_translations_debug_kit_en__u_s) [<a href='https://secure.php.net/splfileinfo.openfile'>splfileinfo.openfile</a>]: failed to open stream: Permission denied in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/Cache/Engine/FileEngine.php, line 397]
+Request URL: /
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+Cake\Cache\Engine\FileEngine::_setKey() - CORE/src/Cache/Engine/FileEngine.php, line 397
+Cake\Cache\Engine\FileEngine::write() - CORE/src/Cache/Engine/FileEngine.php, line 134
+DebugKit\Cache\Engine\DebugEngine::write() - ROOT/vendor/cakephp/debug_kit/src/Cache/Engine/DebugEngine.php, line 123
+Cake\I18n\TranslatorRegistry::get() - CORE/src/I18n/TranslatorRegistry.php, line 151
+Cake\I18n\I18n::getTranslator() - CORE/src/I18n/I18n.php, line 204
+__d - CORE/src/I18n/functions.php, line 88
+DebugKit\Panel\TimerPanel::DebugKit\Panel\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Panel/TimerPanel.php, line 53
+Cake\Event\EventManager::_callListener() - CORE/src/Event/EventManager.php, line 416
+Cake\Event\EventManager::dispatch() - CORE/src/Event/EventManager.php, line 393
+Cake\Controller\Controller::dispatchEvent() - CORE/src/Event/EventDispatcherTrait.php, line 110
+Cake\Controller\Controller::startupProcess() - CORE/src/Controller/Controller.php, line 502
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 114
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+require - ROOT/webroot/index.php, line 40
+[main] - ROOT/index.php, line 16
+
+
+
+2017-11-01 20:21:28 Warning: Warning (512): SplFileInfo::openFile(/var/www/html/depinfo/tmp/cache/models/myapp_cake_model_debug_kit_requests) [<a href='https://secure.php.net/splfileinfo.openfile'>splfileinfo.openfile</a>]: failed to open stream: Permission denied in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/Cache/Engine/FileEngine.php, line 397]
+Request URL: /
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+Cake\Cache\Engine\FileEngine::_setKey() - CORE/src/Cache/Engine/FileEngine.php, line 397
+Cake\Cache\Engine\FileEngine::read() - CORE/src/Cache/Engine/FileEngine.php, line 184
+DebugKit\Cache\Engine\DebugEngine::read() - ROOT/vendor/cakephp/debug_kit/src/Cache/Engine/DebugEngine.php, line 149
+Cake\Cache\Cache::read() - CORE/src/Cache/Cache.php, line 361
+Cake\Database\Schema\CachedCollection::describe() - CORE/src/Database/Schema/CachedCollection.php, line 57
+Cake\ORM\Table::getSchema() - CORE/src/ORM/Table.php, line 532
+Cake\ORM\Table::getPrimaryKey() - CORE/src/ORM/Table.php, line 653
+Cake\ORM\Marshaller::one() - CORE/src/ORM/Marshaller.php, line 170
+Cake\ORM\Table::newEntity() - CORE/src/ORM/Table.php, line 2424
+DebugKit\ToolbarService::saveData() - ROOT/vendor/cakephp/debug_kit/src/ToolbarService.php, line 183
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+require - ROOT/webroot/index.php, line 40
+[main] - ROOT/index.php, line 16
+
+
+
+2017-11-01 20:21:28 Warning: Warning (512): SplFileInfo::openFile(/var/www/html/depinfo/tmp/cache/models/myapp_cake_model_debug_kit_requests) [<a href='https://secure.php.net/splfileinfo.openfile'>splfileinfo.openfile</a>]: failed to open stream: Permission denied in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/Cache/Engine/FileEngine.php, line 397]
+Request URL: /
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+Cake\Cache\Engine\FileEngine::_setKey() - CORE/src/Cache/Engine/FileEngine.php, line 397
+Cake\Cache\Engine\FileEngine::write() - CORE/src/Cache/Engine/FileEngine.php, line 134
+DebugKit\Cache\Engine\DebugEngine::write() - ROOT/vendor/cakephp/debug_kit/src/Cache/Engine/DebugEngine.php, line 123
+Cake\Cache\Cache::write() - CORE/src/Cache/Cache.php, line 280
+Cake\Database\Schema\CachedCollection::describe() - CORE/src/Database/Schema/CachedCollection.php, line 66
+Cake\ORM\Table::getSchema() - CORE/src/ORM/Table.php, line 532
+Cake\ORM\Table::getPrimaryKey() - CORE/src/ORM/Table.php, line 653
+Cake\ORM\Marshaller::one() - CORE/src/ORM/Marshaller.php, line 170
+Cake\ORM\Table::newEntity() - CORE/src/ORM/Table.php, line 2424
+DebugKit\ToolbarService::saveData() - ROOT/vendor/cakephp/debug_kit/src/ToolbarService.php, line 183
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+require - ROOT/webroot/index.php, line 40
+[main] - ROOT/index.php, line 16
+
+
+
+2017-11-01 20:21:28 Warning: Warning (512): _cake_model_ cache was unable to write 'debug_kit_requests' to DebugKit\Cache\Engine\DebugEngine cache in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/Cache/Cache.php, line 290]
+Request URL: /
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+Cake\Cache\Cache::write() - CORE/src/Cache/Cache.php, line 290
+Cake\Database\Schema\CachedCollection::describe() - CORE/src/Database/Schema/CachedCollection.php, line 66
+Cake\ORM\Table::getSchema() - CORE/src/ORM/Table.php, line 532
+Cake\ORM\Table::getPrimaryKey() - CORE/src/ORM/Table.php, line 653
+Cake\ORM\Marshaller::one() - CORE/src/ORM/Marshaller.php, line 170
+Cake\ORM\Table::newEntity() - CORE/src/ORM/Table.php, line 2424
+DebugKit\ToolbarService::saveData() - ROOT/vendor/cakephp/debug_kit/src/ToolbarService.php, line 183
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+require - ROOT/webroot/index.php, line 40
+[main] - ROOT/index.php, line 16
+
+
+
+2017-11-01 20:21:28 Warning: Warning (512): SplFileInfo::openFile(/var/www/html/depinfo/tmp/cache/persistent/myapp_cake_core_translations_cake_en__u_s) [<a href='https://secure.php.net/splfileinfo.openfile'>splfileinfo.openfile</a>]: failed to open stream: Permission denied in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/Cache/Engine/FileEngine.php, line 397]
+Request URL: /
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+Cake\Cache\Engine\FileEngine::_setKey() - CORE/src/Cache/Engine/FileEngine.php, line 397
+Cake\Cache\Engine\FileEngine::read() - CORE/src/Cache/Engine/FileEngine.php, line 184
+DebugKit\Cache\Engine\DebugEngine::read() - ROOT/vendor/cakephp/debug_kit/src/Cache/Engine/DebugEngine.php, line 149
+Cake\I18n\TranslatorRegistry::get() - CORE/src/I18n/TranslatorRegistry.php, line 148
+Cake\I18n\I18n::getTranslator() - CORE/src/I18n/I18n.php, line 204
+__d - CORE/src/I18n/functions.php, line 88
+Cake\Validation\Validator::errors() - CORE/src/Validation/Validator.php, line 111
+Cake\ORM\Marshaller::_validate() - CORE/src/ORM/Marshaller.php, line 254
+Cake\ORM\Marshaller::one() - CORE/src/ORM/Marshaller.php, line 181
+Cake\ORM\Table::newEntity() - CORE/src/ORM/Table.php, line 2424
+DebugKit\ToolbarService::saveData() - ROOT/vendor/cakephp/debug_kit/src/ToolbarService.php, line 183
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+require - ROOT/webroot/index.php, line 40
+[main] - ROOT/index.php, line 16
+
+
+
+2017-11-01 20:21:28 Warning: Warning (512): SplFileInfo::openFile(/var/www/html/depinfo/tmp/cache/persistent/myapp_cake_core_translations_cake_en__u_s) [<a href='https://secure.php.net/splfileinfo.openfile'>splfileinfo.openfile</a>]: failed to open stream: Permission denied in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/Cache/Engine/FileEngine.php, line 397]
+Request URL: /
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+Cake\Cache\Engine\FileEngine::_setKey() - CORE/src/Cache/Engine/FileEngine.php, line 397
+Cake\Cache\Engine\FileEngine::write() - CORE/src/Cache/Engine/FileEngine.php, line 134
+DebugKit\Cache\Engine\DebugEngine::write() - ROOT/vendor/cakephp/debug_kit/src/Cache/Engine/DebugEngine.php, line 123
+Cake\I18n\TranslatorRegistry::get() - CORE/src/I18n/TranslatorRegistry.php, line 151
+Cake\I18n\I18n::getTranslator() - CORE/src/I18n/I18n.php, line 204
+__d - CORE/src/I18n/functions.php, line 88
+Cake\Validation\Validator::errors() - CORE/src/Validation/Validator.php, line 111
+Cake\ORM\Marshaller::_validate() - CORE/src/ORM/Marshaller.php, line 254
+Cake\ORM\Marshaller::one() - CORE/src/ORM/Marshaller.php, line 181
+Cake\ORM\Table::newEntity() - CORE/src/ORM/Table.php, line 2424
+DebugKit\ToolbarService::saveData() - ROOT/vendor/cakephp/debug_kit/src/ToolbarService.php, line 183
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+require - ROOT/webroot/index.php, line 40
+[main] - ROOT/index.php, line 16
+
+
+
+2017-11-01 20:21:28 Warning: Warning (512): SplFileInfo::openFile(/var/www/html/depinfo/tmp/cache/models/myapp_cake_model_debug_kit_panels) [<a href='https://secure.php.net/splfileinfo.openfile'>splfileinfo.openfile</a>]: failed to open stream: Permission denied in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/Cache/Engine/FileEngine.php, line 397]
+Request URL: /
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+Cake\Cache\Engine\FileEngine::_setKey() - CORE/src/Cache/Engine/FileEngine.php, line 397
+Cake\Cache\Engine\FileEngine::read() - CORE/src/Cache/Engine/FileEngine.php, line 184
+DebugKit\Cache\Engine\DebugEngine::read() - ROOT/vendor/cakephp/debug_kit/src/Cache/Engine/DebugEngine.php, line 149
+Cake\Cache\Cache::read() - CORE/src/Cache/Cache.php, line 361
+Cake\Database\Schema\CachedCollection::describe() - CORE/src/Database/Schema/CachedCollection.php, line 57
+Cake\ORM\Table::getSchema() - CORE/src/ORM/Table.php, line 532
+Cake\ORM\Table::getPrimaryKey() - CORE/src/ORM/Table.php, line 653
+Cake\ORM\Marshaller::one() - CORE/src/ORM/Marshaller.php, line 170
+Cake\ORM\Table::newEntity() - CORE/src/ORM/Table.php, line 2424
+Cake\ORM\Association::__call() - CORE/src/ORM/Association.php, line 1365
+Cake\ORM\Association\HasMany::newEntity() - ROOT/vendor/cakephp/debug_kit/src/ToolbarService.php, line 201
+DebugKit\ToolbarService::saveData() - ROOT/vendor/cakephp/debug_kit/src/ToolbarService.php, line 201
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+require - ROOT/webroot/index.php, line 40
+[main] - ROOT/index.php, line 16
+
+
+
+2017-11-01 20:21:28 Warning: Warning (512): SplFileInfo::openFile(/var/www/html/depinfo/tmp/cache/models/myapp_cake_model_debug_kit_panels) [<a href='https://secure.php.net/splfileinfo.openfile'>splfileinfo.openfile</a>]: failed to open stream: Permission denied in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/Cache/Engine/FileEngine.php, line 397]
+Request URL: /
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+Cake\Cache\Engine\FileEngine::_setKey() - CORE/src/Cache/Engine/FileEngine.php, line 397
+Cake\Cache\Engine\FileEngine::write() - CORE/src/Cache/Engine/FileEngine.php, line 134
+DebugKit\Cache\Engine\DebugEngine::write() - ROOT/vendor/cakephp/debug_kit/src/Cache/Engine/DebugEngine.php, line 123
+Cake\Cache\Cache::write() - CORE/src/Cache/Cache.php, line 280
+Cake\Database\Schema\CachedCollection::describe() - CORE/src/Database/Schema/CachedCollection.php, line 66
+Cake\ORM\Table::getSchema() - CORE/src/ORM/Table.php, line 532
+Cake\ORM\Table::getPrimaryKey() - CORE/src/ORM/Table.php, line 653
+Cake\ORM\Marshaller::one() - CORE/src/ORM/Marshaller.php, line 170
+Cake\ORM\Table::newEntity() - CORE/src/ORM/Table.php, line 2424
+Cake\ORM\Association::__call() - CORE/src/ORM/Association.php, line 1365
+Cake\ORM\Association\HasMany::newEntity() - ROOT/vendor/cakephp/debug_kit/src/ToolbarService.php, line 201
+DebugKit\ToolbarService::saveData() - ROOT/vendor/cakephp/debug_kit/src/ToolbarService.php, line 201
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+require - ROOT/webroot/index.php, line 40
+[main] - ROOT/index.php, line 16
+
+
+
+2017-11-01 20:21:28 Warning: Warning (512): _cake_model_ cache was unable to write 'debug_kit_panels' to DebugKit\Cache\Engine\DebugEngine cache in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/Cache/Cache.php, line 290]
+Request URL: /
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+Cake\Cache\Cache::write() - CORE/src/Cache/Cache.php, line 290
+Cake\Database\Schema\CachedCollection::describe() - CORE/src/Database/Schema/CachedCollection.php, line 66
+Cake\ORM\Table::getSchema() - CORE/src/ORM/Table.php, line 532
+Cake\ORM\Table::getPrimaryKey() - CORE/src/ORM/Table.php, line 653
+Cake\ORM\Marshaller::one() - CORE/src/ORM/Marshaller.php, line 170
+Cake\ORM\Table::newEntity() - CORE/src/ORM/Table.php, line 2424
+Cake\ORM\Association::__call() - CORE/src/ORM/Association.php, line 1365
+Cake\ORM\Association\HasMany::newEntity() - ROOT/vendor/cakephp/debug_kit/src/ToolbarService.php, line 201
+DebugKit\ToolbarService::saveData() - ROOT/vendor/cakephp/debug_kit/src/ToolbarService.php, line 201
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 53
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+require - ROOT/webroot/index.php, line 40
+[main] - ROOT/index.php, line 16
+
+
+
+2017-11-01 20:21:28 Warning: Headers already sent in /var/www/html/depinfo/vendor/cakephp/cakephp/src/Error/Debugger.php:850
+2017-11-01 20:21:28 Error: [PDOException] SQLSTATE[HY000]: General error: 8 attempt to write a readonly database in /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php on line 174
+Request URL: /
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(174): PDOStatement->execute(NULL)
+#1 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(174): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#2 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Statement/BufferedStatement.php(76): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Statement/SqliteStatement.php(41): Cake\Database\Statement\BufferedStatement->execute(NULL)
+#4 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Connection.php(314): Cake\Database\Statement\SqliteStatement->execute()
+#5 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Query.php(214): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#6 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Table.php(1925): Cake\Database\Query->execute()
+#7 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Table.php(1819): Cake\ORM\Table->_insert(Object(DebugKit\Model\Entity\Request), Array)
+#8 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Table.php(1732): Cake\ORM\Table->_processSave(Object(DebugKit\Model\Entity\Request), Object(ArrayObject))
+#9 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Table.php(1455): Cake\ORM\Table->Cake\ORM\{closure}()
+#10 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Connection.php(681): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#11 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Table.php(1456): Cake\Database\Connection->transactional(Object(Closure))
+#12 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Table.php(1733): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#13 /var/www/html/depinfo/vendor/cakephp/debug_kit/src/ToolbarService.php(204): Cake\ORM\Table->save(Object(DebugKit\Model\Entity\Request))
+#14 /var/www/html/depinfo/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(53): DebugKit\ToolbarService->saveData(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /var/www/html/depinfo/webroot/index.php(40): Cake\Http\Server->run()
+#19 /var/www/html/depinfo/index.php(16): require('/var/www/html/d...')
+#20 {main}
+
+
