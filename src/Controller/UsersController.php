@@ -39,7 +39,24 @@ class UsersController extends AppController
 
     public function edit($id)
     {
-        echo "Editar usuario: ".$id;
-        exit();
+        $user = $this->Users->get($id);
+        //pj($user);
+        //die();
+        
+                if ($this->request->is(['Patch', 'post', 'put'])) 
+                {
+                    $user = $this->Users->patchEntity($user, $this->request->data);
+                    if ($this->Users->save($user)) 
+                    {
+                        $this->Flash->success("El Empleado a sido modificado Exitosamente");
+                        $this->redirect(['action' => 'index']);
+                    }
+                    else 
+                    {
+                        $this->Flash->error("El Empleado no pudo ser modificado. Por favor, Intente nuevamente"); 
+                    }
+                }
+        
+                $this->set(compact("user"));
     }
 }
