@@ -11,13 +11,19 @@ class UsersController extends AppController
 {
     public function index()
     {
-        echo "Listado de usuarios";
-        exit();
+        $this->paginate = [
+            'limit' => 5,
+        ];
+        //$users = $this->Users->find('all');
+        $users = $this->paginate($this->Users);
+        //pj($users);
+        //die();
+        $this->set('users', $users);
     }
 
-    public function view()
+    public function edit($id)
     {
-        echo "Vista de usuarios";
+        echo "Editar usuario: ".$id;
         exit();
     }
 }
