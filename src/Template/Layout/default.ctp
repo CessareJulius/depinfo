@@ -29,23 +29,51 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->Html->css('estilos') ?>
 
     <?= $this->Html->script(['jquery.min','bootstrap.min']) ?>
-    <?= $this->Html->script('../materialize/js/materialize.min') ?>
+    <?= $this->Html->script(['../materialize/js/materialize.min', 'app']) ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
 <body>
-    <nav>
-		<div class="nav-wrapper blue lighten-1">
-			<h4 class="brand-logo center">Departamento de Informática</h4>
-		</div>
-	</nav>
-    <?= $this->Flash->render() ?>
+    <?= $this->element('modales') ?>
     <div class="row">
-        <?= $this->fetch('content') ?>
+        <nav class="nav-wrapper blue lighten-1">
+            <div>
+                <h4 class="brand-logo center dercha">Departamento de Informática</h4>
+            </div>
+            <div class="row">
+                <div class="right">
+                    <a href="../index.php" class="waves-effect tooltipped" data-position="left" data-delay="50" data-tooltip="Salir"><i class="material-icons">launch
+                    </i></a>
+                </div>
+            </div>
+        </nav>
+        <?= $this->element('menu') ?>
     </div>
-    <footer>
-    </footer>
+    <!--menu desplegable-->
+    <div class="fixed-action-btn vertical click-to-toggle">
+        <a class="waves-effect waves-light btn-floating btn-large blue tooltipped" data-position="left" data-delay="50" data-tooltip="Menu de Administrador">
+            <i class="large material-icons">add</i>
+        </a>
+        <ul>
+            <li><a class="waves-effect waves-light btn-floating green tooltipped" data-position="left" data-delay="50" data-tooltip="Agregar Equipo" href="#agregar"><i class="material-icons">laptop</i></a></li>
+            <li><a class="waves-effect waves-light btn-floating cyan tooltipped" data-position="left" data-delay="50" data-tooltip="Agregar Personal" href="#agregar_pers"><i class="material-icons">group_add</i></a></li>
+            <li><a class="waves-effect waves-light btn-floating red tooltipped" data-position="left" data-delay="50" data-tooltip="Ver todos los equipos" href="#tabla"><i class="material-icons">view_headline</i></a></li>
+        </ul>
+    </div>
+    <div class="row">
+        <div class="col m9 offset-m3">
+            <?= $this->Flash->render() ?>
+            <?= $this->fetch('content') ?>
+        </div>
+    </div>
+    <script>
+		$(document).ready(function() {
+			$('.modal').modal();			
+		
+			$('select').material_select();
+		});
+	</script>
 </body>
 </html>
