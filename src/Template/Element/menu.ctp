@@ -14,9 +14,29 @@
 			<li id="secon">
 				<ul class="collapsible collapsible-accordion">
 					<li class="bold">
+						<a class="collapsible-header waves-effect"><i class="material-icons">group</i>Personas</a>
+						<div class="collapsible-body">
+							<ul class="grey lighten-2">
+								<li><a href="../personas/index"><i class="material-icons">schedule</i>Listar Empleados</a></li>
+								<li><a href="../php/pdf.php"><i class="material-icons">schedule</i>Reporte empleados</a></li>
+								<li>
+									<form action="" method="get" class="col m11">
+										<div class="input-field col m10">
+											<input type="text" id="empleado" class="validate" placeholder="Buscar empleado">
+										</div>
+										<div class="col m1">
+											<button class="btn-flat waves-effect" type="submit" style="margin-top: 25px"><i class="material-icons">search</i></button>
+										</div>
+									</form>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="bold">
 						<a class="collapsible-header waves-effect"><i class="material-icons">group</i>Empledos</a>
 						<div class="collapsible-body">
 							<ul class="grey lighten-2">
+								<li><a href="../users/index"><i class="material-icons">schedule</i>Listar Empleados</a></li>
 								<li><a href="../php/pdf.php"><i class="material-icons">schedule</i>Reporte empleados</a></li>
 								<li>
 									<form action="" method="get" class="col m11">

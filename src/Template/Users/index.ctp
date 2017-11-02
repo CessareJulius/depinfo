@@ -31,13 +31,6 @@
                                 <?= $this->Html->link(__('Editar'), ['action' => 'edit', $user->id], ['Class' => 'btn']) ?>
                                 <?= $this->Form->postLink(__('Eliminar'), ['action' => 'delete', $user->id],['Class' => 'btn'], ['confirm' => __('Esta seguro que desea borrar este usuario # {0}?', $user->id)]) ?>
                             </td>
-                            <td>
-								<a href="./Users/edit/<?= $user->id?>" class="btn-flat waves-effect waves-teal"><i class="material-icons">edit</i></a>
-
-								<button class="btn-flat waves-effect waves-teal"><i class="material-icons">edit</i></button>
-
-								<button class="btn-flat waves-effect waves-red"><i class="material-icons">delete</i></button>
-							</td>
                         </tr>
                         <?php endforeach; ?>
 					</tbody>
