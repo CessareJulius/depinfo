@@ -58,6 +58,10 @@ class ComposerStaticInitbdaa4371f9e02e433810e637e20d3ab0
         array (
             'JsonSchema\\' => 11,
         ),
+        'F' => 
+        array (
+            'Faker\\' => 6,
+        ),
         'D' => 
         array (
             'DebugKit\\Test\\Fixture\\' => 22,
@@ -175,6 +179,10 @@ class ComposerStaticInitbdaa4371f9e02e433810e637e20d3ab0
         'JsonSchema\\' => 
         array (
             0 => __DIR__ . '/..' . '/justinrainbow/json-schema/src/JsonSchema',
+        ),
+        'Faker\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker',
         ),
         'DebugKit\\Test\\Fixture\\' => 
         array (
