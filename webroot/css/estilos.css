@@ -1,0 +1,15 @@
+.frm{
+	height: 250px;     
+	margin-top: 80px;
+}
+.card-panel {
+    opacity: .95 ; 
+    padding-top: 15px; 
+}
+h3, h4, h5{ font-weight: 100; }
+.principal{	margin-top: 20px;}
+.side-nav{ width: 250px; }
+.btn-flat{ width: 40px !important }
+.right > a { margin-right: 30px }
+.dercha{ margin-left: 10%; }
+
