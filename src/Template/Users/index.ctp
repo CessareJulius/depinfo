@@ -5,8 +5,11 @@
 					<thead>
 						<tr>
                             <th scope="col"><?= $this->Paginator->sort('id', 'ID') ?></th>
+                            <th scope="col"><?= $this->Paginator->sort('cedula', 'CEDULA') ?></th>
+                            <th scope="col"><?= $this->Paginator->sort('nombre', 'NOMBRE') ?></th>
+                            <th scope="col"><?= $this->Paginator->sort('apellido', 'APELLIDO') ?></th>
                             <th scope="col"><?= $this->Paginator->sort('cargo', 'CARGO') ?></th>
-                            <th scope="col"><?= $this->Paginator->sort('usuario', 'USUARIO') ?></th>
+                            <th scope="col"><?= $this->Paginator->sort('turno', 'TURNO') ?></th>
                             <th scope="col"><?= $this->Paginator->sort('active', 'STATUS') ?></th>
                             <th scope="col" class="actions" colspan="1"><?= __('ACCIONES') ?></th>
 						</tr>
@@ -15,8 +18,11 @@
                         <?php foreach($users as $user): ?>
 						<tr>
                             <td><?= $this->Number->format($user->id) ?></td>
+                            <td><?= h($user->persona->cedula) ?></td>
+                            <td><?= h($user->persona->nombre) ?></td>
+                            <td><?= h($user->persona->apellido) ?></td>
                             <td><?= h($user->cargo) ?></td>
-                            <td><?= h($user->usuario) ?></td>
+                            <td><?= h($user->turno->turno) ?></td>
                             <td>
                                 <?php 
                                     if($user->active == true){

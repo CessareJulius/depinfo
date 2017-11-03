@@ -3895,3 +3895,1749 @@ Stack Trace:
 #15 {main}
 
 
+2017-11-02 22:20:15 Error: Fatal Error (1): Call to undefined method App\Model\Entity\User::contain() in [/var/www/html/depinfo/src/Controller/UsersController.php, line 43]
+Request URL: /users/edit/2
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 223
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 105
+[main] - [internal], line ??
+
+
+
+2017-11-02 22:20:16 Error: [Cake\Error\FatalErrorException] Call to undefined method App\Model\Entity\User::contain() in /var/www/html/depinfo/src/Controller/UsersController.php on line 43
+Request URL: /users/edit/2
+Referer URL: http://localhost/depinfo/users/index
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(105): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', '/var/www/html/d...', 43)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-11-03 01:14:48 Warning: Warning (4096): Argument 2 passed to Cake\View\Helper\FormHelper::input() must be of the type array, string given, called in /var/www/html/depinfo/src/Template/Users/edit.ctp on line 54 and defined in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php, line 1186]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1186
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:14:48 Warning: Warning (4096): Argument 2 passed to Cake\View\Helper\FormHelper::control() must be of the type array, string given, called in /var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php on line 1188 and defined in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php, line 1094]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1094
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:14:48 Error: Fatal Error (1): Unsupported operand types in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php, line 1105]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 223
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 105
+[main] - [internal], line ??
+
+
+
+2017-11-03 01:14:48 Error: [Cake\Error\FatalErrorException] Unsupported operand types in /var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php on line 1105
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(105): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Unsupported ope...', '/var/www/html/d...', 1105)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-11-03 01:15:08 Warning: Warning (2): explode() expects parameter 2 to be string, array given in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Form/EntityContext.php, line 406]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+explode - [internal], line ??
+Cake\View\Form\EntityContext::isRequired() - CORE/src/View/Form/EntityContext.php, line 406
+Cake\View\Helper\FormHelper::_magicOptions() - CORE/src/View/Helper/FormHelper.php, line 1385
+Cake\View\Helper\FormHelper::_parseOptions() - CORE/src/View/Helper/FormHelper.php, line 1284
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1106
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:15:08 Warning: Warning (2): array_slice() expects parameter 1 to be array, null given in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Form/EntityContext.php, line 449]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+array_slice - [internal], line ??
+Cake\View\Form\EntityContext::_getValidator() - CORE/src/View/Form/EntityContext.php, line 449
+Cake\View\Form\EntityContext::isRequired() - CORE/src/View/Form/EntityContext.php, line 414
+Cake\View\Helper\FormHelper::_magicOptions() - CORE/src/View/Helper/FormHelper.php, line 1385
+Cake\View\Helper\FormHelper::_parseOptions() - CORE/src/View/Helper/FormHelper.php, line 1284
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1106
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:15:08 Warning: Warning (2): array_filter() expects parameter 1 to be array, null given in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Form/EntityContext.php, line 451]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+array_filter - [internal], line ??
+Cake\View\Form\EntityContext::_getValidator() - CORE/src/View/Form/EntityContext.php, line 451
+Cake\View\Form\EntityContext::isRequired() - CORE/src/View/Form/EntityContext.php, line 414
+Cake\View\Helper\FormHelper::_magicOptions() - CORE/src/View/Helper/FormHelper.php, line 1385
+Cake\View\Helper\FormHelper::_parseOptions() - CORE/src/View/Helper/FormHelper.php, line 1284
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1106
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:15:08 Warning: Warning (2): implode() [<a href='https://secure.php.net/function.implode'>function.implode</a>]: Invalid arguments passed in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Form/EntityContext.php, line 452]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+implode - [internal], line ??
+Cake\View\Form\EntityContext::_getValidator() - CORE/src/View/Form/EntityContext.php, line 452
+Cake\View\Form\EntityContext::isRequired() - CORE/src/View/Form/EntityContext.php, line 414
+Cake\View\Helper\FormHelper::_magicOptions() - CORE/src/View/Helper/FormHelper.php, line 1385
+Cake\View\Helper\FormHelper::_parseOptions() - CORE/src/View/Helper/FormHelper.php, line 1284
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1106
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:15:08 Warning: Warning (2): array_pop() expects parameter 1 to be array, null given in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Form/EntityContext.php, line 415]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+array_pop - [internal], line ??
+Cake\View\Form\EntityContext::isRequired() - CORE/src/View/Form/EntityContext.php, line 415
+Cake\View\Helper\FormHelper::_magicOptions() - CORE/src/View/Helper/FormHelper.php, line 1385
+Cake\View\Helper\FormHelper::_parseOptions() - CORE/src/View/Helper/FormHelper.php, line 1284
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1106
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:15:08 Warning: Warning (2): explode() expects parameter 2 to be string, array given in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Form/EntityContext.php, line 539]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+explode - [internal], line ??
+Cake\View\Form\EntityContext::type() - CORE/src/View/Form/EntityContext.php, line 539
+Cake\View\Helper\FormHelper::_magicOptions() - CORE/src/View/Helper/FormHelper.php, line 1388
+Cake\View\Helper\FormHelper::_parseOptions() - CORE/src/View/Helper/FormHelper.php, line 1284
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1106
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:15:08 Warning: Warning (2): array_pop() expects parameter 1 to be array, null given in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Form/EntityContext.php, line 542]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+array_pop - [internal], line ??
+Cake\View\Form\EntityContext::type() - CORE/src/View/Form/EntityContext.php, line 542
+Cake\View\Helper\FormHelper::_magicOptions() - CORE/src/View/Helper/FormHelper.php, line 1388
+Cake\View\Helper\FormHelper::_parseOptions() - CORE/src/View/Helper/FormHelper.php, line 1284
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1106
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:15:08 Warning: Warning (2): explode() expects parameter 2 to be string, array given in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Form/EntityContext.php, line 553]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+explode - [internal], line ??
+Cake\View\Form\EntityContext::attributes() - CORE/src/View/Form/EntityContext.php, line 553
+Cake\View\Helper\FormHelper::_magicOptions() - CORE/src/View/Helper/FormHelper.php, line 1389
+Cake\View\Helper\FormHelper::_parseOptions() - CORE/src/View/Helper/FormHelper.php, line 1284
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1106
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:15:08 Warning: Warning (2): array_pop() expects parameter 1 to be array, null given in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Form/EntityContext.php, line 555]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+array_pop - [internal], line ??
+Cake\View\Form\EntityContext::attributes() - CORE/src/View/Form/EntityContext.php, line 555
+Cake\View\Helper\FormHelper::_magicOptions() - CORE/src/View/Helper/FormHelper.php, line 1389
+Cake\View\Helper\FormHelper::_parseOptions() - CORE/src/View/Helper/FormHelper.php, line 1284
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1106
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:15:08 Warning: Warning (2): transliterator_transliterate() expects parameter 2 to be string, array given in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/Utility/Text.php, line 1073]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+transliterator_transliterate - [internal], line ??
+Cake\Utility\Text::transliterate() - CORE/src/Utility/Text.php, line 1073
+Cake\Utility\Text::slug() - CORE/src/Utility/Text.php, line 1106
+Cake\View\Helper\FormHelper::_domId() - CORE/src/View/Helper/IdGeneratorTrait.php, line 82
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1107
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:15:08 Warning: Warning (2): substr() expects parameter 1 to be string, array given in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php, line 745]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+substr - [internal], line ??
+Cake\View\Helper\FormHelper::error() - CORE/src/View/Helper/FormHelper.php, line 745
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1125
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:15:08 Warning: Warning (2): explode() expects parameter 2 to be string, array given in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Form/EntityContext.php, line 580]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+explode - [internal], line ??
+Cake\View\Form\EntityContext::error() - CORE/src/View/Form/EntityContext.php, line 580
+Cake\View\Form\EntityContext::hasError() - CORE/src/View/Form/EntityContext.php, line 569
+Cake\View\Helper\FormHelper::error() - CORE/src/View/Helper/FormHelper.php, line 751
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1125
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:15:08 Warning: Warning (2): array_pop() expects parameter 1 to be array, null given in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Form/EntityContext.php, line 584]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+array_pop - [internal], line ??
+Cake\View\Form\EntityContext::error() - CORE/src/View/Form/EntityContext.php, line 584
+Cake\View\Form\EntityContext::hasError() - CORE/src/View/Form/EntityContext.php, line 569
+Cake\View\Helper\FormHelper::error() - CORE/src/View/Helper/FormHelper.php, line 751
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1125
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:15:08 Warning: Warning (2): substr() expects parameter 1 to be string, array given in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php, line 2576]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+substr - [internal], line ??
+Cake\View\Helper\FormHelper::_initInputField() - CORE/src/View/Helper/FormHelper.php, line 2576
+Cake\View\Helper\FormHelper::checkbox() - CORE/src/View/Helper/FormHelper.php, line 1545
+Cake\View\Helper\FormHelper::_getInput() - CORE/src/View/Helper/FormHelper.php, line 1265
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1148
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:15:08 Warning: Warning (2): explode() expects parameter 2 to be string, array given in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php, line 2580]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+explode - [internal], line ??
+Cake\View\Helper\FormHelper::_initInputField() - CORE/src/View/Helper/FormHelper.php, line 2580
+Cake\View\Helper\FormHelper::checkbox() - CORE/src/View/Helper/FormHelper.php, line 1545
+Cake\View\Helper\FormHelper::_getInput() - CORE/src/View/Helper/FormHelper.php, line 1265
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1148
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:15:08 Warning: Warning (2): array_shift() expects parameter 1 to be array, null given in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php, line 2581]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+array_shift - [internal], line ??
+Cake\View\Helper\FormHelper::_initInputField() - CORE/src/View/Helper/FormHelper.php, line 2581
+Cake\View\Helper\FormHelper::checkbox() - CORE/src/View/Helper/FormHelper.php, line 1545
+Cake\View\Helper\FormHelper::_getInput() - CORE/src/View/Helper/FormHelper.php, line 1265
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1148
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:15:08 Warning: Warning (2): explode() expects parameter 2 to be string, array given in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Form/EntityContext.php, line 241]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+explode - [internal], line ??
+Cake\View\Form\EntityContext::val() - CORE/src/View/Form/EntityContext.php, line 241
+Cake\View\Helper\FormHelper::getSourceValue() - CORE/src/View/Helper/FormHelper.php, line 2845
+Cake\View\Helper\FormHelper::_initInputField() - CORE/src/View/Helper/FormHelper.php, line 2594
+Cake\View\Helper\FormHelper::checkbox() - CORE/src/View/Helper/FormHelper.php, line 1545
+Cake\View\Helper\FormHelper::_getInput() - CORE/src/View/Helper/FormHelper.php, line 1265
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1148
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:15:08 Warning: Warning (2): end() expects parameter 1 to be array, null given in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Form/EntityContext.php, line 244]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+end - [internal], line ??
+Cake\View\Form\EntityContext::val() - CORE/src/View/Form/EntityContext.php, line 244
+Cake\View\Helper\FormHelper::getSourceValue() - CORE/src/View/Helper/FormHelper.php, line 2845
+Cake\View\Helper\FormHelper::_initInputField() - CORE/src/View/Helper/FormHelper.php, line 2594
+Cake\View\Helper\FormHelper::checkbox() - CORE/src/View/Helper/FormHelper.php, line 1545
+Cake\View\Helper\FormHelper::_getInput() - CORE/src/View/Helper/FormHelper.php, line 1265
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1148
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:15:08 Warning: Warning (2): array_pop() expects parameter 1 to be array, null given in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Form/EntityContext.php, line 249]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+array_pop - [internal], line ??
+Cake\View\Form\EntityContext::val() - CORE/src/View/Form/EntityContext.php, line 249
+Cake\View\Helper\FormHelper::getSourceValue() - CORE/src/View/Helper/FormHelper.php, line 2845
+Cake\View\Helper\FormHelper::_initInputField() - CORE/src/View/Helper/FormHelper.php, line 2594
+Cake\View\Helper\FormHelper::checkbox() - CORE/src/View/Helper/FormHelper.php, line 1545
+Cake\View\Helper\FormHelper::_getInput() - CORE/src/View/Helper/FormHelper.php, line 1265
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1148
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:15:08 Error: [InvalidArgumentException] Cannot get an empty property
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Form/EntityContext.php(250): Cake\ORM\Entity->get(NULL)
+#1 /var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php(2845): Cake\View\Form\EntityContext->val(Array, Array)
+#2 /var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php(2594): Cake\View\Helper\FormHelper->getSourceValue(Array, Array)
+#3 /var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php(1545): Cake\View\Helper\FormHelper->_initInputField(Array, Array)
+#4 /var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php(1265): Cake\View\Helper\FormHelper->checkbox(Array, Array)
+#5 /var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php(1148): Cake\View\Helper\FormHelper->_getInput(Array, Array)
+#6 /var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php(1188): Cake\View\Helper\FormHelper->control(Array, Array)
+#7 /var/www/html/depinfo/src/Template/Users/edit.ctp(54): Cake\View\Helper\FormHelper->input(Array, Array)
+#8 /var/www/html/depinfo/vendor/cakephp/cakephp/src/View/View.php(1196): include('/var/www/html/d...')
+#9 /var/www/html/depinfo/vendor/cakephp/cakephp/src/View/View.php(1157): Cake\View\View->_evaluate('/var/www/html/d...', Array)
+#10 /var/www/html/depinfo/vendor/cakephp/cakephp/src/View/View.php(765): Cake\View\View->_render('/var/www/html/d...')
+#11 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Controller/Controller.php(623): Cake\View\View->render(NULL, NULL)
+#12 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(125): Cake\Controller\Controller->render()
+#13 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#14 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/BaseApplication.php(103): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(95): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 /var/www/html/depinfo/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 /var/www/html/depinfo/webroot/index.php(40): Cake\Http\Server->run()
+#27 {main}
+
+
+2017-11-03 01:15:11 Warning: Warning (2): explode() expects parameter 2 to be string, array given in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Form/EntityContext.php, line 406]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+explode - [internal], line ??
+Cake\View\Form\EntityContext::isRequired() - CORE/src/View/Form/EntityContext.php, line 406
+Cake\View\Helper\FormHelper::_magicOptions() - CORE/src/View/Helper/FormHelper.php, line 1385
+Cake\View\Helper\FormHelper::_parseOptions() - CORE/src/View/Helper/FormHelper.php, line 1284
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1106
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:15:11 Warning: Warning (2): array_slice() expects parameter 1 to be array, null given in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Form/EntityContext.php, line 449]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+array_slice - [internal], line ??
+Cake\View\Form\EntityContext::_getValidator() - CORE/src/View/Form/EntityContext.php, line 449
+Cake\View\Form\EntityContext::isRequired() - CORE/src/View/Form/EntityContext.php, line 414
+Cake\View\Helper\FormHelper::_magicOptions() - CORE/src/View/Helper/FormHelper.php, line 1385
+Cake\View\Helper\FormHelper::_parseOptions() - CORE/src/View/Helper/FormHelper.php, line 1284
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1106
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:15:11 Warning: Warning (2): array_filter() expects parameter 1 to be array, null given in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Form/EntityContext.php, line 451]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+array_filter - [internal], line ??
+Cake\View\Form\EntityContext::_getValidator() - CORE/src/View/Form/EntityContext.php, line 451
+Cake\View\Form\EntityContext::isRequired() - CORE/src/View/Form/EntityContext.php, line 414
+Cake\View\Helper\FormHelper::_magicOptions() - CORE/src/View/Helper/FormHelper.php, line 1385
+Cake\View\Helper\FormHelper::_parseOptions() - CORE/src/View/Helper/FormHelper.php, line 1284
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1106
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:15:11 Warning: Warning (2): implode() [<a href='https://secure.php.net/function.implode'>function.implode</a>]: Invalid arguments passed in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Form/EntityContext.php, line 452]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+implode - [internal], line ??
+Cake\View\Form\EntityContext::_getValidator() - CORE/src/View/Form/EntityContext.php, line 452
+Cake\View\Form\EntityContext::isRequired() - CORE/src/View/Form/EntityContext.php, line 414
+Cake\View\Helper\FormHelper::_magicOptions() - CORE/src/View/Helper/FormHelper.php, line 1385
+Cake\View\Helper\FormHelper::_parseOptions() - CORE/src/View/Helper/FormHelper.php, line 1284
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1106
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:15:11 Warning: Warning (2): array_pop() expects parameter 1 to be array, null given in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Form/EntityContext.php, line 415]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+array_pop - [internal], line ??
+Cake\View\Form\EntityContext::isRequired() - CORE/src/View/Form/EntityContext.php, line 415
+Cake\View\Helper\FormHelper::_magicOptions() - CORE/src/View/Helper/FormHelper.php, line 1385
+Cake\View\Helper\FormHelper::_parseOptions() - CORE/src/View/Helper/FormHelper.php, line 1284
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1106
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:15:11 Warning: Warning (2): explode() expects parameter 2 to be string, array given in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Form/EntityContext.php, line 539]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+explode - [internal], line ??
+Cake\View\Form\EntityContext::type() - CORE/src/View/Form/EntityContext.php, line 539
+Cake\View\Helper\FormHelper::_magicOptions() - CORE/src/View/Helper/FormHelper.php, line 1388
+Cake\View\Helper\FormHelper::_parseOptions() - CORE/src/View/Helper/FormHelper.php, line 1284
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1106
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:15:11 Warning: Warning (2): array_pop() expects parameter 1 to be array, null given in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Form/EntityContext.php, line 542]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+array_pop - [internal], line ??
+Cake\View\Form\EntityContext::type() - CORE/src/View/Form/EntityContext.php, line 542
+Cake\View\Helper\FormHelper::_magicOptions() - CORE/src/View/Helper/FormHelper.php, line 1388
+Cake\View\Helper\FormHelper::_parseOptions() - CORE/src/View/Helper/FormHelper.php, line 1284
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1106
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:15:11 Warning: Warning (2): explode() expects parameter 2 to be string, array given in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Form/EntityContext.php, line 553]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+explode - [internal], line ??
+Cake\View\Form\EntityContext::attributes() - CORE/src/View/Form/EntityContext.php, line 553
+Cake\View\Helper\FormHelper::_magicOptions() - CORE/src/View/Helper/FormHelper.php, line 1389
+Cake\View\Helper\FormHelper::_parseOptions() - CORE/src/View/Helper/FormHelper.php, line 1284
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1106
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:15:11 Warning: Warning (2): array_pop() expects parameter 1 to be array, null given in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Form/EntityContext.php, line 555]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+array_pop - [internal], line ??
+Cake\View\Form\EntityContext::attributes() - CORE/src/View/Form/EntityContext.php, line 555
+Cake\View\Helper\FormHelper::_magicOptions() - CORE/src/View/Helper/FormHelper.php, line 1389
+Cake\View\Helper\FormHelper::_parseOptions() - CORE/src/View/Helper/FormHelper.php, line 1284
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1106
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:15:11 Warning: Warning (2): transliterator_transliterate() expects parameter 2 to be string, array given in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/Utility/Text.php, line 1073]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+transliterator_transliterate - [internal], line ??
+Cake\Utility\Text::transliterate() - CORE/src/Utility/Text.php, line 1073
+Cake\Utility\Text::slug() - CORE/src/Utility/Text.php, line 1106
+Cake\View\Helper\FormHelper::_domId() - CORE/src/View/Helper/IdGeneratorTrait.php, line 82
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1107
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:15:11 Warning: Warning (2): substr() expects parameter 1 to be string, array given in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php, line 745]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+substr - [internal], line ??
+Cake\View\Helper\FormHelper::error() - CORE/src/View/Helper/FormHelper.php, line 745
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1125
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:15:11 Warning: Warning (2): explode() expects parameter 2 to be string, array given in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Form/EntityContext.php, line 580]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+explode - [internal], line ??
+Cake\View\Form\EntityContext::error() - CORE/src/View/Form/EntityContext.php, line 580
+Cake\View\Form\EntityContext::hasError() - CORE/src/View/Form/EntityContext.php, line 569
+Cake\View\Helper\FormHelper::error() - CORE/src/View/Helper/FormHelper.php, line 751
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1125
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:15:11 Warning: Warning (2): array_pop() expects parameter 1 to be array, null given in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Form/EntityContext.php, line 584]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+array_pop - [internal], line ??
+Cake\View\Form\EntityContext::error() - CORE/src/View/Form/EntityContext.php, line 584
+Cake\View\Form\EntityContext::hasError() - CORE/src/View/Form/EntityContext.php, line 569
+Cake\View\Helper\FormHelper::error() - CORE/src/View/Helper/FormHelper.php, line 751
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1125
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:15:11 Warning: Warning (2): substr() expects parameter 1 to be string, array given in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php, line 2576]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+substr - [internal], line ??
+Cake\View\Helper\FormHelper::_initInputField() - CORE/src/View/Helper/FormHelper.php, line 2576
+Cake\View\Helper\FormHelper::checkbox() - CORE/src/View/Helper/FormHelper.php, line 1545
+Cake\View\Helper\FormHelper::_getInput() - CORE/src/View/Helper/FormHelper.php, line 1265
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1148
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:15:11 Warning: Warning (2): explode() expects parameter 2 to be string, array given in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php, line 2580]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+explode - [internal], line ??
+Cake\View\Helper\FormHelper::_initInputField() - CORE/src/View/Helper/FormHelper.php, line 2580
+Cake\View\Helper\FormHelper::checkbox() - CORE/src/View/Helper/FormHelper.php, line 1545
+Cake\View\Helper\FormHelper::_getInput() - CORE/src/View/Helper/FormHelper.php, line 1265
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1148
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:15:11 Warning: Warning (2): array_shift() expects parameter 1 to be array, null given in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php, line 2581]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+array_shift - [internal], line ??
+Cake\View\Helper\FormHelper::_initInputField() - CORE/src/View/Helper/FormHelper.php, line 2581
+Cake\View\Helper\FormHelper::checkbox() - CORE/src/View/Helper/FormHelper.php, line 1545
+Cake\View\Helper\FormHelper::_getInput() - CORE/src/View/Helper/FormHelper.php, line 1265
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1148
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:15:11 Warning: Warning (2): explode() expects parameter 2 to be string, array given in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Form/EntityContext.php, line 241]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+explode - [internal], line ??
+Cake\View\Form\EntityContext::val() - CORE/src/View/Form/EntityContext.php, line 241
+Cake\View\Helper\FormHelper::getSourceValue() - CORE/src/View/Helper/FormHelper.php, line 2845
+Cake\View\Helper\FormHelper::_initInputField() - CORE/src/View/Helper/FormHelper.php, line 2594
+Cake\View\Helper\FormHelper::checkbox() - CORE/src/View/Helper/FormHelper.php, line 1545
+Cake\View\Helper\FormHelper::_getInput() - CORE/src/View/Helper/FormHelper.php, line 1265
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1148
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:15:11 Warning: Warning (2): end() expects parameter 1 to be array, null given in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Form/EntityContext.php, line 244]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+end - [internal], line ??
+Cake\View\Form\EntityContext::val() - CORE/src/View/Form/EntityContext.php, line 244
+Cake\View\Helper\FormHelper::getSourceValue() - CORE/src/View/Helper/FormHelper.php, line 2845
+Cake\View\Helper\FormHelper::_initInputField() - CORE/src/View/Helper/FormHelper.php, line 2594
+Cake\View\Helper\FormHelper::checkbox() - CORE/src/View/Helper/FormHelper.php, line 1545
+Cake\View\Helper\FormHelper::_getInput() - CORE/src/View/Helper/FormHelper.php, line 1265
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1148
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:15:11 Warning: Warning (2): array_pop() expects parameter 1 to be array, null given in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Form/EntityContext.php, line 249]
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+array_pop - [internal], line ??
+Cake\View\Form\EntityContext::val() - CORE/src/View/Form/EntityContext.php, line 249
+Cake\View\Helper\FormHelper::getSourceValue() - CORE/src/View/Helper/FormHelper.php, line 2845
+Cake\View\Helper\FormHelper::_initInputField() - CORE/src/View/Helper/FormHelper.php, line 2594
+Cake\View\Helper\FormHelper::checkbox() - CORE/src/View/Helper/FormHelper.php, line 1545
+Cake\View\Helper\FormHelper::_getInput() - CORE/src/View/Helper/FormHelper.php, line 1265
+Cake\View\Helper\FormHelper::control() - CORE/src/View/Helper/FormHelper.php, line 1148
+Cake\View\Helper\FormHelper::input() - CORE/src/View/Helper/FormHelper.php, line 1188
+include - APP/Template/Users/edit.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-03 01:15:11 Error: [InvalidArgumentException] Cannot get an empty property
+Request URL: /users/edit/3
+Referer URL: http://localhost/depinfo/users/index
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Form/EntityContext.php(250): Cake\ORM\Entity->get(NULL)
+#1 /var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php(2845): Cake\View\Form\EntityContext->val(Array, Array)
+#2 /var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php(2594): Cake\View\Helper\FormHelper->getSourceValue(Array, Array)
+#3 /var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php(1545): Cake\View\Helper\FormHelper->_initInputField(Array, Array)
+#4 /var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php(1265): Cake\View\Helper\FormHelper->checkbox(Array, Array)
+#5 /var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php(1148): Cake\View\Helper\FormHelper->_getInput(Array, Array)
+#6 /var/www/html/depinfo/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php(1188): Cake\View\Helper\FormHelper->control(Array, Array)
+#7 /var/www/html/depinfo/src/Template/Users/edit.ctp(54): Cake\View\Helper\FormHelper->input(Array, Array)
+#8 /var/www/html/depinfo/vendor/cakephp/cakephp/src/View/View.php(1196): include('/var/www/html/d...')
+#9 /var/www/html/depinfo/vendor/cakephp/cakephp/src/View/View.php(1157): Cake\View\View->_evaluate('/var/www/html/d...', Array)
+#10 /var/www/html/depinfo/vendor/cakephp/cakephp/src/View/View.php(765): Cake\View\View->_render('/var/www/html/d...')
+#11 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Controller/Controller.php(623): Cake\View\View->render(NULL, NULL)
+#12 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(125): Cake\Controller\Controller->render()
+#13 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#14 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/BaseApplication.php(103): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(95): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 /var/www/html/depinfo/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 /var/www/html/depinfo/webroot/index.php(40): Cake\Http\Server->run()
+#27 {main}
+
+
+2017-11-03 01:21:32 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::users() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'users',
+  'prefix' => '',
+  'plugin' => false,
+)
+Request URL: /users/users/index
+Referer URL: http://localhost/depinfo/users/edit/3
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#1 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#2 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/BaseApplication.php(103): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(95): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /var/www/html/depinfo/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /var/www/html/depinfo/webroot/index.php(40): Cake\Http\Server->run()
+#15 {main}
+
+
+2017-11-03 01:27:45 Error: [Cake\View\Exception\MissingTemplateException] Template file "Personas/edit.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Personas/edit.ctp',
+)
+Request URL: /personas/edit/2
+Referer URL: http://localhost/depinfo/personas/index
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/cakephp/cakephp/src/View/View.php(761): Cake\View\View->_getViewFileName(NULL)
+#1 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Controller/Controller.php(623): Cake\View\View->render(NULL, NULL)
+#2 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(125): Cake\Controller\Controller->render()
+#3 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PersonasController))
+#4 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/BaseApplication.php(103): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(95): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 /var/www/html/depinfo/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /var/www/html/depinfo/webroot/index.php(40): Cake\Http\Server->run()
+#17 {main}
+
+
+2017-11-03 01:28:46 Error: [Cake\View\Exception\MissingTemplateException] Template file "Personas/view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Personas/view.ctp',
+)
+Request URL: /personas/view/2
+Referer URL: http://localhost/depinfo/personas/index
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/cakephp/cakephp/src/View/View.php(761): Cake\View\View->_getViewFileName(NULL)
+#1 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Controller/Controller.php(623): Cake\View\View->render(NULL, NULL)
+#2 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(125): Cake\Controller\Controller->render()
+#3 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PersonasController))
+#4 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/BaseApplication.php(103): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(95): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 /var/www/html/depinfo/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /var/www/html/depinfo/webroot/index.php(40): Cake\Http\Server->run()
+#17 {main}
+
+
+2017-11-03 01:28:59 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::personas() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'personas',
+  'prefix' => '',
+  'plugin' => false,
+)
+Request URL: /users/personas/index
+Referer URL: http://localhost/depinfo/users/edit/2
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#1 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#2 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/BaseApplication.php(103): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(95): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /var/www/html/depinfo/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /var/www/html/depinfo/webroot/index.php(40): Cake\Http\Server->run()
+#15 {main}
+
+
+2017-11-03 01:30:24 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::mod() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'mod',
+  'prefix' => '',
+  'plugin' => false,
+)
+Request URL: /users/mod
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#1 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#2 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/BaseApplication.php(103): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(95): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /var/www/html/depinfo/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /var/www/html/depinfo/webroot/index.php(40): Cake\Http\Server->run()
+#15 {main}
+
+
+2017-11-03 01:39:43 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::view() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'view',
+  'prefix' => '',
+  'plugin' => false,
+)
+Request URL: /users/view/2
+Referer URL: http://localhost/depinfo/users/index
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#1 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#2 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/BaseApplication.php(103): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(95): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /var/www/html/depinfo/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /var/www/html/depinfo/webroot/index.php(40): Cake\Http\Server->run()
+#15 {main}
+
+
+2017-11-03 01:40:16 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Assets could not be found.
+Exception Attributes: array (
+  'class' => 'Assets',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /assets/images/.jpg
+Referer URL: http://localhost/depinfo/
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(38): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/BaseApplication.php(103): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(95): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /var/www/html/depinfo/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /var/www/html/depinfo/webroot/index.php(40): Cake\Http\Server->run()
+#15 {main}
+
+
+2017-11-03 01:40:40 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::login() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+  'prefix' => '',
+  'plugin' => false,
+)
+Request URL: /users/login
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#1 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#2 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/BaseApplication.php(103): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(95): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /var/www/html/depinfo/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /var/www/html/depinfo/webroot/index.php(40): Cake\Http\Server->run()
+#15 {main}
+
+
+2017-11-03 01:40:43 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Assets could not be found.
+Exception Attributes: array (
+  'class' => 'Assets',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /assets/images/.jpg
+Referer URL: http://localhost/depinfo/
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(38): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/BaseApplication.php(103): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(95): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /var/www/html/depinfo/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /var/www/html/depinfo/webroot/index.php(40): Cake\Http\Server->run()
+#15 {main}
+
+
+2017-11-03 01:59:09 Error: [Cake\View\Exception\MissingTemplateException] Template file "Personas/view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Personas/view.ctp',
+)
+Request URL: /personas/view/2
+Referer URL: http://localhost/depinfo/Personas
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/cakephp/cakephp/src/View/View.php(761): Cake\View\View->_getViewFileName(NULL)
+#1 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Controller/Controller.php(623): Cake\View\View->render(NULL, NULL)
+#2 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(125): Cake\Controller\Controller->render()
+#3 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PersonasController))
+#4 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/BaseApplication.php(103): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(95): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 /var/www/html/depinfo/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /var/www/html/depinfo/webroot/index.php(40): Cake\Http\Server->run()
+#17 {main}
+
+

@@ -7,13 +7,38 @@
                         
                         <div class="input-field col m4">
                             <i class="prefix material-icons">content_paste</i>
-                            <input id="serial1" type="text" name="serial" class="validate" autofocus="true" value="<?= $user->cargo?>">
-                            <label for="serial1">CARGO</label>
+                            <!--<input id="serial1" type="text" name="serial" class="validate" autofocus="true" value="">-->
+                            <?= $this->Form->control('cedula', ['id'=>'serial1', 'class'=>"validate", 'autofocus'=>"true", 'label' => 'CEDULA']) ?>
                         </div>
-                        <div class="input-field col m4 ">
-                            <i class="prefix material-icons">laptop</i>
-                            <input id="tipo" type="text" name="tipo" class="validate" value="">
-                            <label for="tipo">CLAVE</label>
+                        <div class="input-field col m4">
+                            <i class="prefix material-icons">content_paste</i>
+                            <!--<input id="serial1" type="text" name="serial" class="validate" autofocus="true" value="">-->
+                            <?= $this->Form->control('nombre', ['id'=>'serial1', 'class'=>"validate", 'label' => 'NOMBRE']) ?>
+                        </div>
+                        <div class="input-field col m4">
+                            <i class="prefix material-icons">content_paste</i>
+                            <!--<input id="serial1" type="text" name="serial" class="validate" autofocus="true" value="">-->
+                            <?= $this->Form->control('apellido', ['id'=>'serial1', 'class'=>"validate", 'label' => 'APELLIDO']) ?>
+                        </div>
+                        <div class="input-field col m4">
+                            <i class="prefix material-icons">content_paste</i>
+                            <!--<input id="serial1" type="text" name="serial" class="validate" autofocus="true" value="">-->
+                            <?= $this->Form->control('telefono', ['id'=>'serial1', 'class'=>"validate", 'label' => 'TELEFONO']) ?>
+                        </div>
+                        <div class="input-field col m4">
+                            <i class="prefix material-icons">content_paste</i>
+                            <!--<input id="serial1" type="text" name="serial" class="validate" autofocus="true" value="">-->
+                            <?= $this->Form->control('cargo', ['id'=>'serial1', 'class'=>"validate", 'label' => 'CARGO']) ?>
+                        </div>
+                        <div class="input-field col m4">
+                            <i class="prefix material-icons">content_paste</i>
+                            <!--<input id="serial1" type="text" name="serial" class="validate" autofocus="true" value="">-->
+                            <?= $this->Form->control('usuario', ['id'=>'serial1', 'class'=>"validate", 'label' => 'USUARIO']) ?>
+                        </div>
+                        <div class="input-field col m4">
+                            <i class="prefix material-icons">content_paste</i>
+                            <!--<input id="serial1" type="text" name="serial" class="validate" autofocus="true" value="">-->
+                            <?= $this->Form->control('clave', ['id'=>'serial1', 'class'=>"validate", 'label' => 'CLAVE', 'value' => '']) ?>
                         </div>
                         <div class="input-field col m4 ">
                             <i class="material-icons prefix">query_builder</i>
@@ -25,23 +50,18 @@
                             <label>Turno</label>
 					    </div>
                         <div class="input-field col m4 ">
-                            <p>
-                                <input type="checkbox" id="test5" />
-                                <label for="test5">Red</label>
-                            </p>
-                            <?php //echo $this->Form->input("active", ['type' => 'checkbox']); ?>
+                            
+                            <?php echo $this->Form->input("active", ['type' => 'checkbox']); ?>
                         </div>
-                        <?php
-                            echo $this->Form->button("Editar Usuario", ['Class' => 'btn btn-success']);
-                            echo $this->Form->end();
-                        ?>
-                        
                     </div>
                         <a href="../../users/index" class="btn waves-effect waves-light tooltipped Medium" data-position="left" data-delay="50" data-tooltip="Volver "><i class="material-icons">keyboard_backspace</i></a>
 
-                        <button class="wave-effect right waves-green btn tooltipped" data-position="left" data-delay="50" data-tooltip="Finalizar Edicion" type="submit"><i class="material-icons prefix">add</i></button>
-                    <div style="clear: both;"></div>
-                </form>
+                        <?php
+                            echo $this->Form->button("Editar Usuario", ['Class' => 'wave-effect right waves-green btn tooltipped', 'data-position' => "left", "data-delay" => "50",'data-tooltip' => "Finalizar Edicion", 'i' => ['class' => 'material-icons prefix']]);
+                            echo $this->Form->end();
+                        ?>
+                        
+                    
             </div>
         
 

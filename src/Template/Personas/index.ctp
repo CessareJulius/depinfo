@@ -1,7 +1,7 @@
 <div id="row" class="row">
 <div class="col m12">
 				<table class="highlight centered bordered">
-				<caption><h5>Lista de Empleados</h5></caption>
+				<caption><h5>Lista de Personas</h5></caption>
 					<thead>
 						<tr>
                             <th scope="col"><?= $this->Paginator->sort('id', 'ID') ?></th>

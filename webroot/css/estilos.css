@@ -16,3 +16,49 @@ h3, h4, h5{ font-weight: 100; }
 .right > a { margin-right: 30px }
 .dercha{ margin-left: 10%; }
 
+[type="checkbox"]:not(:checked){
+     position: relative;
+     left: 0px; 
+     opacity: 1; 
+}
+[type="checkbox"]:checked{
+    position: relative;
+    left: 0px; 
+    opacity: 1; 
+}
+
+.input-field.col label {
+    left: 3.75rem;
+}
+
+input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea  {
+    margin-left: 3rem;
+    width: 92%;
+    width: calc(100% - 3rem);
+}
+/*
+input[type=text]:not(.browser-default) {
+    margin-left: 0rem;
+    width: 92%;
+    width: calc(100% - -3rem);
+}
+
+input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
+    margin-left: 0rem;
+    width: 92%;
+    width: calc(100% - -3rem);
+}
+*/
+
+.input-field label:not(.label-icon).active {
+    font-size: .8rem;
+    -webkit-transform: translateY(-140%);
+    transform: translateY(-140%);
+    margin-left: 10px;
+}
+
+.prefix ~ .select-wrapper {
+    margin-left: 1rem;
+    width: 92%;
+    width: calc(100% - 3rem);
+}

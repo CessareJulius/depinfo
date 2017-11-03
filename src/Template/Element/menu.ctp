@@ -4,7 +4,11 @@
 			<li >
 				<form action="" method="get" class="col m11">
 					<div class="input-field col m10">
-						<input type="text" placeholder="buscar" autofocus>
+						<input id="busqueda" type="text" placeholder="Buscar" autofocus style="
+    margin-left: 0rem;
+    width: 92%;
+    width: calc(100% - -3rem);
+">
 					</div>
 					<div class="col m1" style="margin-top: 20px;">
 						<button type="submit" class="btn-flat waves-effect"><i class="material-icons ">search</i></button>
@@ -14,10 +18,10 @@
 			<li id="secon">
 				<ul class="collapsible collapsible-accordion">
 					<li class="bold">
-						<a class="collapsible-header waves-effect"><i class="material-icons">group</i>Personas</a>
+						<a class="collapsible-header waves-effect"><i class="material-icons">person</i>Personas</a>
 						<div class="collapsible-body">
 							<ul class="grey lighten-2">
-								<li><a href="../personas/index"><i class="material-icons">schedule</i>Listar Empleados</a></li>
+								<li><a href="../personas/index"><i class="material-icons">schedule</i>Listar Personas</a></li>
 								<li><a href="../php/pdf.php"><i class="material-icons">schedule</i>Reporte empleados</a></li>
 								<li>
 									<form action="" method="get" class="col m11">

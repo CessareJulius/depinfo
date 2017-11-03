@@ -13,6 +13,7 @@ class UsersController extends AppController
     {
         $this->paginate = [
             'limit' => 5,
+            'contain' => ['Personas', 'Turnos']
         ];
         //$users = $this->Users->find('all');
         $users = $this->paginate($this->Users);
@@ -27,11 +28,11 @@ class UsersController extends AppController
         if ($this->request->is('post')) {
             $Users = $this->Users->patchEntity($Users, $this->request->getData());
             if ($this->Users->save($Users)) {
-                $this->Flash->success(__('The Users has been saved.'));
+                $this->Flash->success(__('El Empleado ha sido actualizado exitosamente.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The Users could not be saved. Please, try again.'));
+            $this->Flash->error(__('El Empleado no pudo actualizado. Por favor, intente nuevamente.'));
         }
         $this->set(compact('users'));
         $this->set('_serialize', ['persona']);
