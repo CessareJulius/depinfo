@@ -260,6 +260,13 @@ class ComposerStaticInitbdaa4371f9e02e433810e637e20d3ab0
                 1 => __DIR__ . '/..' . '/josegonzalez/dotenv/tests',
             ),
         ),
+        'R' => 
+        array (
+            'Raven_' => 
+            array (
+                0 => __DIR__ . '/..' . '/sentry/sentry/lib',
+            ),
+        ),
         'J' => 
         array (
             'JakubOnderka\\PhpConsoleHighlighter' => 

@@ -2311,5 +2311,71 @@
         ],
         "description": "CakePHP plugin for creating and/or rendering Pdfs, several Pdf engines supported.",
         "homepage": "http://github.com/friendsofcake/CakePdf"
+    },
+    {
+        "name": "sentry/sentry",
+        "version": "1.8.0",
+        "version_normalized": "1.8.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/getsentry/sentry-php.git",
+            "reference": "b3a03c1eb2877f0c66885641a52216dcbf313a11"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/getsentry/sentry-php/zipball/b3a03c1eb2877f0c66885641a52216dcbf313a11",
+            "reference": "b3a03c1eb2877f0c66885641a52216dcbf313a11",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "php": "^5.3|^7.0"
+        },
+        "conflict": {
+            "raven/raven": "*"
+        },
+        "require-dev": {
+            "friendsofphp/php-cs-fixer": "^1.8.0",
+            "monolog/monolog": "*",
+            "phpunit/phpunit": "^4.8.35 || ^5.7"
+        },
+        "suggest": {
+            "ext-hash": "*",
+            "ext-json": "*",
+            "ext-mbstring": "*",
+            "monolog/monolog": "Automatically capture Monolog events as breadcrumbs"
+        },
+        "time": "2017-10-29T21:19:48+00:00",
+        "bin": [
+            "bin/sentry"
+        ],
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.8.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Raven_": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "David Cramer",
+                "email": "dcramer@gmail.com"
+            }
+        ],
+        "description": "A PHP client for Sentry (http://getsentry.com)",
+        "homepage": "http://getsentry.com",
+        "keywords": [
+            "log",
+            "logging"
+        ]
     }
 ]

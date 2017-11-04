@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'josegonzalez\\Dotenv' => array($vendorDir . '/josegonzalez/dotenv/src', $vendorDir . '/josegonzalez/dotenv/tests'),
+    'Raven_' => array($vendorDir . '/sentry/sentry/lib'),
     'JakubOnderka\\PhpConsoleHighlighter' => array($vendorDir . '/jakub-onderka/php-console-highlighter/src'),
     'JakubOnderka\\PhpConsoleColor' => array($vendorDir . '/jakub-onderka/php-console-color/src'),
     'Detection' => array($vendorDir . '/mobiledetect/mobiledetectlib/namespaced'),
