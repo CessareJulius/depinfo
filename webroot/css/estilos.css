@@ -1,9 +1,28 @@
+/*
+Start Login
+*/
+.row .col.offset-m3 {
+    margin-left: 29.333333%;
+}
+.row .col.m7 {
+    width: 99.333333%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+}
+.frm {
+    height: 250px;
+    margin-top: 33px;
+}
+/*
+End Login
+*/
 #row{
     margin-left: -30px!important;
 }
 .frm{
 	height: 250px;     
-	margin-top: 80px;
+	margin-top: 30px;
 }
 .card-panel {
     opacity: .95 ; 
@@ -62,3 +81,32 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
     width: 92%;
     width: calc(100% - 3rem);
 }
+
+/* 
+Start Tablas index
+*/
+@media only screen and (min-width: 601px) {
+
+    .row .col.m12 {
+        width: 100%;
+        margin-left: 298px;
+        left: auto;
+        right: auto;
+    }
+}
+@media only screen and (min-width: 601px){
+    .row .col.m9 {
+        width: 70%;
+        margin-left: auto;
+        left: 10px;
+        right: auto;
+    }
+}
+@media only screen and (min-width: 992px){
+    html {
+        font-size: 14px;
+    }
+}
+/* 
+End Tablas index
+*/

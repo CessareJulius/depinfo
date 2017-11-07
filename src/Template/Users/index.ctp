@@ -1,55 +1,73 @@
-<div id="row" class="row">
-<div class="col m12">
-				<table class="highlight centered bordered">
-				<caption><h5>Lista de Empleados</h5></caption>
-					<thead>
-						<tr>
-                            <th scope="col"><?= $this->Paginator->sort('id', 'ID') ?></th>
-                            <th scope="col"><?= $this->Paginator->sort('cedula', 'CEDULA') ?></th>
-                            <th scope="col"><?= $this->Paginator->sort('nombre', 'NOMBRE') ?></th>
-                            <th scope="col"><?= $this->Paginator->sort('apellido', 'APELLIDO') ?></th>
-                            <th scope="col"><?= $this->Paginator->sort('cargo', 'CARGO') ?></th>
-                            <th scope="col"><?= $this->Paginator->sort('turno', 'TURNO') ?></th>
-                            <th scope="col"><?= $this->Paginator->sort('active', 'STATUS') ?></th>
-                            <th scope="col" class="actions" colspan="1"><?= __('ACCIONES') ?></th>
-						</tr>
-					</thead>
-					<tbody>
-                        <?php foreach($users as $user): ?>
-						<tr>
-                            <td><?= $this->Number->format($user->id) ?></td>
-                            <td><?= h($user->persona->cedula) ?></td>
-                            <td><?= h($user->persona->nombre) ?></td>
-                            <td><?= h($user->persona->apellido) ?></td>
-                            <td><?= h($user->cargo) ?></td>
-                            <td><?= h($user->turno->turno) ?></td>
-                            <td>
-                                <?php 
-                                    if($user->active == true){
-                                        echo "Activo";
-                                    }else{
-                                        echo "Inactivo";
-                                    };
-                                ?>
-                            </td>
-                            <td class="actions">
-                                <?= $this->Html->link(__('Ver'), ['action' => 'view', $user->id], ['Class' => 'btn waves-effect waves-light']) ?>
-                                <?= $this->Html->link(__('Editar'), ['action' => 'edit', $user->id], ['Class' => 'btn']) ?>
-                                <?= $this->Form->postLink(__('Eliminar'), ['action' => 'delete', $user->id],['Class' => 'btn'], ['confirm' => __('Esta seguro que desea borrar este usuario # {0}?', $user->id)]) ?>
-                            </td>
-                        </tr>
-                        <?php endforeach; ?>
-					</tbody>
-				</table>
-            </div>
-            <div class="paginator">
-            <center>
-                <ul class="pagination">
-                    <?= $this->Paginator->prev('< ' . __('Anterior')) ?>
-                    <?= $this->Paginator->numbers(['before' => '', 'after' => '']) ?>
-                    <?= $this->Paginator->next(__('Siguiente') . ' >') ?>
-                </ul>
-                <p><?= $this->Paginator->counter(['format' => __('Pagina {{page}} de {{pages}}, total de resultados: {{count}}')]) ?></p>
-            </center>
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>Bienvenido<small>Esta es la pagina de inicio</small></h1>
+            <ol class="breadcrumb">
+                <li><i class="fa fa-dashboard"></i>
+                    <?= $this->Html->Link('Inicio', ['controller' => 'Users', 'action' => 'home']); ?>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Main content -->
+    <section class="content">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="box">
+          <div class="box-header">
+            <center><h1 class="box-title">Lista de Empleados</h1></center>
+          </div>
+          <!-- /.box-header -->
+          <div class="box-body">
+            <table id="example1" class="table table-bordered table-striped">
+              <thead>
+              <tr>
+                <th>ID</th>
+                <th>NOMBRE</th>
+                <th>APELLIDO(S)</th>
+                <th>STATUS</th>
+                <th><center>ACCIONES</center></th>
+              </tr>
+              </thead>
+              <tbody>
+              <?php foreach($users as $user): ?>
+              <tr>
+                <td><?= $this->Number->format($user->id) ?></td>
+                <td><?= h($user->persona->nombre) ?></td>
+                <td><?= h($user->persona->apellido) ?></td>
+                <td>
+                    <?php 
+                        if($user->active == true){
+                            echo "Activo";
+                        }else{
+                            echo "Inactivo";
+                        };
+                    ?>
+                </td>
+                <td class="actions">
+                  <center>
+                    <?= $this->Html->link(__('Ver'), ['action' => 'view', $user->id], ['Class' => 'btn btn-info btn-sm']) ?>
+                    <?= $this->Html->link(__('Editar'), ['action' => 'edit', $user->id], ['Class' => 'btn btn-primary btn-sm']) ?>
+                    <?= $this->Form->postLink(__('Eliminar'), ['action' => 'delete', $user->id],['Class' => 'btn btn-danger btn-sm'], ['confirm' => __('Esta seguro que desea borrar este usuario # {0}?', $user->id)]) ?>
+                  </center>
+                </td>
+              </tr>
+              <?php endforeach; ?>
+              </tbody>
+            </table>
+          </div>
+          <!-- /.box-body -->
         </div>
-</div>
+        <!-- /.box -->
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+  </section>
+  <!-- /.content -->
+    </div>
+    <div class="control-sidebar-bg"></div>
+
+
+
+

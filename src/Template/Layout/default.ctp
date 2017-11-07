@@ -19,61 +19,84 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 <html>
 <head>
     <?= $this->Html->charset() ?>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         Departamento de Informatica
     </title>
     <?= $this->Html->meta('icon') ?>
 
-    <?= $this->Html->css(['../materialize/css/materialize.min', '../materialize/fonts/iconfont/material-icons']) ?>
-    <?= $this->Html->css('estilos') ?>
+    <?= $this->Html->css([
+        '../template/bootstrap/dist/css/bootstrap.min', 
+        '../template/font-awesome/css/font-awesome.min', 
+        '../template/Ionicons/css/ionicons.min']) ?>
+    <?= $this->Html->css([
+        '../template/datatables.net-bs/css/dataTables.bootstrap.min', 
+        '../template/dist/css/AdminLTE.min', 
+        '../template/plugins/iCheck/square/blue', 
+        '../template/dist/css/skins/_all-skins.min']) ?>
 
-    <?= $this->Html->script(['jquery.min','bootstrap.min']) ?>
-    <?= $this->Html->script(['../materialize/js/materialize.min', 'app']) ?>
+
+    <?= $this->Html->script([
+        'jquery.min', 
+        '../template/bootstrap/dist/js/bootstrap.min']) ?>
+
+    <?= $this->Html->script([
+        '../template/plugins/iCheck/icheck.min',
+        '../template/datatables.net/js/jquery.dataTables',
+        '../template/datatables.net-bs/js/dataTables.bootstrap.min', 
+        '../template/jquery-slimscroll/jquery.slimscroll.min', 
+        '../template/fastclick/lib/fastclick']) ?>
+
+    <?= $this->Html->script([
+        '../template/dist/js/adminlte.min', 
+        '../template/dist/js/demo']) ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
-<body>
-    <?= $this->element('modales') ?>
-    <div class="row">
-        <nav class="nav-wrapper blue lighten-1">
-            <div>
-                <h4 class="brand-logo center dercha">Departamento de Informática</h4>
-            </div>
-            <div class="row">
-                <div class="right">
-                    <a href="../index.php" class="waves-effect tooltipped" data-position="left" data-delay="50" data-tooltip="Salir"><i class="material-icons">launch
-                    </i></a>
-                </div>
-            </div>
-        </nav>
-        <?= $this->element('menu') ?>
-    </div>
-    <!--menu desplegable-->
-    <div class="fixed-action-btn vertical click-to-toggle">
-        <a class="waves-effect waves-light btn-floating btn-large blue tooltipped" data-position="left" data-delay="50" data-tooltip="Menu de Administrador">
-            <i class="large material-icons">add</i>
-        </a>
-        <ul>
-            <li><a class="waves-effect waves-light btn-floating green tooltipped" data-position="left" data-delay="50" data-tooltip="Agregar Equipo" href="#agregar"><i class="material-icons">laptop</i></a></li>
-            <li><a class="waves-effect waves-light btn-floating cyan tooltipped" data-position="left" data-delay="50" data-tooltip="Agregar Personal" href="#agregar_pers"><i class="material-icons">group_add</i></a></li>
-            <li><a class="waves-effect waves-light btn-floating red tooltipped" data-position="left" data-delay="50" data-tooltip="Ver todos los equipos" href="#tabla"><i class="material-icons">view_headline</i></a></li>
-        </ul>
-    </div>
-    <div class="row">
-        <div class="col m9 offset-m3">
+<?php
+    if (empty($current_user)){
+?>
+    <body class="hold-transition login-page">
+        <?= $this->Flash->render() ?>
+        <?= $this->fetch('content') ?>
+    <script>
+        $(function () {
+            $('input').iCheck({
+            checkboxClass: 'icheckbox_square-blue',
+            radioClass: 'iradio_square-blue',
+            increaseArea: '20%' /* optional */
+            });
+        });
+    </script>
+<?php
+    }else{
+?>
+    <body class="hold-transition skin-blue sidebar-mini">
+        <div class="wrapper">
+            <?= $this->element('nav') ?>
+            <?= $this->element('menu') ?>
+
             <?= $this->Flash->render() ?>
             <?= $this->fetch('content') ?>
+            
+            <?= $this->element('asideConfPage') ?>
+            <?= $this->element('footer') ?>
         </div>
-    </div>
     <script>
-		$(document).ready(function() {
-			$('.modal').modal();			
-		
-			$('select').material_select();
-		});
-	</script>
+        $(document).ready(function () {
+            $('.sidebar-menu').tree()
+        })
+    </script>
+    <script>
+        $(function () {
+            $('#example1').DataTable()
+        })
+    </script>
+<?php    
+    } 
+?>
 </body>
 </html>

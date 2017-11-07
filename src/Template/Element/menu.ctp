@@ -1,71 +1,143 @@
-	<aside id="nav-mobile" class="side-nav fixed z-depth-4 grey lighten-4">
-		<ul>
-			<p class="flow-text center" id="hora"></p>
-			<li >
-				<form action="" method="get" class="col m11">
-					<div class="input-field col m10">
-						<input id="busqueda" type="text" placeholder="Buscar" autofocus style="
-    margin-left: 0rem;
-    width: 92%;
-    width: calc(100% - -3rem);
-">
-					</div>
-					<div class="col m1" style="margin-top: 20px;">
-						<button type="submit" class="btn-flat waves-effect"><i class="material-icons ">search</i></button>
-					</div>
-				</form>
-			</li><br><br><br><br>
-			<li id="secon">
-				<ul class="collapsible collapsible-accordion">
-					<li class="bold">
-						<a class="collapsible-header waves-effect"><i class="material-icons">person</i>Personas</a>
-						<div class="collapsible-body">
-							<ul class="grey lighten-2">
-								<li><a href="../personas/index"><i class="material-icons">schedule</i>Listar Personas</a></li>
-								<li><a href="../php/pdf.php"><i class="material-icons">schedule</i>Reporte empleados</a></li>
-								<li>
-									<form action="" method="get" class="col m11">
-										<div class="input-field col m10">
-											<input type="text" id="empleado" class="validate" placeholder="Buscar empleado">
-										</div>
-										<div class="col m1">
-											<button class="btn-flat waves-effect" type="submit" style="margin-top: 25px"><i class="material-icons">search</i></button>
-										</div>
-									</form>
-								</li>
-							</ul>
-						</div>
-					</li>
-					<li class="bold">
-						<a class="collapsible-header waves-effect"><i class="material-icons">group</i>Empledos</a>
-						<div class="collapsible-body">
-							<ul class="grey lighten-2">
-								<li><a href="../users/index"><i class="material-icons">schedule</i>Listar Empleados</a></li>
-								<li><a href="../php/pdf.php"><i class="material-icons">schedule</i>Reporte empleados</a></li>
-								<li>
-									<form action="" method="get" class="col m11">
-										<div class="input-field col m10">
-											<input type="text" id="empleado" class="validate" placeholder="Buscar empleado">
-										</div>
-										<div class="col m1">
-											<button class="btn-flat waves-effect" type="submit" style="margin-top: 25px"><i class="material-icons">search</i></button>
-										</div>
-									</form>
-								</li>
-							</ul>
-						</div>
-					</li>
-					<li>
-						<a class="collapsible-header waves-effect"><i class="material-icons">desktop_mac</i>Equipos</a>
-						<div class="collapsible-body">
-							<ul class="grey lighten-2">
-								<li><a href="#"><i class="material-icons">done</i>Reparados</a></li>
-								<li><a href="#"><i class="material-icons">close</i>En reparación</a></li>
-							</ul>
-						</div>
-					</li>
-				</ul>
-			</li>
-		</ul>
-	</aside>
-
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+        <?= $this->html->image('img/user2-160x160.jpg', ['class' => 'img-circle', 'alt' => 'User Image']); ?>
+        </div>
+        <div class="pull-left info">
+          <p>Cessare Julius</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        </div>
+      </div>
+      <!-- search form -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Buscar...">
+          <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+      </form>
+      <!-- /.search form -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu" data-widget="tree">
+        <li class="header"><center>MENU</center></li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-male"></i> <span>Clientes</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li>
+                <?= $this->Html->Link('<i class="fa fa-navicon"></i> Ver Todos', ['controller' => 'Personas', 'action' => 'index'], ['escape' => false]); ?>
+            </li>
+            <li><a href="../../index2.html"><i class="fa fa-search"></i> Buscar Cliente</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-users"></i>
+            <span>Empleados</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><?= $this->Html->Link('<i class="fa fa-user-plus"></i> Agregar Nuevo', ['controller' => 'Users', 'action' => 'add'], ['escape' => false]); ?></li>
+            <li><?= $this->Html->Link('<i class="fa fa-navicon"></i> Ver Todos', ['controller' => 'Users', 'action' => 'index'], ['escape' => false]); ?></li>
+            <li><a href="../charts/flot.html"><i class="fa fa-search"></i> Buscar Empleado</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-laptop"></i>
+            <span>Registro</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="../UI/general.html"><i class="fa fa-circle-o"></i> Nuevo Registro</a></li>
+            <li><a href="../UI/icons.html"><i class="fa fa-circle-o"></i> Ver Todos</a></li>
+            <li><a href="../UI/buttons.html"><i class="fa fa-circle-o"></i> Buscar Registro</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-laptop"></i> <span>Equipos</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="../forms/general.html"><i class="fa fa-circle-o"></i> Ver Todos</a></li>
+            <li><a href="../forms/advanced.html"><i class="fa fa-circle-o"></i> Buscar Equipo</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-folder"></i> <span>Reportes</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="treeview">
+              <a href="#"><i class="fa fa-circle-o"></i> Clientes
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> Todos</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Filtrar</a></li>
+              </ul>
+            </li>
+            <li class="treeview">
+              <a href="#"><i class="fa fa-circle-o"></i> Empleados
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> Todos</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Filtrar</a></li>
+              </ul>
+            </li>
+            <li class="treeview">
+              <a href="#"><i class="fa fa-circle-o"></i> Registros
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> Todos</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Filtrar</a></li>
+              </ul>
+            </li>
+            <li class="treeview">
+              <a href="#"><i class="fa fa-circle-o"></i> Equipos
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> Todos</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Filtrar</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="header"><center>OPCIONES</center></li>
+        <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Perfil</span></a></li>
+        <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Configuracion</span></a></li>
+        <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Salir</span></a></li>
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
