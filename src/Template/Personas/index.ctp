@@ -6,6 +6,7 @@
                 <li><i class="fa fa-dashboard"></i>
                     <?= $this->Html->Link('Inicio', ['controller' => 'Users', 'action' => 'home']); ?>
                 </li>
+                <li class="active">Clientes</li>
             </ol>
         </section>
 

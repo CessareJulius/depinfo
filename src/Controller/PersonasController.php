@@ -19,8 +19,10 @@ class PersonasController extends AppController
      */
     public function index()
     {
+        $this->paginate = [
+            'limit' => 9999
+        ];
         $personas = $this->paginate($this->Personas);
-
         $this->set(compact('personas'));
         $this->set('_serialize', ['personas']);
     }
@@ -37,6 +39,8 @@ class PersonasController extends AppController
         $persona = $this->Personas->get($id, [
             'contain' => []
         ]);
+        //pj($persona);
+        //die();
 
         $this->set('persona', $persona);
         $this->set('_serialize', ['persona']);

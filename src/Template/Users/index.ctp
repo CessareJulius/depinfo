@@ -6,6 +6,7 @@
                 <li><i class="fa fa-dashboard"></i>
                     <?= $this->Html->Link('Inicio', ['controller' => 'Users', 'action' => 'home']); ?>
                 </li>
+                <li class="active">Empleados</li>
             </ol>
         </section>
 
@@ -38,7 +39,7 @@
                 <td>
                     <?php 
                         if($user->active == true){
-                            echo "Activo";
+                            echo "<label class='badge badge-success'>Activo</label>";
                         }else{
                             echo "Inactivo";
                         };
