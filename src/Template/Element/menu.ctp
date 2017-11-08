@@ -27,7 +27,7 @@
         <li class="header"><center>MENU</center></li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-male"></i> <span>Clientes</span>
+            <i class="fa fa-male"></i> <span>Personas</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -35,6 +35,20 @@
           <ul class="treeview-menu">
             <li>
                 <?= $this->Html->Link('<i class="fa fa-navicon"></i> Ver Todos', ['controller' => 'Personas', 'action' => 'index'], ['escape' => false]); ?>
+            </li>
+            <li><a href="../../index2.html"><i class="fa fa-search"></i> Buscar Persona</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-user"></i> <span>Clientes</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li>
+                <?= $this->Html->Link('<i class="fa fa-navicon"></i> Ver Todos', ['controller' => 'Clientes', 'action' => 'index'], ['escape' => false]); ?>
             </li>
             <li><a href="../../index2.html"><i class="fa fa-search"></i> Buscar Cliente</a></li>
           </ul>

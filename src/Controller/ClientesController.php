@@ -23,7 +23,10 @@ class ClientesController extends AppController
         $this->paginate = [
             'contain' => ['Personas']
         ];
+        
         $clientes = $this->paginate($this->Clientes);
+        //pj($clientes);
+        //die();
 
         $this->set(compact('clientes'));
         $this->set('_serialize', ['clientes']);

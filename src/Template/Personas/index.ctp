@@ -6,7 +6,7 @@
                 <li><i class="fa fa-dashboard"></i>
                     <?= $this->Html->Link('Inicio', ['controller' => 'Users', 'action' => 'home']); ?>
                 </li>
-                <li class="active">Clientes</li>
+                <li class="active">Personas</li>
             </ol>
         </section>
 
@@ -16,7 +16,7 @@
       <div class="col-xs-12">
         <div class="box">
           <div class="box-header">
-            <center><h1 class="box-title">Lista de Clientes</h1></center>
+            <center><h1 class="box-title">Lista de Personas</h1></center>
           </div>
           <!-- /.box-header -->
           <div class="box-body">
