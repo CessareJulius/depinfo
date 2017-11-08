@@ -52,7 +52,7 @@
         <div class="row">
             <div id="editEmp" class="col-xs-10">
                 <!-- general form elements -->
-                <div class="box box-primary">
+                <div class="box box-warning">
                     <div class="box-header with-border">
                         <center><h3 class="box-title">Datos de Empleado/Usuario</h3></center>
                     </div>
