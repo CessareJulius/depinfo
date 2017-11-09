@@ -52,9 +52,9 @@ class PersonasTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
-            ->integer('cedula')
             ->requirePresence('cedula', 'create')
-            ->notEmpty('cedula');
+            ->notEmpty('cedula')
+            ->add('cedula', 'unique', ['rules' => 'validateUnique', 'Provider' => 'table', 'message' => 'Esta cedula ya existe']);
 
         $validator
             ->scalar('nombre')
@@ -69,6 +69,11 @@ class PersonasTable extends Table
         $validator
             ->requirePresence('telefono', 'create')
             ->notEmpty('telefono');
+        
+        $validator
+            ->integer('status')
+            ->requirePresence('status', 'create')
+            ->notEmpty('status');
 
         return $validator;
     }

@@ -17,6 +17,10 @@
     margin-left: 42%;
 }
 
+#box-body-Edit{
+    margin-left: 14%;
+}
+
 </style>
 
 <div class="content-wrapper">
@@ -57,7 +61,7 @@
                         <center><h3 class="box-title">Datos de Empleado/Usuario</h3></center>
                     </div>
                     <?= $this->Form->create($user) ?>
-                        <div class="box-body">
+                        <div id="box-body-Edit" class="box-body">
                             <div class="form-group col-xs-5">
                                 <?php 
                                     echo $this->Form->input("cargo", ['label' => 'Cargo', 'class' => 'form-control']);

@@ -11,6 +11,7 @@ use Cake\ORM\Entity;
  * @property string $nombre
  * @property string $apellido
  * @property int $telefono
+ * @property int $status
  * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
  */
@@ -31,6 +32,7 @@ class Persona extends Entity
         'nombre' => true,
         'apellido' => true,
         'telefono' => true,
+        'status' => true,
         'created' => true,
         'modified' => true
     ];

@@ -87,6 +87,9 @@ class UsersTable extends Table
             ->boolean('active')
             ->requirePresence('active', 'create')
             ->notEmpty('active');
+        $validator
+            ->notEmpty('per_id')
+            ->add('per_id', 'unique', ['rules' => 'validateUnique', 'provider' => 'table', 'message' => 'El empleado ya tiene datos personales guardados']);
 
         return $validator;
     }

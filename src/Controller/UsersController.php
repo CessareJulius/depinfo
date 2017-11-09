@@ -35,6 +35,7 @@ class UsersController extends AppController
     public function index()
     {
         $this->paginate = [
+            'conditions' => ['status' => 1],
             'limit' => 9999,
             'contain' => ['Personas', 'Turnos']
         ];
@@ -60,7 +61,18 @@ class UsersController extends AppController
 
     public function add()
     {
-        
+        $user = $this->Users->newEntity();
+        if ($this->request->is('post')) {
+            $user = $this->Users->patchEntity($user, $this->request->getData());
+            if ($this->users->save($user)) {
+                $this->Flash->success(__('El Empleado ha sido creado exitosamente.'));
+
+                return $this->redirect(['action' => 'index']);
+            }
+            $this->Flash->error(__('El Empleado no pudo ser creado. Por Favor, intente nuevamente.'));
+        }
+        $this->set(compact('user'));
+        $this->set('_serialize', ['user']);
     }
 
     public function edit($id = null)

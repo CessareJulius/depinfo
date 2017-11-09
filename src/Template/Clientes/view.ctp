@@ -41,7 +41,8 @@
                         <h3 class="box-title">Datos Personales</h3>&nbsp;&nbsp;
                         <?= $this->Html->link(__('Editar'), 
                             [
-                                'action' => 'edit', $cliente->id
+                                'controller' => 'Personas',
+                                'action' => 'edit', $cliente->persona->id
                             ], 
                             [
                                 'Class' => 'btn btn-primary btn-sm'

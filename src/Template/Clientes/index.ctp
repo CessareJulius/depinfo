@@ -42,7 +42,7 @@
                 <td class="actions">
                   <center>
                     <?= $this->Html->link(__('Ver'), ['controller' => 'Clientes', 'action' => 'view', $cliente->id], ['Class' => 'btn btn-info btn-sm']) ?>
-                    <?= $this->Html->link(__('Editar'), ['action' => 'edit', $cliente->id], ['Class' => 'btn btn-primary btn-sm']) ?>
+                    <?= $this->Html->link(__('Editar'), ['controller' => 'Personas', 'action' => 'edit', $cliente->persona->id], ['Class' => 'btn btn-primary btn-sm']) ?>
                     <?= $this->Form->postLink(__('Eliminar'), ['action' => 'delete', $cliente->id],['Class' => 'btn btn-danger btn-sm'], ['confirm' => __('Esta seguro que desea borrar este usuario # {0}?', $cliente->id)]) ?>
                   </center>
                 </td>

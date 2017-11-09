@@ -20,6 +20,7 @@ class PersonasController extends AppController
     public function index()
     {
         $this->paginate = [
+            'conditions' => ['status' => 2],
             'limit' => 9999
         ];
         $personas = $this->paginate($this->Personas);
