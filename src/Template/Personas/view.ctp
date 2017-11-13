@@ -3,7 +3,7 @@
         <center><h3><i class="fa fa-male"> Persona Registrada </i></h3></center>
         <ol class="breadcrumb">
             <li>
-              <?= $this->Html->Link('<i class="fa fa-dashboard"></i> Inicio', 
+              <?= $this->Html->Link('<i class="fa fa-home"></i> Inicio', 
                 [
                     'controller' => 'Users',
                     'action' => 'home'

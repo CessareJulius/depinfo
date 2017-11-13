@@ -1,9 +1,10 @@
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
+      <?= $this->Flash->render() ?> 
         <section class="content-header">
             <h1>Bienvenido<small>Esta es la pagina de inicio</small></h1>
             <ol class="breadcrumb">
-                <li><i class="fa fa-dashboard"></i>
+                <li><i class="fa fa-home"></i>
                     <?= $this->Html->Link('Inicio', ['controller' => 'Users', 'action' => 'home']); ?>
                 </li>
                 <li class="active">Empleados</li>

@@ -14,7 +14,10 @@
 }
 
 #btnEditEmp{
-    margin-left: 42%;
+    margin-left: 25%;
+}
+#btnVolEmp{
+    margin-left: 17%;
 }
 
 #box-body-Edit{
@@ -28,7 +31,7 @@
         <center><h3><i class="fa fa-male"> Editar Datos del Empleado</i></h3></center>
         <ol class="breadcrumb">
             <li>
-              <?= $this->Html->Link('<i class="fa fa-dashboard"></i> Inicio', 
+              <?= $this->Html->Link('<i class="fa fa-home"></i> Inicio', 
                 [
                     'controller' => 'Users',
                     'action' => 'home'
@@ -69,23 +72,35 @@
                             </div>
                             <div class="form-group col-xs-5">
                                 <?php 
-                                    echo $this->Form->input("usuario", ['label' => 'Usuario', 'class' => 'form-control']);
+                                    echo $this->Form->control("usuario", ['label' => 'Usuario', 'class' => 'form-control']);
                                 ?>
                             </div>
                             <div class="form-group col-xs-5">
                                 <?php 
-                                    echo $this->Form->input("clave", ['label' => 'Contraseña', 'class' => 'form-control', 'value' => '']);
+                                    echo $this->Form->control("clave", ['label' => 'Contraseña', 'type'=> 'password', 'class' => 'form-control', 'value' => '']);
                                 ?>
                             </div>
-                            <div class="form-group col-md-4">
-                                <div class="checkbox">
-                                    <?php 
-                                        echo $this->Form->input("active", ['label' => 'Activo', 'type' => 'checkbox']);
-                                    ?>
-                                </div>
+                            <div class="form-group col-xs-5">
+                                <label>Turno</label>
+                                <select name="turno" class="form-control select2" style="width: 100%;">
+                                    <?php if($user->turno == 1){ ?>
+                                        <option value="1" selected="selected">Mañana</option>
+                                        <option value="2">Tarde</option>
+                                    <?php }else{ ?>
+                                        <option value="1">Mañana</option>
+                                        <option value="2" selected="selected">Tarde</option>
+                                    <?php } ?>
+                                </select>
+                            </div>
+                            <div class="form-group col-xs-4">
+                                <b>Activo</b>
+                                <?php 
+                                    echo $this->Form->control("active", ['label' => false, 'type' => 'checkbox', 'class' => 'flat-red']);
+                                ?>
                             </div>
                         </div>
                         <div class="box-footer">
+                            <?= $this->Html->Link('Volver', ['action' => 'index'], ['id' => 'btnVolEmp', 'class' => 'btn btn-info']) ?>
                             <?= $this->Form->button("Editar Empleado", ['id' => 'btnEditEmp', 'Class' => 'btn btn-primary']); ?>
                         </div>
                     <?= $this->Form->end() ?>

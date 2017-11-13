@@ -45,10 +45,10 @@ class UsersTable extends Table
             'foreignKey' => 'per_id',
             'joinType' => 'INNER'
         ]);
-        $this->belongsTo('Turnos', [
+        /*$this->belongsTo('Turnos', [
             'foreignKey' => 'tur_id',
             'joinType' => 'INNER'
-        ]);
+        ]);*/
     }
 
     /**
@@ -90,6 +90,10 @@ class UsersTable extends Table
         $validator
             ->notEmpty('per_id')
             ->add('per_id', 'unique', ['rules' => 'validateUnique', 'provider' => 'table', 'message' => 'El empleado ya tiene datos personales guardados']);
+        $validator
+            ->integer('turno')
+            ->requirePresence('turno', 'create')
+            ->notEmpty('usuario');
 
         return $validator;
     }
@@ -104,8 +108,18 @@ class UsersTable extends Table
     public function buildRules(RulesChecker $rules)
     {
         $rules->add($rules->existsIn(['per_id'], 'Personas'));
-        $rules->add($rules->existsIn(['tur_id'], 'Turnos'));
+        //$rules->add($rules->existsIn(['tur_id'], 'Turnos'));
 
         return $rules;
     }
+    /*
+    public function findAuth(\Cake\ORM\Query $query, array $options)
+    {
+        $query
+            ->select(['id', 'role', 'cargo', 'usuario'])
+            ->where(['Users.active' => 1]);
+            
+        return $query;
+    }
+    */
 }

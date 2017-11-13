@@ -31,7 +31,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         '../template/font-awesome/css/font-awesome.min', 
         '../template/Ionicons/css/ionicons.min']) ?>
     <?= $this->Html->css([
-        '../template/datatables.net-bs/css/dataTables.bootstrap.min', 
+        '../template/datatables.net-bs/css/dataTables.bootstrap.min',
+        '../template/plugins/iCheck/all', 
         '../template/dist/css/AdminLTE.min', 
         '../template/plugins/iCheck/square/blue', 
         '../template/dist/css/skins/_all-skins.min']) ?>
@@ -45,7 +46,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         '../template/plugins/iCheck/icheck.min',
         '../template/datatables.net/js/jquery.dataTables',
         '../template/datatables.net-bs/js/dataTables.bootstrap.min', 
-        '../template/jquery-slimscroll/jquery.slimscroll.min', 
+        '../template/jquery-slimscroll/jquery.slimscroll.min',
+        '../template/plugins/iCheck/icheck.min', 
         '../template/fastclick/lib/fastclick']) ?>
 
     <?= $this->Html->script([
@@ -79,7 +81,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <?= $this->element('nav') ?>
             <?= $this->element('menu') ?>
 
-            <?= $this->Flash->render() ?>
+            
             <?= $this->fetch('content') ?>
             
             <?= $this->element('asideConfPage') ?>
@@ -93,6 +95,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <script>
         $(function () {
             $('#example1').DataTable()
+            $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
+                checkboxClass: 'icheckbox_flat-green',
+                radioClass   : 'iradio_flat-green'
+                })
         })
     </script>
 <?php    

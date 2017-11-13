@@ -139,7 +139,7 @@
         <li class="header"><center>OPCIONES</center></li>
         <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Perfil</span></a></li>
         <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Configuracion</span></a></li>
-        <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Salir</span></a></li>
+        <li><?= $this->Html->Link('<i class="fa fa-circle-o text-red"></i> <span>Salir</span>', ['controller' => 'Users', 'action' => 'logout'], ['escape' => false]) ?></li>
       </ul>
     </section>
     <!-- /.sidebar -->

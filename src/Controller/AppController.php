@@ -57,7 +57,7 @@ class AppController extends Controller
                 'controller' => 'Users',
                 'action' => 'login'
             ],
-            'authError' => 'Ingrese sus datos correctamente',
+            'authError' => 'Complete los datos para poder ingresar',
             'loginRedirect' => [
                 'controller' => 'Users',
                 'action' => 'home'
@@ -96,7 +96,9 @@ class AppController extends Controller
 
     public function beforeFilter(Event $event)
     {
+        
         $this->set('current_user', $this->Auth->user());
+  
     }
 
     public function isAuthorized($user) {

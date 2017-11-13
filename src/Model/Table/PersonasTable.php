@@ -53,8 +53,8 @@ class PersonasTable extends Table
 
         $validator
             ->requirePresence('cedula', 'create')
-            ->notEmpty('cedula')
-            ->add('cedula', 'unique', ['rules' => 'validateUnique', 'Provider' => 'table', 'message' => 'Esta cedula ya existe']);
+            ->notEmpty('cedula');
+            //->add('cedula', 'unique', ['rules' => 'validateUnique', 'provider' => 'table', 'message' => 'Esta cedula ya existe']);
 
         $validator
             ->scalar('nombre')
@@ -76,5 +76,12 @@ class PersonasTable extends Table
             ->notEmpty('status');
 
         return $validator;
+    }
+
+    public function buildRules(RulesChecker $rules)
+    {
+        $rules->add($rules->isUnique(['cedula'], 'Esta cedula ya existe'));
+
+        return $rules;
     }
 }

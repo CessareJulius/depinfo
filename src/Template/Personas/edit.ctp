@@ -7,8 +7,12 @@
     padding-left: 15px;
 }
 
-#btnEditEmp{
-    margin-left: 42%;
+#btnEditClient{
+    margin-left: 25%;
+}
+
+#btnVolClient{
+    margin-left: 17%;
 }
 
 #box-body-Edit{
@@ -22,7 +26,7 @@
         <center><h3><i class="fa fa-male"> Editar Datos</i></h3></center>
         <ol class="breadcrumb">
             <li>
-              <?= $this->Html->Link('<i class="fa fa-dashboard"></i> Inicio', 
+              <?= $this->Html->Link('<i class="fa fa-home"></i> Inicio', 
                 [
                     'controller' => 'Users',
                     'action' => 'home'
@@ -78,7 +82,8 @@
                             </div>
                         </div>
                         <div class="box-footer">
-                            <?= $this->Form->button("Editar Persona", ['id' => 'btnEditEmp', 'Class' => 'btn btn-primary']); ?>
+                            <?= $this->Html->Link('Volver', ['action' => 'index'], ['id' => 'btnVolClient', 'class' => 'btn btn-info']) ?>
+                            <?= $this->Form->button("Editar Persona", ['id' => 'btnEditClient', 'Class' => 'btn btn-primary']); ?>
                         </div>
                     <?= $this->Form->end() ?>
                 </div>

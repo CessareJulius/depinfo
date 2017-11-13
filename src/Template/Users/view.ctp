@@ -98,6 +98,14 @@
                                 <dd>&nbsp;&nbsp;<?= $user->cargo ?></dd>
                                 <br>
 
+                            <dt>Turno</dt>
+                                <?php if($user->turno == 1){ ?>
+                                    <dd>&nbsp;&nbsp;<?php echo "Mañana"; ?></dd>
+                                    <br>
+                                <?php }else{ ?>
+                                    <dd>&nbsp;&nbsp;<?php echo "Tarde"; ?></dd>
+                                    <br>
+                                <?php } ?>
                             <dt>Usuario</dt>
                                 <dd>&nbsp;&nbsp;<?= $user->usuario ?></dd>
                                 <br>

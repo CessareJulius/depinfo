@@ -55,14 +55,19 @@ class PersonasController extends AppController
     public function add()
     {
         $persona = $this->Personas->newEntity();
+
         if ($this->request->is('post')) {
+            //pj($this->request->getData());
+            //pj($this->request->data);
+            //die();
             $persona = $this->Personas->patchEntity($persona, $this->request->getData());
+            $persona->status = 2;
             if ($this->Personas->save($persona)) {
-                $this->Flash->success(__('The persona has been saved.'));
+                $this->Flash->success(__('El Cliente ha sido creado exitosamente.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The persona could not be saved. Please, try again.'));
+            $this->Flash->error(__('El cliente no pudo ser creado. Por favor, intente nuevamente.'));
         }
         $this->set(compact('persona'));
         $this->set('_serialize', ['persona']);
@@ -83,11 +88,11 @@ class PersonasController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $persona = $this->Personas->patchEntity($persona, $this->request->getData());
             if ($this->Personas->save($persona)) {
-                $this->Flash->success(__('The persona has been saved.'));
+                $this->Flash->success(__('Los datos han sido actualizados correctamente.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The persona could not be saved. Please, try again.'));
+            $this->Flash->error(__('Los datos no pudieron ser actualizados. Por favor, intente nuevamente.'));
         }
         $this->set(compact('persona'));
         $this->set('_serialize', ['persona']);
@@ -105,9 +110,9 @@ class PersonasController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $persona = $this->Personas->get($id);
         if ($this->Personas->delete($persona)) {
-            $this->Flash->success(__('The persona has been deleted.'));
+            $this->Flash->success(__('El cliente ha sido Eliminado exitosamente.'));
         } else {
-            $this->Flash->error(__('The persona could not be deleted. Please, try again.'));
+            $this->Flash->error(__('El cliente no puedo ser eliminado. Por favor, intentelo nuevamente.'));
         }
 
         return $this->redirect(['action' => 'index']);

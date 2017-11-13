@@ -1,12 +1,13 @@
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
+    <?= $this->Flash->render() ?> 
         <section class="content-header">
             <h1>Bienvenido<small>Esta es la pagina de inicio</small></h1>
             <ol class="breadcrumb">
-                <li><i class="fa fa-dashboard"></i>
+                <li><i class="fa fa-home"></i>
                     <?= $this->Html->Link('Inicio', ['controller' => 'Users', 'action' => 'home']); ?>
                 </li>
-                <li class="active">Personas</li>
+                <li class="active">Clientes</li>
             </ol>
         </section>
 
@@ -16,7 +17,7 @@
       <div class="col-xs-12">
         <div class="box">
           <div class="box-header">
-            <center><h1 class="box-title">Lista de Personas</h1></center>
+            <center><h1 class="box-title">Lista de Clientes</h1></center>
           </div>
           <!-- /.box-header -->
           <div class="box-body">
@@ -25,7 +26,7 @@
               <tr>
                 <th>ID</th>
                 <th>CEDULA</th>
-                <th>NOMBRE</th>
+                <th>NOMBRE(S)</th>
                 <th>APELLIDO(S)</th>
                 <th>TELEFONO</th>
                 <th><center>ACCIONES</center></th>
@@ -43,7 +44,7 @@
                   <center>
                     <?= $this->Html->link(__('Ver'), ['action' => 'view', $persona->id], ['Class' => 'btn btn-info btn-sm']) ?>
                     <?= $this->Html->link(__('Editar'), ['action' => 'edit', $persona->id], ['Class' => 'btn btn-primary btn-sm']) ?>
-                    <?= $this->Form->postLink(__('Eliminar'), ['action' => 'delete', $persona->id],['Class' => 'btn btn-danger btn-sm'], ['confirm' => __('Esta seguro que desea borrar este usuario # {0}?', $persona->id)]) ?>
+                    <?= $this->Form->postLink(__('Eliminar'), ['action' => 'delete', $persona->id],['Class' => 'btn btn-danger btn-sm'], ['confirm' => __('Esta seguro que desea borrar este cliente # {0}?', $persona->id)]) ?>
                   </center>
                 </td>
               </tr>
