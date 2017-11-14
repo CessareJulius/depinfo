@@ -7,8 +7,8 @@
         <?= $this->html->image('img/user2-160x160.jpg', ['class' => 'img-circle', 'alt' => 'User Image']); ?>
         </div>
         <div class="pull-left info">
-          <p>Cessare Julius</p>
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+          <p><?php echo $current_user['persona']['nombre']." ".$current_user['persona']['apellido'] ?></p>
+          <a href="#"><i class="fa fa-circle text-success"></i> En Linea</a>
         </div>
       </div>
       <!-- search form -->
@@ -137,7 +137,8 @@
           </ul>
         </li>
         <li class="header"><center>OPCIONES</center></li>
-        <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Perfil</span></a></li>
+        <?php $id = $current_user['id']; ?>
+        <li><?= $this->Html->Link('<i class="fa fa-circle-o text-aqua"></i> <span>Perfil</span>', ['controller' => 'Users', 'action' => "profile/$id"], ['escape' => false]) ?></li>
         <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Configuracion</span></a></li>
         <li><?= $this->Html->Link('<i class="fa fa-circle-o text-red"></i> <span>Salir</span>', ['controller' => 'Users', 'action' => 'logout'], ['escape' => false]) ?></li>
       </ul>

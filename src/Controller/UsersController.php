@@ -59,6 +59,19 @@ class UsersController extends AppController
         $this->set('_serialize', ['user']);
     }
 
+    public function profile($id = null)
+    {
+        $user = $this->Users->get($id, [
+            'contain' => ['Personas']
+        ]);
+        
+        //pj($user);
+        //die();
+
+        $this->set('user', $user);
+        $this->set('_serialize', ['user']);
+    }
+
     public function add()
     {
         /* $user = $this->Users->newEntity();

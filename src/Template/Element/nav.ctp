@@ -110,7 +110,7 @@
         <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             <?= $this->html->image('img/user2-160x160.jpg', ['class' => 'user-image', 'alt' => 'User Image']); ?>
-            <span class="hidden-xs"><?php echo $current_user['role']; ?></span>
+            <span class="hidden-xs"><?php echo $current_user['persona']['nombre']." ".$current_user['persona']['apellido'] ?></span>
             </a>
             <ul class="dropdown-menu">
             <!-- User image -->
@@ -118,8 +118,36 @@
             <?= $this->html->image('img/user2-160x160.jpg', ['class' => 'img-circle', 'alt' => 'User Image']); ?>
 
                 <p>
-                Alexander Pierce - Web Developer
-                <small>Member since Nov. 2012</small>
+                <?php echo $current_user['persona']['nombre']." ".$current_user['persona']['apellido'] ?>
+                <?php 
+                    $fechaCreated = explode("/", $current_user['created']);
+                    
+                    if (isset($fechaCreated[0])) {
+
+                        $fechaCreatedMes = $fechaCreated[0];
+                    }
+                    if (isset($fechaCreated[1])) {
+
+                        if ($fechaCreated[1] != '') {
+                            $fechaCreatedDia = $fechaCreated[1];
+                            
+                        }
+                    }
+                    if (isset($fechaCreated[2])) {
+
+                        if ($fechaCreated[2] != '') {
+                            $fechaCreatedAñoTime = $fechaCreated[2];
+
+                            $timeYearCreated = explode(",", $fechaCreatedAñoTime);
+
+                            if (isset($timeYearCreated[0])) {
+                                $fechaCreatedAño = "20";
+                                $fechaCreatedAño .= $timeYearCreated[0];
+                            }
+                        }
+                    }
+                ?>
+                <small>Miembro desde <?php echo "$fechaCreatedDia/$fechaCreatedMes/$fechaCreatedAño"; ?></small>
                 </p>
             </li>
             <!-- Menu Body -->
@@ -140,14 +168,23 @@
             <!-- Menu Footer-->
             <li class="user-footer">
                 <div class="pull-left">
-                <a href="#" class="btn btn-default btn-flat">Profile</a>
+                    <?php
+                        $id = $current_user['id'];
+                        echo $this->html->link('Perfil', 
+                            ["controller" => "Users", "action" => "profile/$id"], 
+                            [
+                                'class' => 'btn btn-info btn-flat', 
+                                'data-position' => 'left', 'data-delay' => '50', 
+                                'data-tooltip' => 'Perfil'
+                            ]);   
+                    ?>
                 </div>
                 <div class="pull-right">
                     <?php
                             echo $this->html->link('Salir', 
                             ['controller' => 'Users', 'action' => 'logout'], 
                             [
-                                'class' => 'btn btn-default btn-flat', 
+                                'class' => 'btn btn-warning btn-flat', 
                                 'data-position' => 'left', 'data-delay' => '50', 
                                 'data-tooltip' => 'Salir'
                             ]);   
