@@ -27,6 +27,7 @@
 </style>
 
 <div class="content-wrapper">
+<?= $this->Flash->render() ?>
     <section class="content-header">
         <center><h3><i class="fa fa-male"> Editar Datos del Empleado</i></h3></center>
         <ol class="breadcrumb">
@@ -63,7 +64,7 @@
                     <div class="box-header with-border">
                         <center><h3 class="box-title">Datos de Empleado/Usuario</h3></center>
                     </div>
-                    <?= $this->Form->create($user) ?>
+                    <?= $this->Form->create($user,['novalidate']) ?>
                         <div id="box-body-Edit" class="box-body">
                             <div class="form-group col-xs-5">
                                 <?php 
@@ -100,8 +101,23 @@
                             </div>
                         </div>
                         <div class="box-footer">
-                            <?= $this->Html->Link('Volver', ['action' => 'index'], ['id' => 'btnVolEmp', 'class' => 'btn btn-info']) ?>
-                            <?= $this->Form->button("Editar Empleado", ['id' => 'btnEditEmp', 'Class' => 'btn btn-primary']); ?>
+                            <?php
+
+                                $controller = $this->request->getParam('controller');
+                                // $this->request->getParam('action);
+                                $idParam = $this->request->getParam('pass.0');
+
+                                if ($current_user['id'] == $idParam) {
+                                    $controller = 'Users';
+                                    $action = "profile/".$current_user['id'];
+                                }else {
+                                    $action = "index";
+                                }
+                                
+                                echo $this->Html->Link("<i class='fa fa-reply'>&nbsp;</i>Volver", ['controller' => $controller,'action' => $action], ['id' => 'btnVolEmp', 'class' => 'btn btn-info', 'escape' => false]);
+                            
+                            ?>
+                            <?= $this->Form->button("<i class='fa fa-share'>&nbsp;</i>Editar Empleado", ['id' => 'btnEditEmp', 'Class' => 'btn btn-primary', 'escape' => false]); ?>
                         </div>
                     <?= $this->Form->end() ?>
                 </div>

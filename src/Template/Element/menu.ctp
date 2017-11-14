@@ -27,24 +27,24 @@
         <li class="header"><center>MENU</center></li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-user"></i> <span>Clientes</span>
+            <i class="fa fa-user text-aqua"></i> <span>Clientes</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
             <li>
-                <?= $this->Html->Link('<i class="fa fa-user-plus"></i> Agregar Nuevo', ['controller' => 'Personas', 'action' => 'add'], ['escape' => false]); ?>
+                <?= $this->Html->Link('<i class="fa fa-user-plus text-green"></i> Agregar Nuevo', ['controller' => 'Personas', 'action' => 'add'], ['escape' => false]); ?>
             </li>
             <li>
-                <?= $this->Html->Link('<i class="fa fa-navicon"></i> Ver Todos', ['controller' => 'Personas', 'action' => 'index'], ['escape' => false]); ?>
+                <?= $this->Html->Link('<i class="fa fa-navicon text-aqua"></i> Ver Todos', ['controller' => 'Personas', 'action' => 'index'], ['escape' => false]); ?>
             </li>
-            <li><a href="../../index2.html"><i class="fa fa-search"></i> Buscar Cliente</a></li>
           </ul>
         </li>
+        <?php if ($current_user['role'] == 'admin'): ?>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-users"></i>
+            <i class="fa fa-users text-aqua"></i>
             <span>Empleados</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -56,6 +56,7 @@
             <li><a href="../charts/flot.html"><i class="fa fa-search"></i> Buscar Empleado</a></li>
           </ul>
         </li>
+        <?php endif ?>
         <li class="treeview">
           <a href="#">
             <i class="fa fa-laptop"></i>
@@ -84,34 +85,36 @@
         </li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-folder"></i> <span>Reportes</span>
+            <i class="fa fa-file-pdf-o text-aqua"></i> <span>Reportes</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
             <li class="treeview">
-              <a href="#"><i class="fa fa-circle-o"></i> Clientes
+              <a href="#"><i class="fa fa-user"></i> Clientes
                 <span class="pull-right-container">
                   <i class="fa fa-angle-left pull-right"></i>
                 </span>
               </a>
               <ul class="treeview-menu">
                 <li><a href="#"><i class="fa fa-circle-o"></i> Todos</a></li>
-                <li><a href="#"><i class="fa fa-circle-o"></i> Filtrar</a></li>
+                <li><a href="#"><i class="fa fa-filter"></i> Filtrar</a></li>
               </ul>
             </li>
+            <?php if ($current_user['role'] == 'admin'): ?>
             <li class="treeview">
-              <a href="#"><i class="fa fa-circle-o"></i> Empleados
+              <a href="#"><i class="fa fa-users"></i> Empleados
                 <span class="pull-right-container">
                   <i class="fa fa-angle-left pull-right"></i>
                 </span>
               </a>
               <ul class="treeview-menu">
                 <li><a href="#"><i class="fa fa-circle-o"></i> Todos</a></li>
-                <li><a href="#"><i class="fa fa-circle-o"></i> Filtrar</a></li>
+                <li><a href="#"><i class="fa fa-filter"></i> Filtrar</a></li>
               </ul>
             </li>
+            <?php endif ?>
             <li class="treeview">
               <a href="#"><i class="fa fa-circle-o"></i> Registros
                 <span class="pull-right-container">
@@ -120,7 +123,7 @@
               </a>
               <ul class="treeview-menu">
                 <li><a href="#"><i class="fa fa-circle-o"></i> Todos</a></li>
-                <li><a href="#"><i class="fa fa-circle-o"></i> Filtrar</a></li>
+                <li><a href="#"><i class="fa fa-filter"></i> Filtrar</a></li>
               </ul>
             </li>
             <li class="treeview">
@@ -138,9 +141,9 @@
         </li>
         <li class="header"><center>OPCIONES</center></li>
         <?php $id = $current_user['id']; ?>
-        <li><?= $this->Html->Link('<i class="fa fa-circle-o text-aqua"></i> <span>Perfil</span>', ['controller' => 'Users', 'action' => "profile/$id"], ['escape' => false]) ?></li>
+        <li><?= $this->Html->Link('<i class="fa fa-child text-aqua"></i> <span>Perfil</span>', ['controller' => 'Users', 'action' => "profile/$id"], ['escape' => false]) ?></li>
         <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Configuracion</span></a></li>
-        <li><?= $this->Html->Link('<i class="fa fa-circle-o text-red"></i> <span>Salir</span>', ['controller' => 'Users', 'action' => 'logout'], ['escape' => false]) ?></li>
+        <li><?= $this->Html->Link("<i class='fa fa-power-off text-danger'>&nbsp;</i><span>Salir</span>", ['controller' => 'Users', 'action' => 'logout'], ['escape' => false]) ?></li>
       </ul>
     </section>
     <!-- /.sidebar -->

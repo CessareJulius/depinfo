@@ -39,7 +39,7 @@
             </li>
           </ul>
         <?php $idPersona = $current_user['persona']['id'];
-            echo $this->Html->Link('Editar', ['controller' => 'Personas', 'action' => "edit/$idPersona"], ['class' => 'btn btn-info btn-block']) 
+            echo $this->Html->Link("<i class='fa fa-edit'>&nbsp;</i>Editar", ['controller' => 'Personas', 'action' => "edit/$idPersona"], ['class' => 'btn btn-info btn-block', 'escape' => false]) 
         ?>
         </div>
         <!-- /.box-body -->
@@ -63,7 +63,7 @@
             </li>
           </ul>
         <?php $idUser = $current_user['id'];
-            echo $this->Html->Link('Editar', ['controller' => 'Users', 'action' => "edit/$idUser"], ['class' => 'btn btn-info btn-block']) 
+            echo $this->Html->Link("<i class='fa fa-edit'>&nbsp;</i>Editar", ['controller' => 'Users', 'action' => "edit/$idUser"], ['class' => 'btn btn-info btn-block', 'escape' => false]) 
         ?>
         </div>
       </div>

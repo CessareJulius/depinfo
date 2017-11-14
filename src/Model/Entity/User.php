@@ -3,6 +3,7 @@ namespace App\Model\Entity;
 
 use Cake\ORM\Entity;
 use Cake\Auth\DefaultPasswordHasher;
+use Cake\ORM\TableRegistry;
 
 /**
  * User Entity
@@ -46,8 +47,19 @@ class User extends Entity
         'persona' => true,
     ];
 
-    protected function _setClave($value){
-        $hasher = new DefaultPasswordHasher();
-        return $hasher->hash($value);
+    protected function _setClave($value) {
+
+        if (!empty($value)) {
+
+            $hasher = new DefaultPasswordHasher();
+            return $hasher->hash($value);
+        } else {
+
+            $id_user = $this->_properties['id'];
+            $user = TableRegistry::get('Users')->recoverPassword($id_user);
+            return $user;
+        }
+
+        
     }
 }

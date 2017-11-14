@@ -44,7 +44,7 @@ class AppController extends Controller
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
         $this->loadComponent('Auth', [
-            'autorize' => ['Controller'],
+            'authorize' => ['Controller'],
             'authenticate' => [
                 'Form' => [
                     'fields' => [
@@ -66,7 +66,8 @@ class AppController extends Controller
             'logoutRedirect' => [
                 'controller' => 'Users',
                 'action' => 'login'
-            ]
+            ],
+            'unauthorizedRedirect' => $this->referer()
         ]);
 
         /*
@@ -103,6 +104,11 @@ class AppController extends Controller
     }
 
     public function isAuthorized($user) {
-        return true;
+        
+        if (isset($user['role']) and $user['role'] === 'admin') {
+            return true;
+        }
+
+        return false;
     }
 }

@@ -82,7 +82,22 @@
                             </div>
                         </div>
                         <div class="box-footer">
-                            <?= $this->Html->Link('Volver', ['action' => 'index'], ['id' => 'btnVolClient', 'class' => 'btn btn-info']) ?>
+                            <?php
+
+                            $controller = $this->request->getParam('controller');
+                            // $this->request->getParam('action);
+                            $idParam = $this->request->getParam('pass.0');
+
+                            if ($current_user['persona']['id'] == $idParam) {
+                                $controller = 'Users';
+                                $action = "profile/".$current_user['id'];
+                            }else {
+                                $action = "index";
+                            }
+                            
+                            echo $this->Html->Link('Volver', ['controller' => $controller,'action' => $action], ['id' => 'btnVolClient', 'class' => 'btn btn-info']);
+                            
+                            ?>
                             <?= $this->Form->button("Editar Persona", ['id' => 'btnEditClient', 'Class' => 'btn btn-primary']); ?>
                         </div>
                     <?= $this->Form->end() ?>

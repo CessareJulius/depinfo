@@ -9,6 +9,19 @@ use App\Controller\AppController;
  */
 class UsersController extends AppController
 {
+    public function isAuthorized($user) { //pj($user);die();
+        
+
+        if (isset($user['role']) and $user['role'] === 'user') {
+
+            if (in_array($this->request->action, ['home', 'edit', 'profile', 'logout'])) {
+
+                return true;
+            }
+        }
+        return parent::isAuthorized($user);
+    }
+
     public function login()
     {
         if ($this->request->is('post')) 

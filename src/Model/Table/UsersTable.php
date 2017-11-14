@@ -76,12 +76,12 @@ class UsersTable extends Table
         $validator
             ->scalar('usuario')
             ->requirePresence('usuario', 'create')
-            ->notEmpty('usuario');
+            ->notEmpty('usuario', 'Rellene este campo');
 
         $validator
             ->scalar('clave')
             ->requirePresence('clave', 'create')
-            ->notEmpty('clave');
+            ->notEmpty('clave', 'Rellene este campo', 'create');
 
         $validator
             ->boolean('active')
@@ -107,7 +107,9 @@ class UsersTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
-        $rules->add($rules->existsIn(['per_id'], 'Personas'));
+        $rules
+            ->add($rules->existsIn(['per_id'], 'Personas'))
+            ->add($rules->isUnique(['usuario'], 'Ya existe este usuario, intente con uno distinto'));
         //$rules->add($rules->existsIn(['tur_id'], 'Turnos'));
 
         return $rules;
@@ -130,14 +132,20 @@ class UsersTable extends Table
 
         //return $query->where(['Users.active' => 1]);
     }
-    /*
-    public function findAuth(\Cake\ORM\Query $query, array $options)
+    
+    public function recoverPassword($id)
     {
-        $query
-            ->select(['id', 'role', 'cargo', 'usuario'])
-            ->where(['Users.active' => 1]);
-            
-        return $query;
+        $user = $this->get($id);
+        return $user->clave;
     }
-    */
+
+    public function beforeDelete($event, $entity, $options)
+    {
+        if ($entity->role == 'admin') {
+            return false;
+        } else {
+            return true;
+        }
+        
+    }
 }

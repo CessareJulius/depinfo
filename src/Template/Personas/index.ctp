@@ -44,7 +44,9 @@
                   <center>
                     <?= $this->Html->link(__('Ver'), ['action' => 'view', $persona->id], ['Class' => 'btn btn-info btn-sm']) ?>
                     <?= $this->Html->link(__('Editar'), ['action' => 'edit', $persona->id], ['Class' => 'btn btn-primary btn-sm']) ?>
-                    <?= $this->Form->postLink(__('Eliminar'), ['action' => 'delete', $persona->id],['Class' => 'btn btn-danger btn-sm'], ['confirm' => __('Esta seguro que desea borrar este cliente # {0}?', $persona->id)]) ?>
+                    <?php if ($current_user['role'] == 'admin') {
+                      echo $this->Form->postLink(__('Eliminar'), ['action' => 'delete', $persona->id],['Class' => 'btn btn-danger btn-sm'], ['confirm' => __('Esta seguro que desea borrar este cliente # {0}?', $persona->id)]);
+                    } ?>
                   </center>
                 </td>
               </tr>

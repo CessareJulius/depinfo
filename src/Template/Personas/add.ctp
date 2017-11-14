@@ -15,6 +15,7 @@
 </style>
 
 <div class="content-wrapper">
+<?= $this->Flash->render() ?>
     <section class="content-header">
         <center><h3><i class="fa fa-user-plus"> Crear Nuevo Cliente</i></h3></center>
         <ol class="breadcrumb">

@@ -175,18 +175,20 @@
                             [
                                 'class' => 'btn btn-info btn-flat', 
                                 'data-position' => 'left', 'data-delay' => '50', 
-                                'data-tooltip' => 'Perfil'
+                                'data-tooltip' => 'Perfil',
+                                'escape' => false
                             ]);   
                     ?>
                 </div>
                 <div class="pull-right">
                     <?php
-                            echo $this->html->link('Salir', 
+                            echo $this->html->link("<i class='fa fa-sign-out text-gray'>&nbsp;</i>Salir", 
                             ['controller' => 'Users', 'action' => 'logout'], 
                             [
                                 'class' => 'btn btn-warning btn-flat', 
                                 'data-position' => 'left', 'data-delay' => '50', 
-                                'data-tooltip' => 'Salir'
+                                'data-tooltip' => 'Salir',
+                                'escape' => false
                             ]);   
                     ?>
                 </div>
