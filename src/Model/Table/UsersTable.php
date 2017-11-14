@@ -112,6 +112,24 @@ class UsersTable extends Table
 
         return $rules;
     }
+
+    public function findAuth(\Cake\ORM\Query $query, array $options) {
+        
+
+        $query
+            -> find('all', [
+                'contain' => [
+                    'Personas'
+                ],
+                'conditions' => [
+                    'Users.active' => 1
+                ]
+            ]);
+
+        return $query;
+
+        //return $query->where(['Users.active' => 1]);
+    }
     /*
     public function findAuth(\Cake\ORM\Query $query, array $options)
     {

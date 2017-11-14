@@ -50,7 +50,8 @@ class AppController extends Controller
                     'fields' => [
                         'username' => 'usuario',
                         'password' => 'clave'
-                    ]
+                    ],
+                    'finder' => 'auth'
                 ]
             ],
             'loginAction' => [

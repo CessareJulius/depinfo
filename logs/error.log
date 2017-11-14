@@ -14546,3 +14546,647 @@ Stack Trace:
 #18 {main}
 
 
+2017-11-14 00:56:46 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.active' in 'where clause'
+Request URL: /users/login
+Referer URL: http://localhost/depinfo/users/login
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(174): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Connection.php(314): Cake\Database\Log\LoggingStatement->execute()
+#4 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Query.php(214): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Query.php(1039): Cake\Database\Query->execute()
+#6 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(287): Cake\ORM\Query->_execute()
+#7 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Query.php(987): Cake\ORM\Query->_all()
+#8 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(415): Cake\ORM\Query->all()
+#9 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Auth/BaseAuthenticate.php(109): Cake\ORM\Query->first()
+#10 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Auth/FormAuthenticate.php(79): Cake\Auth\BaseAuthenticate->_findUser('root', 'root')
+#11 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(820): Cake\Auth\FormAuthenticate->authenticate(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /var/www/html/depinfo/src/Controller/UsersController.php(16): Cake\Controller\Component\AuthComponent->identify()
+#13 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Controller/Controller.php(440): App\Controller\UsersController->login()
+#14 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#15 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#16 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/BaseApplication.php(103): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(95): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 /var/www/html/depinfo/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#28 /var/www/html/depinfo/webroot/index.php(40): Cake\Http\Server->run()
+#29 {main}
+
+
+2017-11-14 00:58:53 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/depinfo/vendor/cakephp/cakephp/src/Error/Debugger.php:850) in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/Network/Session.php, line 568]
+Request URL: /users/login
+Referer URL: http://localhost/depinfo/users/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+setcookie - [internal], line ??
+Cake\Network\Session::renew() - CORE/src/Network/Session.php, line 568
+Cake\Auth\Storage\SessionStorage::write() - CORE/src/Auth/Storage/SessionStorage.php, line 104
+Cake\Controller\Component\AuthComponent::setUser() - CORE/src/Controller/Component/AuthComponent.php, line 678
+App\Controller\UsersController::login() - APP/Controller/UsersController.php, line 21
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 440
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 119
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-14 00:58:53 Warning: Warning (2): session_regenerate_id() [<a href='https://secure.php.net/function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/Network/Session.php, line 571]
+Request URL: /users/login
+Referer URL: http://localhost/depinfo/users/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+session_regenerate_id - [internal], line ??
+Cake\Network\Session::renew() - CORE/src/Network/Session.php, line 571
+Cake\Auth\Storage\SessionStorage::write() - CORE/src/Auth/Storage/SessionStorage.php, line 104
+Cake\Controller\Component\AuthComponent::setUser() - CORE/src/Controller/Component/AuthComponent.php, line 678
+App\Controller\UsersController::login() - APP/Controller/UsersController.php, line 21
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 440
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 119
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-14 00:58:53 Warning: Warning (512): Unable to emit headers. Headers sent in file=/var/www/html/depinfo/vendor/cakephp/cakephp/src/Error/Debugger.php line=850 in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 48]
+Request URL: /users/login
+Referer URL: http://localhost/depinfo/users/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 48
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 106
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-14 00:58:53 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/depinfo/vendor/cakephp/cakephp/src/Error/Debugger.php:850) in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 149]
+Request URL: /users/login
+Referer URL: http://localhost/depinfo/users/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE/src/Http/ResponseEmitter.php, line 149
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 54
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 106
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-14 00:58:53 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/depinfo/vendor/cakephp/cakephp/src/Error/Debugger.php:850) in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 181]
+Request URL: /users/login
+Referer URL: http://localhost/depinfo/users/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE/src/Http/ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 106
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-14 00:58:53 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/depinfo/vendor/cakephp/cakephp/src/Error/Debugger.php:850) in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 181]
+Request URL: /users/login
+Referer URL: http://localhost/depinfo/users/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE/src/Http/ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 106
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-14 00:58:53 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/depinfo/vendor/cakephp/cakephp/src/Error/Debugger.php:850) in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 181]
+Request URL: /users/login
+Referer URL: http://localhost/depinfo/users/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE/src/Http/ResponseEmitter.php, line 181
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 55
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 106
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-11-14 01:06:16 Error: Fatal Error (1): Call to a member function first() on null in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/Auth/BaseAuthenticate.php, line 109]
+Request URL: /users/login
+Referer URL: http://localhost/depinfo/users/login
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 223
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 105
+[main] - [internal], line ??
+
+
+
+2017-11-14 01:06:16 Error: [Cake\Error\FatalErrorException] Call to a member function first() on null in /var/www/html/depinfo/vendor/cakephp/cakephp/src/Auth/BaseAuthenticate.php on line 109
+Request URL: /users/login
+Referer URL: http://localhost/depinfo/users/login
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(105): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/var/www/html/d...', 109)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-11-14 01:10:30 Error: Fatal Error (1): Call to a member function find() on null in [/var/www/html/depinfo/src/Model/Table/UsersTable.php, line 119]
+Request URL: /users/login
+Referer URL: http://localhost/depinfo/users/login
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 223
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 105
+[main] - [internal], line ??
+
+
+
+2017-11-14 01:10:30 Warning: Headers already sent in /var/www/html/depinfo/vendor/cakephp/cakephp/src/Error/Debugger.php:850
+2017-11-14 01:10:30 Error: [Cake\Error\FatalErrorException] Call to a member function find() on null in /var/www/html/depinfo/src/Model/Table/UsersTable.php on line 119
+Request URL: /users/login
+Referer URL: http://localhost/depinfo/users/login
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(105): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/var/www/html/d...', 119)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-11-14 01:10:55 Error: Fatal Error (1): Class 'App\Model\Table\TableRegistry' not found in [/var/www/html/depinfo/src/Model/Table/UsersTable.php, line 118]
+Request URL: /users/login
+Referer URL: http://localhost/depinfo/users/login
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 223
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 105
+[main] - [internal], line ??
+
+
+
+2017-11-14 01:10:55 Error: [Cake\Error\FatalErrorException] Class 'App\Model\Table\TableRegistry' not found in /var/www/html/depinfo/src/Model/Table/UsersTable.php on line 118
+Request URL: /users/login
+Referer URL: http://localhost/depinfo/users/login
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(105): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'App\\Mode...', '/var/www/html/d...', 118)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-11-14 01:13:21 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'depinfo.Personas' doesn't exist
+Request URL: /users/login
+Referer URL: http://localhost/depinfo/users/login
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(174): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Connection.php(314): Cake\Database\Log\LoggingStatement->execute()
+#4 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Query.php(214): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Query.php(1039): Cake\Database\Query->execute()
+#6 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(287): Cake\ORM\Query->_execute()
+#7 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Query.php(987): Cake\ORM\Query->_all()
+#8 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(415): Cake\ORM\Query->all()
+#9 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Auth/BaseAuthenticate.php(109): Cake\ORM\Query->first()
+#10 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Auth/FormAuthenticate.php(79): Cake\Auth\BaseAuthenticate->_findUser('Oran', 'empleado')
+#11 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(820): Cake\Auth\FormAuthenticate->authenticate(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /var/www/html/depinfo/src/Controller/UsersController.php(16): Cake\Controller\Component\AuthComponent->identify()
+#13 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Controller/Controller.php(440): App\Controller\UsersController->login()
+#14 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#15 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#16 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/BaseApplication.php(103): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(95): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 /var/www/html/depinfo/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#28 /var/www/html/depinfo/webroot/index.php(40): Cake\Http\Server->run()
+#29 {main}
+
+
+2017-11-14 01:17:04 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'depinfo.Personas' doesn't exist
+Request URL: /users/login
+Referer URL: http://localhost/depinfo/users/login
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(174): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Connection.php(314): Cake\Database\Log\LoggingStatement->execute()
+#4 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Query.php(214): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Query.php(1039): Cake\Database\Query->execute()
+#6 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(287): Cake\ORM\Query->_execute()
+#7 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Query.php(987): Cake\ORM\Query->_all()
+#8 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(415): Cake\ORM\Query->all()
+#9 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Auth/BaseAuthenticate.php(109): Cake\ORM\Query->first()
+#10 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Auth/FormAuthenticate.php(79): Cake\Auth\BaseAuthenticate->_findUser('Oran', 'empleado')
+#11 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(820): Cake\Auth\FormAuthenticate->authenticate(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /var/www/html/depinfo/src/Controller/UsersController.php(16): Cake\Controller\Component\AuthComponent->identify()
+#13 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Controller/Controller.php(440): App\Controller\UsersController->login()
+#14 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#15 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#16 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/BaseApplication.php(103): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(95): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 /var/www/html/depinfo/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#28 /var/www/html/depinfo/webroot/index.php(40): Cake\Http\Server->run()
+#29 {main}
+
+
+2017-11-14 01:17:31 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'depinfo.Personas' doesn't exist
+Request URL: /users/login
+Referer URL: http://localhost/depinfo/users/login
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(174): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Connection.php(314): Cake\Database\Log\LoggingStatement->execute()
+#4 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Query.php(214): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Query.php(1039): Cake\Database\Query->execute()
+#6 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(287): Cake\ORM\Query->_execute()
+#7 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Query.php(987): Cake\ORM\Query->_all()
+#8 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(415): Cake\ORM\Query->all()
+#9 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Auth/BaseAuthenticate.php(109): Cake\ORM\Query->first()
+#10 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Auth/FormAuthenticate.php(79): Cake\Auth\BaseAuthenticate->_findUser('Oran', 'empleado')
+#11 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(820): Cake\Auth\FormAuthenticate->authenticate(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /var/www/html/depinfo/src/Controller/UsersController.php(16): Cake\Controller\Component\AuthComponent->identify()
+#13 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Controller/Controller.php(440): App\Controller\UsersController->login()
+#14 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#15 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#16 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/BaseApplication.php(103): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(95): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 /var/www/html/depinfo/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#28 /var/www/html/depinfo/webroot/index.php(40): Cake\Http\Server->run()
+#29 {main}
+
+
+2017-11-14 01:18:08 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'depinfo.Personas' doesn't exist
+Request URL: /users/login
+Referer URL: http://localhost/depinfo/users/login
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(174): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Connection.php(314): Cake\Database\Log\LoggingStatement->execute()
+#4 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Query.php(214): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Query.php(1039): Cake\Database\Query->execute()
+#6 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(287): Cake\ORM\Query->_execute()
+#7 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Query.php(987): Cake\ORM\Query->_all()
+#8 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(415): Cake\ORM\Query->all()
+#9 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Auth/BaseAuthenticate.php(109): Cake\ORM\Query->first()
+#10 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Auth/FormAuthenticate.php(79): Cake\Auth\BaseAuthenticate->_findUser('Oran', 'empleado')
+#11 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(820): Cake\Auth\FormAuthenticate->authenticate(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /var/www/html/depinfo/src/Controller/UsersController.php(16): Cake\Controller\Component\AuthComponent->identify()
+#13 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Controller/Controller.php(440): App\Controller\UsersController->login()
+#14 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#15 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#16 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/BaseApplication.php(103): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(95): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 /var/www/html/depinfo/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#28 /var/www/html/depinfo/webroot/index.php(40): Cake\Http\Server->run()
+#29 {main}
+
+
+2017-11-14 01:22:39 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'depinfo.Personas' doesn't exist
+Request URL: /users/login
+Referer URL: http://localhost/depinfo/users/login
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(174): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Connection.php(314): Cake\Database\Log\LoggingStatement->execute()
+#4 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Query.php(214): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Query.php(1039): Cake\Database\Query->execute()
+#6 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(287): Cake\ORM\Query->_execute()
+#7 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Query.php(987): Cake\ORM\Query->_all()
+#8 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(415): Cake\ORM\Query->all()
+#9 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Auth/BaseAuthenticate.php(109): Cake\ORM\Query->first()
+#10 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Auth/FormAuthenticate.php(79): Cake\Auth\BaseAuthenticate->_findUser('Oran', 'empleado')
+#11 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(820): Cake\Auth\FormAuthenticate->authenticate(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /var/www/html/depinfo/src/Controller/UsersController.php(16): Cake\Controller\Component\AuthComponent->identify()
+#13 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Controller/Controller.php(440): App\Controller\UsersController->login()
+#14 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#15 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#16 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/BaseApplication.php(103): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(95): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 /var/www/html/depinfo/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#28 /var/www/html/depinfo/webroot/index.php(40): Cake\Http\Server->run()
+#29 {main}
+
+
+2017-11-14 01:22:58 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'depinfo.Personas' doesn't exist
+Request URL: /users/login
+Referer URL: http://localhost/depinfo/users/login
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(174): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Connection.php(314): Cake\Database\Log\LoggingStatement->execute()
+#4 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Query.php(214): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Query.php(1039): Cake\Database\Query->execute()
+#6 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(287): Cake\ORM\Query->_execute()
+#7 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Query.php(987): Cake\ORM\Query->_all()
+#8 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(415): Cake\ORM\Query->all()
+#9 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Auth/BaseAuthenticate.php(109): Cake\ORM\Query->first()
+#10 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Auth/FormAuthenticate.php(79): Cake\Auth\BaseAuthenticate->_findUser('Oran', 'empleado')
+#11 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(820): Cake\Auth\FormAuthenticate->authenticate(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /var/www/html/depinfo/src/Controller/UsersController.php(16): Cake\Controller\Component\AuthComponent->identify()
+#13 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Controller/Controller.php(440): App\Controller\UsersController->login()
+#14 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#15 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#16 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/BaseApplication.php(103): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(95): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 /var/www/html/depinfo/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#28 /var/www/html/depinfo/webroot/index.php(40): Cake\Http\Server->run()
+#29 {main}
+
+
+2017-11-14 01:31:59 Error: [BadMethodCallException] Unknown method "on"
+Request URL: /users/login
+Referer URL: http://localhost/depinfo/users/login
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Query.php(1202): Cake\ORM\Query->_call('on', Array)
+#1 /var/www/html/depinfo/src/Model/Table/UsersTable.php(137): Cake\ORM\Query->__call('on', Array)
+#2 /var/www/html/depinfo/src/Model/Table/UsersTable.php(137): Cake\ORM\Query->on(Array)
+#3 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Table.php(2209): App\Model\Table\UsersTable->findAuth(Object(Cake\ORM\Query), Array)
+#4 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Table.php(1181): Cake\ORM\Table->callFinder('auth', Object(Cake\ORM\Query), Array)
+#5 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Auth/BaseAuthenticate.php(171): Cake\ORM\Table->find('auth', Array)
+#6 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Auth/BaseAuthenticate.php(109): Cake\Auth\BaseAuthenticate->_query('Oran')
+#7 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Auth/FormAuthenticate.php(79): Cake\Auth\BaseAuthenticate->_findUser('Oran', 'empleado')
+#8 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(820): Cake\Auth\FormAuthenticate->authenticate(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /var/www/html/depinfo/src/Controller/UsersController.php(16): Cake\Controller\Component\AuthComponent->identify()
+#10 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Controller/Controller.php(440): App\Controller\UsersController->login()
+#11 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#12 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#13 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/BaseApplication.php(103): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(95): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /var/www/html/depinfo/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 /var/www/html/depinfo/webroot/index.php(40): Cake\Http\Server->run()
+#26 {main}
+
+
+2017-11-14 01:32:11 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Users.usuario' in 'where clause'
+Request URL: /users/login
+Referer URL: http://localhost/depinfo/users/login
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(174): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Connection.php(314): Cake\Database\Log\LoggingStatement->execute()
+#4 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Query.php(214): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Query.php(1039): Cake\Database\Query->execute()
+#6 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(287): Cake\ORM\Query->_execute()
+#7 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Query.php(987): Cake\ORM\Query->_all()
+#8 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(415): Cake\ORM\Query->all()
+#9 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Auth/BaseAuthenticate.php(109): Cake\ORM\Query->first()
+#10 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Auth/FormAuthenticate.php(79): Cake\Auth\BaseAuthenticate->_findUser('Oran', 'empleado')
+#11 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(820): Cake\Auth\FormAuthenticate->authenticate(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /var/www/html/depinfo/src/Controller/UsersController.php(16): Cake\Controller\Component\AuthComponent->identify()
+#13 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Controller/Controller.php(440): App\Controller\UsersController->login()
+#14 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#15 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#16 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/BaseApplication.php(103): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(95): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 /var/www/html/depinfo/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#28 /var/www/html/depinfo/webroot/index.php(40): Cake\Http\Server->run()
+#29 {main}
+
+
+2017-11-14 01:33:15 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Users.usuario' in 'where clause'
+Request URL: /users/login
+Referer URL: http://localhost/depinfo/users/login
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(174): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Connection.php(314): Cake\Database\Log\LoggingStatement->execute()
+#4 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Query.php(214): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Query.php(1039): Cake\Database\Query->execute()
+#6 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(287): Cake\ORM\Query->_execute()
+#7 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Query.php(987): Cake\ORM\Query->_all()
+#8 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(415): Cake\ORM\Query->all()
+#9 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Auth/BaseAuthenticate.php(109): Cake\ORM\Query->first()
+#10 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Auth/FormAuthenticate.php(79): Cake\Auth\BaseAuthenticate->_findUser('Oran', 'empleado')
+#11 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(820): Cake\Auth\FormAuthenticate->authenticate(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /var/www/html/depinfo/src/Controller/UsersController.php(16): Cake\Controller\Component\AuthComponent->identify()
+#13 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Controller/Controller.php(440): App\Controller\UsersController->login()
+#14 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#15 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#16 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/BaseApplication.php(103): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(95): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 /var/www/html/depinfo/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#28 /var/www/html/depinfo/webroot/index.php(40): Cake\Http\Server->run()
+#29 {main}
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      2017-11-14 01:59:23 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Users.usuario' in 'where clause'
+Request URL: /users/login
+Referer URL: http://localhost/depinfo/users/login
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(174): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Connection.php(314): Cake\Database\Log\LoggingStatement->execute()
+#4 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Query.php(214): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Query.php(1039): Cake\Database\Query->execute()
+#6 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(287): Cake\ORM\Query->_execute()
+#7 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Query.php(987): Cake\ORM\Query->_all()
+#8 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(415): Cake\ORM\Query->all()
+#9 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Auth/BaseAuthenticate.php(109): Cake\ORM\Query->first()
+#10 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Auth/FormAuthenticate.php(79): Cake\Auth\BaseAuthenticate->_findUser('Oran', 'empleado')
+#11 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(820): Cake\Auth\FormAuthenticate->authenticate(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /var/www/html/depinfo/src/Controller/UsersController.php(16): Cake\Controller\Component\AuthComponent->identify()
+#13 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Controller/Controller.php(440): App\Controller\UsersController->login()
+#14 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#15 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#16 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/BaseApplication.php(103): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(95): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 /var/www/html/depinfo/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#28 /var/www/html/depinfo/webroot/index.php(40): Cake\Http\Server->run()
+#29 {main}
+
+
+2017-11-14 02:00:42 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Users.usuario' in 'where clause'
+Request URL: /users/login
+Referer URL: http://192.168.0.101/depinfo/users/login
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(174): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Connection.php(314): Cake\Database\Log\LoggingStatement->execute()
+#4 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Query.php(214): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Query.php(1039): Cake\Database\Query->execute()
+#6 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(287): Cake\ORM\Query->_execute()
+#7 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Query.php(987): Cake\ORM\Query->_all()
+#8 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(415): Cake\ORM\Query->all()
+#9 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Auth/BaseAuthenticate.php(109): Cake\ORM\Query->first()
+#10 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Auth/FormAuthenticate.php(79): Cake\Auth\BaseAuthenticate->_findUser('root', 'root')
+#11 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(820): Cake\Auth\FormAuthenticate->authenticate(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /var/www/html/depinfo/src/Controller/UsersController.php(16): Cake\Controller\Component\AuthComponent->identify()
+#13 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Controller/Controller.php(440): App\Controller\UsersController->login()
+#14 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#15 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#16 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/BaseApplication.php(103): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(95): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 /var/www/html/depinfo/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#28 /var/www/html/depinfo/webroot/index.php(40): Cake\Http\Server->run()
+#29 {main}
+
+
+2017-11-14 02:06:32 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Users.id' in 'field list'
+Request URL: /users/login
+Referer URL: http://localhost/depinfo/users/login
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(174): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Connection.php(314): Cake\Database\Log\LoggingStatement->execute()
+#4 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Query.php(214): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Query.php(1039): Cake\Database\Query->execute()
+#6 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(287): Cake\ORM\Query->_execute()
+#7 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Query.php(987): Cake\ORM\Query->_all()
+#8 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(415): Cake\ORM\Query->all()
+#9 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Auth/BaseAuthenticate.php(109): Cake\ORM\Query->first()
+#10 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Auth/FormAuthenticate.php(79): Cake\Auth\BaseAuthenticate->_findUser('Oran', 'empleado')
+#11 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(820): Cake\Auth\FormAuthenticate->authenticate(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /var/www/html/depinfo/src/Controller/UsersController.php(16): Cake\Controller\Component\AuthComponent->identify()
+#13 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Controller/Controller.php(440): App\Controller\UsersController->login()
+#14 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#15 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#16 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/BaseApplication.php(103): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(106): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(95): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 /var/www/html/depinfo/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Http/Server.php(81): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#28 /var/www/html/depinfo/webroot/index.php(40): Cake\Http\Server->run()
+#29 {main}
+
+

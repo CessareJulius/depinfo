@@ -65,7 +65,7 @@
                     </div>
                     <?= $this->Form->create($user) ?>
                         <div id="box-body-Edit" class="box-body">
-                            <div class="form-group col-xs-5">
+                            <div class="form-group col-xs-5"></div>
                                 <?php 
                                     echo $this->Form->input("cargo", ['label' => 'Cargo', 'class' => 'form-control']);
                                 ?>
