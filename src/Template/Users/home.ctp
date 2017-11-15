@@ -1,51 +1,162 @@
+<style>
+    #info-box-content {
+        padding: 10px 2px;
+        margin-left: 76px;
+}
 
-    <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-        <section class="content-header">
-            <h1>Bienvenido<small>Esta es la pagina de inicio</small></h1>
-            <ol class="breadcrumb">
-                <li><i class="fa fa-home"></i>
-                    <?= $this->Html->Link('Inicio', ['controller' => 'Users', 'action' => 'home']); ?>
-            </ol>
-        </section>
+    #info-box {
+        display: block;
+        min-height: 83px;
+        background: #fff;
+        width: 100%;
+        box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+        border-radius: 2px;
+        margin-bottom: 15px;
+}
 
-        <section class="content">
-            <div class="box">
-                <div class="box-header with-border">
-                    <h3 class="box-title">Title</h3>
-                    <div class="box-tools pull-right">
-                        <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
-                            title="Collapse"><i class="fa fa-minus"></i>
-                        </button>
-                        <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
-                            <i class="fa fa-times"></i>
-                        </button>
+    #info-box-icon {
+        border-top-left-radius: 2px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 2px;
+        display: block;
+        float: left;
+        height: 83px;
+        width: 70px;
+        text-align: center;
+        font-size: 45px;
+        line-height: 90px;
+        background: rgba(0,0,0,0.2);
+}
+</style>
+<div class="content-wrapper">
+    <?= $this->Flash->render() ?> 
+    <section class="content-header">
+        <h1>Bienvenido<small>Esta es la pagina de inicio</small></h1>
+        <ol class="breadcrumb">
+            <li><i class="fa fa-home"></i>
+                <?= $this->Html->Link('Inicio', ['controller' => 'Users', 'action' => 'home']); ?>
+            </li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-lg-3 col-xs-6">
+                <div class="small-box bg-aqua">
+                    <div class="inner">
+                        <h3>15</h3>
+                        <p>Clientes Registrados Actualmente</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-ios-people"></i>
+                    </div>
+                    <a href="#" class="small-box-footer">Más Informacion <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <?php if ($current_user['role'] == 'admin'):?>
+            <div class="col-lg-3 col-xs-6">
+                <div class="small-box bg-green">
+                    <div class="inner">
+                        <h3>53</h3>
+                        <p>Registros creados </p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-clipboard"></i>
+                    </div>
+                    <a href="#" class="small-box-footer">Más Informacion <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-xs-6">
+                <div class="small-box bg-yellow">
+                    <div class="inner">
+                        <h3>24</h3>
+                        <p>Empleados Registrados</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-android-contacts"></i>
+                    </div>
+                    <a href="#" class="small-box-footer">Más Informacion <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <?php endif ?>
+            <div class="col-lg-3 col-xs-6">
+                <div class="small-box bg-red">
+                    <div class="inner">
+                        <h3>65</h3>
+                        <p>Equipos Reparados y Entregados</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-android-laptop"></i>
+                    </div>
+                    <a href="#" class="small-box-footer">Más Informacion <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div id="info-box">
+                    <span id="info-box-icon" class="bg-aqua">
+                        <i class="ion ion-android-people"></i>
+                    </span>
+                    <div id="info-box-content" title="Clientes sin Registro">
+                        <span class="info-box-text" >Clientes sin Registro</span>
+                        <span class="info-box-number" >1</span>
                     </div>
                 </div>
-                <div class="box-body">
-                    Start creating your amazing application!
-                </div>
-                <!-- /.box-body -->
-                <div class="box-footer">
-                    Footer
-                </div>
-                <!-- /.box-footer-->
             </div>
-        </section>
-        <!-- AQUI COMIENZA LA LOCURA DE LAS TABLAS -->
-        <!-- Main content -->
-    <section class="content">
-    <div class="row">
-        <div class="col-xs-12">
+            <?php if ($current_user['role'] == 'admin') { ?>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div id="info-box">
+                        <span id="info-box-icon" class="bg-green">
+                            <i class="fa fa-group"></i>
+                        </span>
+                        <div id="info-box-content" title="Empleados en Sesion">
+                            <span class="info-box-text">Empleados en Sesion</span>
+                            <span class="info-box-number">5</span>
+                        </div>
+                    </div>
+                </div>
+            <?php     
+            } elseif($current_user['role'] == 'user') { ?>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div id="info-box">
+                        <span id="info-box-icon" class="bg-green">
+                            <i class="fa fa-building"></i>
+                        </span>
+                        <div id="info-box-content" title="Registros Creados">
+                            <span class="info-box-text">Registros Creados</span>
+                            <span class="info-box-number">10</span>
+                            Hoy
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
 
+            <div class="clearfix visible-sm-block"></div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div id="info-box">
+                    <span id="info-box-icon" class="bg-yellow">
+                        <i class="fa fa-desktop"></i>
+                    </span>
+                    <div id="info-box-content" title="Equipos por Retirar">
+                        <span class="info-box-text">Equipos por Retirar</span>
+                        <span class="info-box-number">3</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div id="info-box">
+                    <span id="info-box-icon" class="bg-red">
+                        <i class="fa fa-laptop"></i>
+                    </span>
+                    <div id="info-box-content" title="Equipos en Reparacion">
+                        <span class="info-box-text">Equipos en Reparacion</span>
+                        <span class="info-box-number">5</span>
+                    </div>
+                </div>
+            </div>
         </div>
-      <!-- /.col -->
-    </div>
-    <!-- /.row -->
-  </section>
-  <!-- /.content -->
-    </div>
-    <div class="control-sidebar-bg"></div>
+    </section>
+</div>
+<div class="control-sidebar-bg"></div>
 
 
 

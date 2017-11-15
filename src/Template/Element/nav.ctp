@@ -1,7 +1,7 @@
 <header class="main-header">
     <!-- Logo -->
     <?= $this->Html->Link(
-        '<span class="logo-mini"><b>D</b>IF</span><span class="logo-lg"><b>Dep</b>INFO</span>', 
+        "<span class='logo-mini'><b>D</b>IF</span><span class='logo-lg'><b>Dep</b>INFO</span>", 
         [
             'controller' => 'Users', 'action' => 'home'
         ], 
@@ -170,7 +170,7 @@
                 <div class="pull-left">
                     <?php
                         $id = $current_user['id'];
-                        echo $this->html->link('Perfil', 
+                        echo $this->html->link("<i class='ion ion-tshirt'>&nbsp;</i>Perfil", 
                             ["controller" => "Users", "action" => "profile/$id"], 
                             [
                                 'class' => 'btn btn-info btn-flat', 

@@ -59,7 +59,7 @@
         <?php endif ?>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-laptop"></i>
+            <i class="ion ion-clipboard"></i>
             <span>Registro</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -141,8 +141,8 @@
         </li>
         <li class="header"><center>OPCIONES</center></li>
         <?php $id = $current_user['id']; ?>
-        <li><?= $this->Html->Link('<i class="fa fa-child text-aqua"></i> <span>Perfil</span>', ['controller' => 'Users', 'action' => "profile/$id"], ['escape' => false]) ?></li>
-        <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Configuracion</span></a></li>
+        <li><?= $this->Html->Link('<i class="ion ion-person text-aqua"></i> <span>Perfil</span>', ['controller' => 'Users', 'action' => "profile/$id"], ['escape' => false]) ?></li>
+        <li><a href="#"><i class="ion ion-wrench text-yellow"></i> <span>Configuracion</span></a></li>
         <li><?= $this->Html->Link("<i class='fa fa-power-off text-danger'>&nbsp;</i><span>Salir</span>", ['controller' => 'Users', 'action' => 'logout'], ['escape' => false]) ?></li>
       </ul>
     </section>

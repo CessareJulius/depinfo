@@ -1,3 +1,18 @@
+<style>
+
+.labell {
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 100%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
+</style>
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
       <?= $this->Flash->render() ?> 
@@ -40,9 +55,9 @@
                 <td>
                     <?php 
                         if($user->active == true){
-                            echo "<label class='badge badge-success'>Activo</label>";
+                            echo "<center><label class='labell label-success'>Activo</label></center>";
                         }else{
-                            echo "Inactivo";
+                          echo "<center><label class='labell label-warning'>Inactivo</label></center>";
                         };
                     ?>
                 </td>
