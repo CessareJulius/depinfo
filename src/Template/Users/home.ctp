@@ -28,6 +28,10 @@
         line-height: 90px;
         background: rgba(0,0,0,0.2);
 }
+
+#bg-green{
+    color: #fff !important;
+}
 </style>
 <div class="content-wrapper">
     <?= $this->Flash->render() ?> 
@@ -44,7 +48,7 @@
             <div class="col-lg-3 col-xs-6">
                 <div class="small-box bg-aqua">
                     <div class="inner">
-                        <h3>15</h3>
+                        <h3><?= $clientCount ?></h3>
                         <p>Clientes Registrados Actualmente</p>
                     </div>
                     <div class="icon">
@@ -69,7 +73,7 @@
             <div class="col-lg-3 col-xs-6">
                 <div class="small-box bg-yellow">
                     <div class="inner">
-                        <h3>24</h3>
+                        <h3><?= $empCount ?></h3>
                         <p>Empleados Registrados</p>
                     </div>
                     <div class="icon">
@@ -106,11 +110,13 @@
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div id="info-box">
                         <span id="info-box-icon" class="bg-green">
-                            <i class="fa fa-group"></i>
+                            <?= $this->Html->Link("<i class='fa fa-group'></i>", 
+                            ['controller' => 'Sessions', 'action' => 'index'], 
+                            ['id' => 'bg-green', 'escape' => false]) ?> 
                         </span>
                         <div id="info-box-content" title="Empleados en Sesion">
                             <span class="info-box-text">Empleados en Sesion</span>
-                            <span class="info-box-number">5</span>
+                            <span class="info-box-number"><?php if ($sessCount == null) {echo "0";} else {echo $sessCount;} ?></span>
                         </div>
                     </div>
                 </div>
