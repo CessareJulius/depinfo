@@ -2,6 +2,9 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use App\Shell\ConsoleShell;
+use Symfony\Component\Console\Event\ConsoleEvent;
+use Composer\EventDispatcher\Event;
 
 /**
  * Users Controller
@@ -22,8 +25,17 @@ class UsersController extends AppController
         return parent::isAuthorized($user);
     }
 
-    public function createSession() {
-        return  print ("hola mundo");
+    public function loadSession($id) {
+
+        $this->loadModel('Sessions');
+
+        $session = $this->Sessions->find('all', [
+            'conditions' => [
+                'status' => 'activa',
+                'user_id' => $id
+            ]
+        ]);
+        return $session;
     }
 
     public function login()
@@ -32,19 +44,13 @@ class UsersController extends AppController
         {
             $user = $this->Auth->identify();
 
-            if ($user) {   
-                $this->loadModel('Sessions');
-                $sessExist = $this->Sessions->find('all', [
-                    'conditions' => [
-                        'status' => 'activa',
-                        'user_id' => $user['id']
-                    ]
-                ]);
+            if ($user) {
+                $sessExist = $this->loadSession($user['id']);
                 
                 $countData = $sessExist->count();
                 if ($countData > 0) {
 
-                    foreach ($sessExist as $key => $value) {}
+                    foreach ($sessExist as $value) {}
                     if ($value['id']) {
                         $this->Flash->error("Este usuario tiene una session activa, 
                         de ser un error comuniquese con el administrador");
@@ -73,40 +79,58 @@ class UsersController extends AppController
 
     public function home()
     {
-        // ----------- Contador de Clientes --------
-        $this->loadModel('Personas');
-        $clientes = $this->Personas->find('all', [
-            'conditions' => [
-                'status' => 2
-            ]
-        ]);
+        $user = $this->Auth->user();
+        $session = $this->loadSession($user['id']);
+        $countData = $session->count();
 
-        $clientCount = $clientes->count();
-
-        // ------- Empleados Registrados ---------
-        $users = $this->Users->find('all', [
-            'conditions' => [
-                'role' => 'user'
-            ]
-        ]);
-
-        $empCount = $users->count();
-
-        // ------- Sessions Activas
-        $this->loadModel('Sessions');
-        $sessExist = $this->Sessions->find('all', [
-            'contain' => ['Users'],
-            'conditions' => [
-                'Users.role' => 'user',
-                'Sessions.status' => 'activa'
-            ]
-        ]);
-        $sessCount = $sessExist->count();
-        if ($sessCount > 0 ) {
+        if ($countData > 0) {
             
+                // ----------- Contador de Clientes --------
+            $this->loadModel('Personas');
+            $clientes = $this->Personas->find('all', [
+                'conditions' => [
+                    'status' => 2
+                ]
+            ]);
+
+            $clientCount = $clientes->count();
+
+            // ------- Empleados Registrados ---------
+            $users = $this->Users->find('all', [
+                'conditions' => [
+                    'role' => 'user'
+                ]
+            ]);
+
+            $empCount = $users->count();
+
+            // ------- Sessions Activas
+            $this->loadModel('Sessions');
+            $sessExist = $this->Sessions->find('all', [
+                'contain' => ['Users'],
+                'conditions' => [
+                    'Users.role' => 'user',
+                    'Sessions.status' => 'activa'
+                ]
+            ]);
+            $sessCount = $sessExist->count();
+            if ($sessCount > 0 ) {
+                
+            } else {
+                $sessCount = 0;
+            }
+
         } else {
-            $sessCount = 0;
+            $this->Flash->error("Error. Usted ha sido desconectado por el Administrador.");
+            return $this->redirect($this->Auth->logout());
         }
+        //pj($countData);die();
+
+        /* 
+        
+        
+        
+        */
         //pj($clientCount);die();
 
         $this->set(compact('clientCount', 'empCount', 'sessCount'));
@@ -114,6 +138,7 @@ class UsersController extends AppController
 
     public function index()
     {
+
         $this->paginate = [
             'conditions' => ['role' => 'user'],
             'limit' => 9999,
@@ -121,8 +146,7 @@ class UsersController extends AppController
         ];
         //$users = $this->Users->find('all');
         $users = $this->paginate($this->Users);
-        //pj($users);
-        //die();
+        //pj($users);die();
         $this->set('users', $users);
     }
 
@@ -131,25 +155,35 @@ class UsersController extends AppController
         $user = $this->Users->get($id, [
             'contain' => ['Personas']
         ]);
-        
-        //pj($user);
-        //die();
-
+            
+        //pj($user);die();
+    
         $this->set('user', $user);
         $this->set('_serialize', ['user']);
     }
 
     public function profile($id = null)
     {
-        $user = $this->Users->get($id, [
-            'contain' => ['Personas']
-        ]);
-        
-        //pj($user);
-        //die();
+        $user = $this->Auth->user();
+        $session = $this->loadSession($user['id']);
+        $countData = $session->count();
 
-        $this->set('user', $user);
-        $this->set('_serialize', ['user']);
+        if ($countData > 0) {
+
+            $user = $this->Users->get($id, [
+                'contain' => ['Personas']
+            ]);
+            
+            //pj($user);
+            //die();
+    
+            $this->set('user', $user);
+            $this->set('_serialize', ['user']);
+
+        } else {
+            $this->Flash->error("Error. Usted ha sido desconectado por el Administrador.");
+            return $this->redirect($this->Auth->logout());
+        }
     }
 
     public function add()
@@ -172,103 +206,106 @@ class UsersController extends AppController
         $this->set(compact('user'));
         $this->set('_serialize', ['user']);
          */
-        
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
-            
+                
             $this->request->data['Personas']['status'] = 1;
             $user->role = 'user';
             $user->cargo = 'empleado';
             $user->active = 1;
-
+    
             $this->loadModel('Personas');
             $persona = $this->Personas->newEntity();
             $persona = $this->Personas->patchEntity($persona, $this->request->getData());
             if ($this->Personas->save($persona)) {
                 $id = $persona->id;
                 $user->per_id = $id;
-
+    
                 if ($this->Users->save($user)) {
                     $this->Flash->success(__('El Empleado ha sido creado exitosamente.'));
-    
+        
                     return $this->redirect(['action' => 'index']);
                 }
             } 
             $this->Flash->error(__('El Empleado no pudo ser creado. Por Favor, intente nuevamente.'));
         }
+
         $this->set(compact('user'));
         $this->set('_serialize', ['user']);
     }
 
     public function edit($id = null)
     {
-        $user = $this->Users->get($id, [
-            'contain' => ['Personas']
-        ]);
-        //pj($user);
-        //die();
 
-        if ($this->request->is(['Patch', 'post', 'put'])) {
+        $user = $this->Auth->user();
+        $session = $this->loadSession($user['id']);
+        $countData = $session->count();
+
+        if ($countData > 0) {
+
+            $user = $this->Users->get($id, [
+                'contain' => ['Personas']
+            ]);
+            //pj($user);
+            //die();
+    
+            if ($this->request->is(['Patch', 'post', 'put'])) {
+                
+                $user = $this->Users->patchEntity($user, $this->request->data);
+                if ($this->Users->save($user)) {
+                    $this->Flash->success("El usuario a sido modificado Exitosamente");
+                    $this->redirect(['action' => 'index']);
+                } else {
+                    $this->Flash->error("El usuario no pudo ser modificado. Por favor, Intente nuevamente"); 
+                }
+            }
+    
+            $this->set(compact("user"));
+
+        } else {
+            $this->Flash->error("Error. Usted ha sido desconectado por el Administrador.");
+            return $this->redirect($this->Auth->logout());
+        }
+    }
+
+    public function closedSession($id) {
+        $user = $this->Auth->user();
+
+        if ($id == $user['id']) {
+            $session = $this->loadSession($id);
             
-            $user = $this->Users->patchEntity($user, $this->request->data);
-            if ($this->Users->save($user)) {
-                $this->Flash->success("El usuario a sido modificado Exitosamente");
-                $this->redirect(['action' => 'index']);
+            foreach ($session as $value) {}
+            $idSession = $value['id'];
+            $session = $this->Sessions->get($idSession, [
+                        'contain' => []
+            ]);
+            $session->status = 'terminada';
+            if ($this->Sessions->save($session)) {
+                return $this->redirect($this->Auth->logout());
             } else {
-                $this->Flash->error("El usuario no pudo ser modificado. Por favor, Intente nuevamente"); 
+                $this->Flash->error("No se pudo desconectar");
+            }
+        } else {
+            $session = $this->loadSession($id);
+            
+            foreach ($session as $value) {}
+            $idSession = $value['id'];
+            $session = $this->Sessions->get($idSession, [
+                        'contain' => []
+            ]);
+            $session->status = 'terminada';
+            if ($this->Sessions->save($session)) {
+                return $this->redirect("/Users/home");
+            } else {
+                $this->Flash->error("El empleado no se pudo desconectar");
             }
         }
-
-        $this->set(compact("user"));
     }
 
     public function logout()
     {
-        // Obtener todos los datos del usuario logeado
         $user = $this->Auth->user();
-
-        // Cargamos el modelo Sessions
-        $this->loadModel('Sessions');
-
-        // Buscamos la session que tenga activa el usuario actual. Esto nos retorna un array
-        $querySession = $this->Sessions->find('all', [
-            'conditions' => [
-                'status' => 'activa',
-                'user_id' => $user['id']
-            ]
-        ]);
-        foreach ($querySession as $value) {
-            # code...
-        }
-        $idSession = $value['id'];
-
-        $session = $this->Sessions->get($idSession, [
-            'contain' => []
-        ]);
-        $session->status = 'terminada';
-        if ($this->Sessions->save($session)) {
-            return $this->redirect($this->Auth->logout());
-        }
-        //pj($session);die();
-
-        /*
-        $session = $this->Sessions->get("Sessions");
-        $query = $session->query();
-        $result = $query
-                        ->update('sessions')
-                        ->set(['status' => 'terminada'])
-                        ->where(['id' => $idSession])
-                        ->execute();
-        */
-        /*
-        // Obtenemos permisos para editar la entidad
-        $othersession = TableRegistry::get('Sessions');
-        $user = $othersession->get($session['id']);
-        //$session->status = 'terminada';
-        */
-        //pj($session);die();
-        //UPDATE `sessions` SET `status` = 'activa' WHERE `sessions`.`id` = 1;
-        
+        $closedS = $this->closedSession($user['id']); 
     } 
 }

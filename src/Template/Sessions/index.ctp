@@ -56,7 +56,7 @@
                 <td class="actions">
                   <center>
                     <?= $this->Html->link(__('Ver'), ['action' => 'view', $session->id], ['Class' => 'btn btn-info btn-sm']) ?>
-                    <?= $this->Form->postLink(__('Terminar'), ['action' => 'delete'],['Class' => 'btn btn-danger btn-sm'], ['confirm' => __('Esta seguro que desea terminar esta sesion?')]) ?>
+                    <?= $this->Form->postLink(__('Terminar'), ['controller' => 'Users', 'action' => "closedSession", $session->user_id],['Class' => 'btn btn-danger btn-sm'], ['confirm' => __('Esta seguro que desea terminar esta sesion?')]) ?>
                   </center>
                 </td>
               </tr>

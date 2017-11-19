@@ -54,7 +54,7 @@
                     <div class="icon">
                         <i class="ion ion-ios-people"></i>
                     </div>
-                    <a href="#" class="small-box-footer">Más Informacion <i class="fa fa-arrow-circle-right"></i></a>
+                    <?= $this->Html->Link('Más Informacion <i class="fa fa-arrow-circle-right"></i>', ['controller' => 'Personas', 'action' => 'index'], ['class' => 'small-box-footer', 'escape' => false]); ?>
                 </div>
             </div>
             <?php if ($current_user['role'] == 'admin'):?>
@@ -67,7 +67,7 @@
                     <div class="icon">
                         <i class="ion ion-clipboard"></i>
                     </div>
-                    <a href="#" class="small-box-footer">Más Informacion <i class="fa fa-arrow-circle-right"></i></a>
+                    <?= $this->Html->Link('Más Informacion <i class="fa fa-arrow-circle-right"></i>', ['controller' => 'Registros', 'action' => 'index'], ['class' => 'small-box-footer', 'escape' => false]); ?>
                 </div>
             </div>
             <div class="col-lg-3 col-xs-6">
@@ -79,7 +79,7 @@
                     <div class="icon">
                         <i class="ion ion-android-contacts"></i>
                     </div>
-                    <a href="#" class="small-box-footer">Más Informacion <i class="fa fa-arrow-circle-right"></i></a>
+                    <?= $this->Html->Link('Más Informacion <i class="fa fa-arrow-circle-right"></i>', ['controller' => 'Users', 'action' => 'index'], ['class' => 'small-box-footer', 'escape' => false]); ?>
                 </div>
             </div>
             <?php endif ?>
