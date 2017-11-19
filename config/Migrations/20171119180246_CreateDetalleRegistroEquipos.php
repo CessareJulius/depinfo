@@ -13,15 +13,13 @@ class CreateDetalleRegistroEquipos extends AbstractMigration
     public function change()
     {
         $table = $this->table('detalle_registro_equipos');
-        $table->addColumn('falla', 'string', [
+        $table->addColumn('falla', 'text', [
             'default' => null,
-            'limit' => 255,
             'null' => false,
         ]);
-        $table->addColumn('reparacion', 'string', [
+        $table->addColumn('reparacion', 'text', [
             'default' => null,
-            'limit' => 255,
-            'null' => true,
+            'null' => false,
         ]);
         $table->addColumn('created', 'datetime', [
             'default' => null,
@@ -31,18 +29,16 @@ class CreateDetalleRegistroEquipos extends AbstractMigration
             'default' => null,
             'null' => false,
         ]);
+        $table->addColumn('status', 'enum', [
+            'values' => 'activo, anulado'
+        ]);
         $table->create();
-
 
         $refTable = $this->table("detalle_registro_equipos");
         $refTable->addColumn("equipo_id", "integer", array("signed" => "disable"))
                  ->addForeignKey("equipo_id", "equipos", "id", array("delete" => "CASCADE", "update" => "NO_ACTION"))
-                 ->addColumn("registroEquipos_id", "integer", array("signed" => "disable"))
-                 ->addForeignKey("registroEquipos_id", "registroEquipos", "id", array("delete" => "CASCADE", "update" => "NO_ACTION"))
+                 ->addColumn("registro_equipos_id", "integer", array("signed" => "disable"))
+                 ->addForeignKey("registro_equipos_id", "registro_equipos", "id", array("delete" => "CASCADE", "update" => "NO_ACTION"))
                  ->update();
-
-        $table = $this->table('detalle_registro_equipos');
-        $table->addColumn('status', 'enum', array('values' => 'activo, anulado'))
-              ->update();
     }
 }

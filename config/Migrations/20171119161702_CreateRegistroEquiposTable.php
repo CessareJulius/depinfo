@@ -12,13 +12,13 @@ class CreateRegistroEquiposTable extends AbstractMigration
      */
     public function change()
     {
-        $table = $this->table('registroEquipos');
+        $table = $this->table('registro_equipos');
         $table->addColumn('Codigo', 'string', array('limit' => 100))
               ->addColumn('created', 'datetime')
               ->addColumn('modified', 'datetime')
               ->create();
 
-              $refTable = $this->table("registroEquipos");
+              $refTable = $this->table("registro_equipos");
               $refTable->addColumn("persona_id", "integer", array("signed" => "disable"))
                        ->addForeignKey("persona_id", "personas", "id", array("delete" => "CASCADE", "update" => "NO_ACTION"))
                        ->addColumn("user_id", "integer", array("signed" => "disable"))

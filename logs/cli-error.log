@@ -35,3 +35,208 @@ Cake\Database\Connection::__destruct() - CORE/src/Database/Connection.php, line 
 
 
 
+2017-11-19 16:09:20 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'depinfo.registro_equipos' doesn't exist in /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Schema/Collection.php on line 131
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'registro_equipo...', Array, Object(Cake\Database\Schema\TableSchema))
+#1 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(63): Cake\Database\Schema\Collection->describe('registro_equipo...', Array)
+#2 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Table.php(532): Cake\Database\Schema\CachedCollection->describe('registro_equipo...')
+#3 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Table.php(653): Cake\ORM\Table->getSchema()
+#4 /var/www/html/depinfo/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(220): Cake\ORM\Table->getPrimaryKey()
+#5 /var/www/html/depinfo/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(130): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 /var/www/html/depinfo/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(113): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'registro_equipo...', 'RegistroEquipos')
+#7 /var/www/html/depinfo/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(100): Bake\Shell\Task\ModelTask->bake('RegistroEquipos')
+#8 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Console/Shell.php(507): Bake\Shell\Task\ModelTask->main('RegistroEquipos')
+#9 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Console/Shell.php(500): Cake\Console\Shell->runCommand(Array, false, Array)
+#10 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Console/CommandRunner.php(141): Cake\Console\Shell->runCommand(Array, true)
+#11 /var/www/html/depinfo/bin/cake.php(12): Cake\Console\CommandRunner->run(Array)
+#12 {main}
+
+
+2017-11-19 16:09:57 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'depinfo.registro_equipos' doesn't exist in /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Schema/Collection.php on line 131
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'registro_equipo...', Array, Object(Cake\Database\Schema\TableSchema))
+#1 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(63): Cake\Database\Schema\Collection->describe('registro_equipo...', Array)
+#2 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Table.php(532): Cake\Database\Schema\CachedCollection->describe('registro_equipo...')
+#3 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Table.php(653): Cake\ORM\Table->getSchema()
+#4 /var/www/html/depinfo/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(220): Cake\ORM\Table->getPrimaryKey()
+#5 /var/www/html/depinfo/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(130): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 /var/www/html/depinfo/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(113): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'registro_equipo...', 'RegistroEquipos')
+#7 /var/www/html/depinfo/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(100): Bake\Shell\Task\ModelTask->bake('RegistroEquipos')
+#8 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Console/Shell.php(507): Bake\Shell\Task\ModelTask->main('registroEquipos')
+#9 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Console/Shell.php(500): Cake\Console\Shell->runCommand(Array, false, Array)
+#10 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Console/CommandRunner.php(141): Cake\Console\Shell->runCommand(Array, true)
+#11 /var/www/html/depinfo/bin/cake.php(12): Cake\Console\CommandRunner->run(Array)
+#12 {main}
+
+
+2017-11-19 16:10:43 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'depinfo.registro_equipos' doesn't exist in /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Schema/Collection.php on line 131
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'registro_equipo...', Array, Object(Cake\Database\Schema\TableSchema))
+#1 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(63): Cake\Database\Schema\Collection->describe('registro_equipo...', Array)
+#2 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Table.php(532): Cake\Database\Schema\CachedCollection->describe('registro_equipo...')
+#3 /var/www/html/depinfo/vendor/cakephp/cakephp/src/ORM/Table.php(653): Cake\ORM\Table->getSchema()
+#4 /var/www/html/depinfo/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(220): Cake\ORM\Table->getPrimaryKey()
+#5 /var/www/html/depinfo/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(130): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 /var/www/html/depinfo/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(113): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'registro_equipo...', 'RegistroEquipos')
+#7 /var/www/html/depinfo/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(100): Bake\Shell\Task\ModelTask->bake('RegistroEquipos')
+#8 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Console/Shell.php(507): Bake\Shell\Task\ModelTask->main('registroEquipos')
+#9 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Console/Shell.php(500): Cake\Console\Shell->runCommand(Array, false, Array)
+#10 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Console/CommandRunner.php(141): Cake\Console\Shell->runCommand(Array, true)
+#11 /var/www/html/depinfo/bin/cake.php(12): Cake\Console\CommandRunner->run(Array)
+#12 {main}
+
+
+2017-11-19 16:19:04 Error: [InvalidArgumentException] Could not find class "CreateDetalleRegistroEquiposTable" in file "/var/www/html/depinfo/config/Migrations/20171119161853_CreateDetalleRegistroEquiposTable.php" in /var/www/html/depinfo/vendor/robmorgan/phinx/src/Phinx/Migration/Manager.php on line 670
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/robmorgan/phinx/src/Phinx/Migration/Manager.php(297): Phinx\Migration\Manager->getMigrations()
+#1 /var/www/html/depinfo/vendor/robmorgan/phinx/src/Phinx/Console/Command/Migrate.php(113): Phinx\Migration\Manager->migrate('default', NULL)
+#2 /var/www/html/depinfo/vendor/cakephp/migrations/src/Command/CommandTrait.php(35): Phinx\Console\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /var/www/html/depinfo/vendor/cakephp/migrations/src/Command/Migrate.php(65): Migrations\Command\Migrate->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 /var/www/html/depinfo/vendor/symfony/console/Command/Command.php(262): Migrations\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 /var/www/html/depinfo/vendor/symfony/console/Application.php(888): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 /var/www/html/depinfo/vendor/symfony/console/Application.php(224): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /var/www/html/depinfo/vendor/symfony/console/Application.php(125): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /var/www/html/depinfo/vendor/cakephp/migrations/src/Shell/MigrationsShell.php(101): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Console/Shell.php(507): Migrations\Shell\MigrationsShell->main('migrations', 'migrate')
+#10 /var/www/html/depinfo/vendor/cakephp/migrations/src/Shell/MigrationsShell.php(156): Cake\Console\Shell->runCommand(Array, true, Array)
+#11 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Console/CommandRunner.php(141): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#12 /var/www/html/depinfo/bin/cake.php(12): Cake\Console\CommandRunner->run(Array)
+#13 {main}
+
+
+2017-11-19 16:19:45 Error: [InvalidArgumentException] Could not find class "CreateDetalleRegistroEquiposTable" in file "/var/www/html/depinfo/config/Migrations/20171119161853_CreateDetalleRegistroEquiposTable.php" in /var/www/html/depinfo/vendor/robmorgan/phinx/src/Phinx/Migration/Manager.php on line 670
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/robmorgan/phinx/src/Phinx/Migration/Manager.php(297): Phinx\Migration\Manager->getMigrations()
+#1 /var/www/html/depinfo/vendor/robmorgan/phinx/src/Phinx/Console/Command/Migrate.php(113): Phinx\Migration\Manager->migrate('default', NULL)
+#2 /var/www/html/depinfo/vendor/cakephp/migrations/src/Command/CommandTrait.php(35): Phinx\Console\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /var/www/html/depinfo/vendor/cakephp/migrations/src/Command/Migrate.php(65): Migrations\Command\Migrate->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 /var/www/html/depinfo/vendor/symfony/console/Command/Command.php(262): Migrations\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 /var/www/html/depinfo/vendor/symfony/console/Application.php(888): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 /var/www/html/depinfo/vendor/symfony/console/Application.php(224): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /var/www/html/depinfo/vendor/symfony/console/Application.php(125): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /var/www/html/depinfo/vendor/cakephp/migrations/src/Shell/MigrationsShell.php(101): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Console/Shell.php(507): Migrations\Shell\MigrationsShell->main('migrations', 'migrate')
+#10 /var/www/html/depinfo/vendor/cakephp/migrations/src/Shell/MigrationsShell.php(156): Cake\Console\Shell->runCommand(Array, true, Array)
+#11 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Console/CommandRunner.php(141): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#12 /var/www/html/depinfo/bin/cake.php(12): Cake\Console\CommandRunner->run(Array)
+#13 {main}
+
+
+2017-11-19 16:21:00 Error: [InvalidArgumentException] Could not find class "CreateDetalleRegistroEquiposTable" in file "/var/www/html/depinfo/config/Migrations/20171119161853_CreateDetalleRegistroEquiposTable.php" in /var/www/html/depinfo/vendor/robmorgan/phinx/src/Phinx/Migration/Manager.php on line 670
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/robmorgan/phinx/src/Phinx/Migration/Manager.php(297): Phinx\Migration\Manager->getMigrations()
+#1 /var/www/html/depinfo/vendor/robmorgan/phinx/src/Phinx/Console/Command/Migrate.php(113): Phinx\Migration\Manager->migrate('default', NULL)
+#2 /var/www/html/depinfo/vendor/cakephp/migrations/src/Command/CommandTrait.php(35): Phinx\Console\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /var/www/html/depinfo/vendor/cakephp/migrations/src/Command/Migrate.php(65): Migrations\Command\Migrate->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 /var/www/html/depinfo/vendor/symfony/console/Command/Command.php(262): Migrations\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 /var/www/html/depinfo/vendor/symfony/console/Application.php(888): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 /var/www/html/depinfo/vendor/symfony/console/Application.php(224): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /var/www/html/depinfo/vendor/symfony/console/Application.php(125): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /var/www/html/depinfo/vendor/cakephp/migrations/src/Shell/MigrationsShell.php(101): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Console/Shell.php(507): Migrations\Shell\MigrationsShell->main('migrations', 'migrate')
+#10 /var/www/html/depinfo/vendor/cakephp/migrations/src/Shell/MigrationsShell.php(156): Cake\Console\Shell->runCommand(Array, true, Array)
+#11 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Console/CommandRunner.php(141): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#12 /var/www/html/depinfo/bin/cake.php(12): Cake\Console\CommandRunner->run(Array)
+#13 {main}
+
+
+2017-11-19 16:22:52 Error: [InvalidArgumentException] Could not find class "CreateDetalleRegistroEquiposTable" in file "/var/www/html/depinfo/config/Migrations/20171119162208_CreateDetalleRegistroEquiposTable.php" in /var/www/html/depinfo/vendor/robmorgan/phinx/src/Phinx/Migration/Manager.php on line 670
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/robmorgan/phinx/src/Phinx/Migration/Manager.php(297): Phinx\Migration\Manager->getMigrations()
+#1 /var/www/html/depinfo/vendor/robmorgan/phinx/src/Phinx/Console/Command/Migrate.php(113): Phinx\Migration\Manager->migrate('default', NULL)
+#2 /var/www/html/depinfo/vendor/cakephp/migrations/src/Command/CommandTrait.php(35): Phinx\Console\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /var/www/html/depinfo/vendor/cakephp/migrations/src/Command/Migrate.php(65): Migrations\Command\Migrate->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 /var/www/html/depinfo/vendor/symfony/console/Command/Command.php(262): Migrations\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 /var/www/html/depinfo/vendor/symfony/console/Application.php(888): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 /var/www/html/depinfo/vendor/symfony/console/Application.php(224): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /var/www/html/depinfo/vendor/symfony/console/Application.php(125): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /var/www/html/depinfo/vendor/cakephp/migrations/src/Shell/MigrationsShell.php(101): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Console/Shell.php(507): Migrations\Shell\MigrationsShell->main('migrations', 'migrate')
+#10 /var/www/html/depinfo/vendor/cakephp/migrations/src/Shell/MigrationsShell.php(156): Cake\Console\Shell->runCommand(Array, true, Array)
+#11 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Console/CommandRunner.php(141): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#12 /var/www/html/depinfo/bin/cake.php(12): Cake\Console\CommandRunner->run(Array)
+#13 {main}
+
+
+2017-11-19 17:15:21 Error: [PDOException] SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint in /var/www/html/depinfo/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/PdoAdapter.php on line 338
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/PdoAdapter.php(338): PDO->exec('ALTER TABLE `de...')
+#1 /var/www/html/depinfo/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/MysqlAdapter.php(697): Phinx\Db\Adapter\PdoAdapter->execute('ALTER TABLE `de...')
+#2 /var/www/html/depinfo/vendor/cakephp/migrations/src/CakeAdapter.php(636): Phinx\Db\Adapter\MysqlAdapter->addForeignKey(Object(Migrations\Table), Object(Phinx\Db\Table\ForeignKey))
+#3 /var/www/html/depinfo/vendor/robmorgan/phinx/src/Phinx/Db/Table.php(636): Migrations\CakeAdapter->addForeignKey(Object(Migrations\Table), Object(Phinx\Db\Table\ForeignKey))
+#4 /var/www/html/depinfo/vendor/cakephp/migrations/src/Table.php(105): Phinx\Db\Table->update()
+#5 /var/www/html/depinfo/config/Migrations/20171119171422_CreateDetalleRegistroEquipos.php(39): Migrations\Table->update()
+#6 /var/www/html/depinfo/vendor/robmorgan/phinx/src/Phinx/Migration/Manager/Environment.php(122): CreateDetalleRegistroEquipos->change()
+#7 /var/www/html/depinfo/vendor/robmorgan/phinx/src/Phinx/Migration/Manager.php(366): Phinx\Migration\Manager\Environment->executeMigration(Object(CreateDetalleRegistroEquipos), 'up')
+#8 /var/www/html/depinfo/vendor/robmorgan/phinx/src/Phinx/Migration/Manager.php(342): Phinx\Migration\Manager->executeMigration('default', Object(CreateDetalleRegistroEquipos), 'up')
+#9 /var/www/html/depinfo/vendor/robmorgan/phinx/src/Phinx/Console/Command/Migrate.php(113): Phinx\Migration\Manager->migrate('default', NULL)
+#10 /var/www/html/depinfo/vendor/cakephp/migrations/src/Command/CommandTrait.php(35): Phinx\Console\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /var/www/html/depinfo/vendor/cakephp/migrations/src/Command/Migrate.php(65): Migrations\Command\Migrate->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /var/www/html/depinfo/vendor/symfony/console/Command/Command.php(262): Migrations\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /var/www/html/depinfo/vendor/symfony/console/Application.php(888): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /var/www/html/depinfo/vendor/symfony/console/Application.php(224): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /var/www/html/depinfo/vendor/symfony/console/Application.php(125): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /var/www/html/depinfo/vendor/cakephp/migrations/src/Shell/MigrationsShell.php(101): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Console/Shell.php(507): Migrations\Shell\MigrationsShell->main('migrations', 'migrate')
+#18 /var/www/html/depinfo/vendor/cakephp/migrations/src/Shell/MigrationsShell.php(156): Cake\Console\Shell->runCommand(Array, true, Array)
+#19 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Console/CommandRunner.php(141): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#20 /var/www/html/depinfo/bin/cake.php(12): Cake\Console\CommandRunner->run(Array)
+#21 {main}
+
+
+2017-11-19 17:15:21 Warning: The connection is going to be closed but there is an active transaction.
+2017-11-19 17:15:21 Warning: Warning (2): fwrite(): 123 is not a valid stream resource in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/Console/ConsoleOutput.php, line 253]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+fwrite - [internal], line ??
+Cake\Console\ConsoleOutput::_write() - CORE/src/Console/ConsoleOutput.php, line 253
+Cake\Console\ConsoleOutput::write() - CORE/src/Console/ConsoleOutput.php, line 188
+Cake\Log\Engine\ConsoleLog::log() - CORE/src/Log/Engine/ConsoleLog.php, line 94
+Cake\Log\Log::write() - CORE/src/Log/Log.php, line 384
+Cake\Log\Log::warning() - CORE/src/Log/Log.php, line 469
+Cake\Database\Connection::__destruct() - CORE/src/Database/Connection.php, line 132
+[main] - [internal], line ??
+
+
+
+2017-11-19 17:58:04 Error: [PDOException] SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'detalle_registro_equipos' already exists in /var/www/html/depinfo/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/PdoAdapter.php on line 338
+Stack Trace:
+#0 /var/www/html/depinfo/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/PdoAdapter.php(338): PDO->exec('CREATE TABLE `d...')
+#1 /var/www/html/depinfo/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/MysqlAdapter.php(306): Phinx\Db\Adapter\PdoAdapter->execute('CREATE TABLE `d...')
+#2 /var/www/html/depinfo/vendor/cakephp/migrations/src/CakeAdapter.php(444): Phinx\Db\Adapter\MysqlAdapter->createTable(Object(Migrations\Table))
+#3 /var/www/html/depinfo/vendor/robmorgan/phinx/src/Phinx/Db/Table.php(609): Migrations\CakeAdapter->createTable(Object(Migrations\Table))
+#4 /var/www/html/depinfo/vendor/cakephp/migrations/src/Table.php(89): Phinx\Db\Table->create()
+#5 /var/www/html/depinfo/config/Migrations/20171119171422_CreateDetalleRegistroEquipos.php(32): Migrations\Table->create()
+#6 /var/www/html/depinfo/vendor/robmorgan/phinx/src/Phinx/Migration/Manager/Environment.php(122): CreateDetalleRegistroEquipos->change()
+#7 /var/www/html/depinfo/vendor/robmorgan/phinx/src/Phinx/Migration/Manager.php(366): Phinx\Migration\Manager\Environment->executeMigration(Object(CreateDetalleRegistroEquipos), 'up')
+#8 /var/www/html/depinfo/vendor/robmorgan/phinx/src/Phinx/Migration/Manager.php(342): Phinx\Migration\Manager->executeMigration('default', Object(CreateDetalleRegistroEquipos), 'up')
+#9 /var/www/html/depinfo/vendor/robmorgan/phinx/src/Phinx/Console/Command/Migrate.php(113): Phinx\Migration\Manager->migrate('default', NULL)
+#10 /var/www/html/depinfo/vendor/cakephp/migrations/src/Command/CommandTrait.php(35): Phinx\Console\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /var/www/html/depinfo/vendor/cakephp/migrations/src/Command/Migrate.php(65): Migrations\Command\Migrate->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /var/www/html/depinfo/vendor/symfony/console/Command/Command.php(262): Migrations\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /var/www/html/depinfo/vendor/symfony/console/Application.php(888): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /var/www/html/depinfo/vendor/symfony/console/Application.php(224): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /var/www/html/depinfo/vendor/symfony/console/Application.php(125): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /var/www/html/depinfo/vendor/cakephp/migrations/src/Shell/MigrationsShell.php(101): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Console/Shell.php(507): Migrations\Shell\MigrationsShell->main('migrations', 'migrate')
+#18 /var/www/html/depinfo/vendor/cakephp/migrations/src/Shell/MigrationsShell.php(156): Cake\Console\Shell->runCommand(Array, true, Array)
+#19 /var/www/html/depinfo/vendor/cakephp/cakephp/src/Console/CommandRunner.php(141): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#20 /var/www/html/depinfo/bin/cake.php(12): Cake\Console\CommandRunner->run(Array)
+#21 {main}
+
+
+2017-11-19 17:58:04 Warning: The connection is going to be closed but there is an active transaction.
+2017-11-19 17:58:04 Warning: Warning (2): fwrite(): 123 is not a valid stream resource in [/var/www/html/depinfo/vendor/cakephp/cakephp/src/Console/ConsoleOutput.php, line 253]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+fwrite - [internal], line ??
+Cake\Console\ConsoleOutput::_write() - CORE/src/Console/ConsoleOutput.php, line 253
+Cake\Console\ConsoleOutput::write() - CORE/src/Console/ConsoleOutput.php, line 188
+Cake\Log\Engine\ConsoleLog::log() - CORE/src/Log/Engine/ConsoleLog.php, line 94
+Cake\Log\Log::write() - CORE/src/Log/Log.php, line 384
+Cake\Log\Log::warning() - CORE/src/Log/Log.php, line 469
+Cake\Database\Connection::__destruct() - CORE/src/Database/Connection.php, line 132
+[main] - [internal], line ??
+
+
+
