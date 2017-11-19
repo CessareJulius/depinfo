@@ -24,6 +24,19 @@ class PersonasController extends AppController
         return parent::isAuthorized($user);
     }
 
+    public function loadSession($id) {
+        
+        $this->loadModel('Sessions');
+        
+        $session = $this->Sessions->find('all', [
+            'conditions' => [
+                'status' => 'activa',
+                'user_id' => $id
+            ]
+        ]);
+        return $session;
+    }
+
     /**
      * Index method
      *
@@ -31,13 +44,24 @@ class PersonasController extends AppController
      */
     public function index()
     {
-        $this->paginate = [
-            'conditions' => ['status' => 2],
-            'limit' => 9999
-        ];
-        $personas = $this->paginate($this->Personas);
-        $this->set(compact('personas'));
-        $this->set('_serialize', ['personas']);
+        $user = $this->Auth->user();
+        $session = $this->loadSession($user['id']);
+        $countData = $session->count();
+
+        if ($countData > 0) {
+
+            $this->paginate = [
+                'conditions' => ['status' => 2],
+                'limit' => 9999
+            ];
+            $personas = $this->paginate($this->Personas);
+            $this->set(compact('personas'));
+            $this->set('_serialize', ['personas']);
+            
+        } else {
+            $this->Flash->error("Error. Usted ha sido desconectado por el Administrador.");
+            return $this->redirect($this->Auth->logout());
+        }
     }
 
     /**
@@ -49,14 +73,25 @@ class PersonasController extends AppController
      */
     public function view($id = null)
     {
-        $persona = $this->Personas->get($id, [
-            'contain' => []
-        ]);
-        //pj($persona);
-        //die();
+        $user = $this->Auth->user();
+        $session = $this->loadSession($user['id']);
+        $countData = $session->count();
 
-        $this->set('persona', $persona);
-        $this->set('_serialize', ['persona']);
+        if ($countData > 0) {
+
+            $persona = $this->Personas->get($id, [
+                'contain' => []
+            ]);
+            //pj($persona);
+            //die();
+    
+            $this->set('persona', $persona);
+            $this->set('_serialize', ['persona']);
+
+        } else {
+            $this->Flash->error("Error. Usted ha sido desconectado por el Administrador.");
+            return $this->redirect($this->Auth->logout());
+        }
     }
 
     /**
@@ -66,23 +101,31 @@ class PersonasController extends AppController
      */
     public function add()
     {
-        $persona = $this->Personas->newEntity();
+        $user = $this->Auth->user();
+        $session = $this->loadSession($user['id']);
+        $countData = $session->count();
 
-        if ($this->request->is('post')) {
-            //pj($this->request->getData());
-            //pj($this->request->data);
-            //die();
-            $persona = $this->Personas->patchEntity($persona, $this->request->getData());
-            $persona->status = 2;
-            if ($this->Personas->save($persona)) {
-                $this->Flash->success(__('El Cliente ha sido creado exitosamente.'));
+        if ($countData > 0) {
+            
+            $persona = $this->Personas->newEntity();
+            
+            if ($this->request->is('post')) {
+                $persona = $this->Personas->patchEntity($persona, $this->request->getData());
+                $persona->status = 2;
+                if ($this->Personas->save($persona)) {
+                    $this->Flash->success(__('El Cliente ha sido creado exitosamente.'));
 
-                return $this->redirect(['action' => 'index']);
+                    return $this->redirect(['action' => 'index']);
+                }
+                $this->Flash->error(__('El cliente no pudo ser creado. Por favor, intente nuevamente.'));
             }
-            $this->Flash->error(__('El cliente no pudo ser creado. Por favor, intente nuevamente.'));
+            $this->set(compact('persona'));
+            $this->set('_serialize', ['persona']);
+
+        } else {
+            $this->Flash->error("Error. Usted ha sido desconectado por el Administrador.");
+            return $this->redirect($this->Auth->logout());
         }
-        $this->set(compact('persona'));
-        $this->set('_serialize', ['persona']);
     }
 
     /**
@@ -94,20 +137,31 @@ class PersonasController extends AppController
      */
     public function edit($id = null)
     {
-        $persona = $this->Personas->get($id, [
-            'contain' => []
-        ]);
-        if ($this->request->is(['patch', 'post', 'put'])) {
-            $persona = $this->Personas->patchEntity($persona, $this->request->getData());
-            if ($this->Personas->save($persona)) {
-                $this->Flash->success(__('Los datos han sido actualizados correctamente.'));
+        $user = $this->Auth->user();
+        $session = $this->loadSession($user['id']);
+        $countData = $session->count();
 
-                return $this->redirect(['action' => 'index']);
+        if ($countData > 0) {
+
+            $persona = $this->Personas->get($id, [
+                'contain' => []
+            ]);
+            if ($this->request->is(['patch', 'post', 'put'])) {
+                $persona = $this->Personas->patchEntity($persona, $this->request->getData());
+                if ($this->Personas->save($persona)) {
+                    $this->Flash->success(__('Los datos han sido actualizados correctamente.'));
+    
+                    return $this->redirect(['action' => 'index']);
+                }
+                $this->Flash->error(__('Los datos no pudieron ser actualizados. Por favor, intente nuevamente.'));
             }
-            $this->Flash->error(__('Los datos no pudieron ser actualizados. Por favor, intente nuevamente.'));
+            $this->set(compact('persona'));
+            $this->set('_serialize', ['persona']);
+
+        } else {
+            $this->Flash->error("Error. Usted ha sido desconectado por el Administrador.");
+            return $this->redirect($this->Auth->logout());
         }
-        $this->set(compact('persona'));
-        $this->set('_serialize', ['persona']);
     }
 
     /**
@@ -119,14 +173,25 @@ class PersonasController extends AppController
      */
     public function delete($id = null)
     {
-        $this->request->allowMethod(['post', 'delete']);
-        $persona = $this->Personas->get($id);
-        if ($this->Personas->delete($persona)) {
-            $this->Flash->success(__('El cliente ha sido Eliminado exitosamente.'));
-        } else {
-            $this->Flash->error(__('El cliente no puedo ser eliminado. Por favor, intentelo nuevamente.'));
-        }
+        $user = $this->Auth->user();
+        $session = $this->loadSession($user['id']);
+        $countData = $session->count();
 
-        return $this->redirect(['action' => 'index']);
+        if ($countData > 0) {
+
+            $this->request->allowMethod(['post', 'delete']);
+            $persona = $this->Personas->get($id);
+            if ($this->Personas->delete($persona)) {
+                $this->Flash->success(__('El cliente ha sido Eliminado exitosamente.'));
+            } else {
+                $this->Flash->error(__('El cliente no puedo ser eliminado. Por favor, intentelo nuevamente.'));
+            }
+    
+            return $this->redirect(['action' => 'index']);
+            
+        } else {
+            $this->Flash->error("Error. Usted ha sido desconectado por el Administrador.");
+            return $this->redirect($this->Auth->logout());
+        }
     }
 }

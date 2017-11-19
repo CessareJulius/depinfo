@@ -55,6 +55,7 @@
                                 <dd>&nbsp;&nbsp;<?= $session->user->persona->apellido ?></dd>
                                 <br>
                         </dl>
+                        <?= $this->Form->postLink(__('Volver'), ['action' => "index"],['Class' => 'btn btn-info btn-sm']) ?>
                     </div>
                 </div>
             </div>
@@ -62,13 +63,13 @@
                 <div class="box box-primary">
                     <div class="box-header with-border">
                         <h3 class="box-title">Datos de la Sesion</h3>&nbsp;&nbsp;
-                        <?= $this->Html->link(__('Terminar'), 
-                            [
-                                'action' => 'edit'
+                        <?= $this->Form->postLink(__('Terminar'), [
+                            'controller' => 'Users', 'action' => "closedSession", $session->user_id
                             ], 
                             [
                                 'Class' => 'btn btn-danger btn-sm'
-                            ]) 
+                            ], 
+                            ['confirm' => __('Esta seguro que desea terminar esta sesion?')]) 
                         ?>
                     </div>
                     <div class="box-body">
