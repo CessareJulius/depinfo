@@ -82,6 +82,11 @@ class EquiposTable extends Table
             ->scalar('departamento')
             ->requirePresence('departamento', 'create')
             ->notEmpty('departamento');
+        
+        $validator
+            ->scalar('status')
+            ->requirePresence('status', 'create')
+            ->notEmpty('status');
 
         return $validator;
     }

@@ -35,6 +35,7 @@ class Equipo extends Entity
         'marca' => true,
         'modelo' => true,
         'departamento' => true,
+        'status' => true,
         'created' => true,
         'modified' => true,
         'detalle_registro_equipos' => true

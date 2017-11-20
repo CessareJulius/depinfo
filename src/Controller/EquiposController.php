@@ -11,6 +11,18 @@ use App\Controller\AppController;
  */
 class EquiposController extends AppController
 {
+    public function isAuthorized($user) { //pj($user);die();
+        
+
+        if (isset($user['role']) and $user['role'] === 'user') {
+
+            if (in_array($this->request->action, ['index', 'view', 'edit'])) {
+
+                return true;
+            }
+        }
+        return parent::isAuthorized($user);
+    }
 
     /**
      * Index method
@@ -20,6 +32,7 @@ class EquiposController extends AppController
     public function index()
     {
         $equipos = $this->paginate($this->Equipos);
+        //pj($equipos);die();
 
         $this->set(compact('equipos'));
         $this->set('_serialize', ['equipos']);

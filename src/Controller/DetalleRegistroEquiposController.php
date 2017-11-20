@@ -12,6 +12,18 @@ use App\Controller\AppController;
  */
 class DetalleRegistroEquiposController extends AppController
 {
+    public function isAuthorized($user) { //pj($user);die();
+        
+
+        if (isset($user['role']) and $user['role'] === 'user') {
+
+            if (in_array($this->request->action, ['index','add', 'view', 'edit'])) {
+
+                return true;
+            }
+        }
+        return parent::isAuthorized($user);
+    }
 
     /**
      * Index method
@@ -21,10 +33,18 @@ class DetalleRegistroEquiposController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Equipos', 'RegistroEquipos']
+            'contain' => [
+                'Equipos', 
+                'RegistroEquipos' => [
+                    'Personas',
+                    'Users' => [
+                        'Personas'
+                    ]
+                ]
+            ]
         ];
         $detalleRegistroEquipos = $this->paginate($this->DetalleRegistroEquipos);
-
+        //pj($detalleRegistroEquipos);die();
         $this->set(compact('detalleRegistroEquipos'));
         $this->set('_serialize', ['detalleRegistroEquipos']);
     }
@@ -39,7 +59,15 @@ class DetalleRegistroEquiposController extends AppController
     public function view($id = null)
     {
         $detalleRegistroEquipo = $this->DetalleRegistroEquipos->get($id, [
-            'contain' => ['Equipos', 'RegistroEquipos']
+            'contain' => [
+                'Equipos', 
+                'RegistroEquipos' => [
+                    'Personas',
+                    'Users' => [
+                        'Personas'
+                    ]
+                ]
+            ]
         ]);
 
         $this->set('detalleRegistroEquipo', $detalleRegistroEquipo);

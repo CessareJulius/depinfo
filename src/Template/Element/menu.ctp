@@ -66,8 +66,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="../UI/general.html"><i class="fa fa-circle-o"></i> Nuevo Registro</a></li>
-            <li><a href="../UI/icons.html"><i class="fa fa-circle-o"></i> Ver Todos</a></li>
+            <li><?= $this->Html->Link('<i class="fa fa-plus"></i> Nuevo Registro', ['controller' => 'DetalleRegistroEquipos', 'action' => 'add'], ['escape' => false]); ?></li>
+            <li><?= $this->Html->Link('<i class="fa fa-navicon"></i> Ver Todos', ['controller' => 'DetalleRegistroEquipos', 'action' => 'index'], ['escape' => false]); ?></li>
             <li><a href="../UI/buttons.html"><i class="fa fa-circle-o"></i> Buscar Registro</a></li>
           </ul>
         </li>
@@ -79,7 +79,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="../forms/general.html"><i class="fa fa-circle-o"></i> Ver Todos</a></li>
+            <li><?= $this->Html->Link('<i class="fa fa-navicon"></i> Ver Todos', ['controller' => 'Equipos', 'action' => 'index'], ['escape' => false]); ?></li>
             <li><a href="../forms/advanced.html"><i class="fa fa-circle-o"></i> Buscar Equipo</a></li>
           </ul>
         </li>
