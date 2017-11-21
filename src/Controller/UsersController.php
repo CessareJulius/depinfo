@@ -119,6 +119,61 @@ class UsersController extends AppController
             } else {
                 $sessCount = 0;
             }
+            //pj($sessCount);die();
+
+            // ------- Registros Creados
+            $this->loadModel('DetalleRegistroEquipos');
+            $registroEquipos = $this->DetalleRegistroEquipos->find('all');
+            $registroCount = $registroEquipos->count();
+            if ($registroCount > 0 ) {
+                
+            } else {
+                $registroCount = 0;
+            }
+            //pj($registroEquipos);die();
+
+            // ------- Equipos en Reparacion 
+            $this->loadModel('Equipos');
+            $Equipos_EnRep = $this->Equipos->find('all', [
+                'conditions' => [
+                    'status' => "reparando"
+                ]
+            ]);
+            $equip_EnRepCount = $Equipos_EnRep->count();
+            if ($equip_EnRepCount > 0 ) {
+                
+            } else {
+                $equip_EnRepCount = 0;
+            }
+            //pj($equipCount);die();
+
+            // ------- Equipos Reparados
+            $Equipos_Rep = $this->Equipos->find('all', [
+                'conditions' => [
+                    'status' => "reparado"
+                ]
+            ]);
+            $equip_RepCount = $Equipos_Rep->count();
+            if ($equip_RepCount > 0 ) {
+                
+            } else {
+                $equip_RepCount = 0;
+            }
+            //pj($equip_RepCount);die();
+            
+            // ------- Equipos Reparados
+            $Equipos_Ent = $this->Equipos->find('all', [
+                'conditions' => [
+                    'status' => "entregado"
+                ]
+            ]);
+            $equip_EntCount = $Equipos_Ent->count();
+            if ($equip_EntCount > 0 ) {
+                
+            } else {
+                $equip_EntCount = 0;
+            }
+            //pj($equip_EntCount);die(); 
 
         } else {
             $this->Flash->error("Error. Usted ha sido desconectado por el Administrador.");
@@ -133,7 +188,7 @@ class UsersController extends AppController
         */
         //pj($clientCount);die();
 
-        $this->set(compact('clientCount', 'empCount', 'sessCount'));
+        $this->set(compact('clientCount', 'registroCount', 'empCount', 'sessCount', 'equip_EnRepCount', 'equip_RepCount', 'equip_EntCount'));
     }
 
     public function index()

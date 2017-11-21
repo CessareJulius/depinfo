@@ -38,6 +38,42 @@ class EquiposController extends AppController
         $this->set('_serialize', ['equipos']);
     }
 
+    public function reparando() {
+        $equipos_EnRep = $this->Equipos->find('all', [
+            'conditions' => [
+                'status' => "reparando"
+            ]
+        ]);
+        //pj($equipos_EnRep);die();
+
+        $this->set(compact('equipos_EnRep'));
+        $this->set('_serialize', ['equipos_EnRep']);
+    }
+
+    public function reparados() {
+        $equipos_Rep = $this->Equipos->find('all', [
+            'conditions' => [
+                'status' => "reparado"
+            ]
+        ]);
+        pj($equipos_Rep);die();
+
+        $this->set(compact('equipos_Rep'));
+        $this->set('_serialize', ['equipos_Rep']);
+    }
+
+    public function entregados() {
+        $equipos_Ent = $this->Equipos->find('all', [
+            'conditions' => [
+                'status' => "entregado"
+            ]
+        ]);
+        pj($equipos_Ent);die();
+
+        $this->set(compact('equipos_Ent'));
+        $this->set('_serialize', ['equipos_Ent']);
+    }
+
     /**
      * View method
      *
@@ -50,7 +86,7 @@ class EquiposController extends AppController
         $equipo = $this->Equipos->get($id, [
             'contain' => []
         ]);
-
+        //pj($equipo);die();
         $this->set('equipo', $equipo);
         $this->set('_serialize', ['equipo']);
     }
@@ -66,11 +102,11 @@ class EquiposController extends AppController
         if ($this->request->is('post')) {
             $equipo = $this->Equipos->patchEntity($equipo, $this->request->getData());
             if ($this->Equipos->save($equipo)) {
-                $this->Flash->success(__('The equipo has been saved.'));
+                $this->Flash->success(__('El equipo ha sido creado exitosamente.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The equipo could not be saved. Please, try again.'));
+            $this->Flash->error(__('El equipo no pudo ser creado, Por favor, intente nuevamente.'));
         }
         $this->set(compact('equipo'));
         $this->set('_serialize', ['equipo']);
@@ -89,13 +125,19 @@ class EquiposController extends AppController
             'contain' => []
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
+            
+            if ($this->request->data['departamento'] == "") {
+                $this->request->data['departamento'] = null;
+            }
+            //pj($this->request->data());die();
+            
             $equipo = $this->Equipos->patchEntity($equipo, $this->request->getData());
             if ($this->Equipos->save($equipo)) {
-                $this->Flash->success(__('The equipo has been saved.'));
+                $this->Flash->success(__('El equipo ha sido editado exitosamente.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The equipo could not be saved. Please, try again.'));
+            $this->Flash->error(__('El equipo no pudo ser editado, Por favor, intente nuevamente.'));
         }
         $this->set(compact('equipo'));
         $this->set('_serialize', ['equipo']);

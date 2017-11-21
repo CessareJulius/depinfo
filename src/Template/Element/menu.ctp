@@ -80,7 +80,18 @@
           </a>
           <ul class="treeview-menu">
             <li><?= $this->Html->Link('<i class="fa fa-navicon"></i> Ver Todos', ['controller' => 'Equipos', 'action' => 'index'], ['escape' => false]); ?></li>
-            <li><a href="../forms/advanced.html"><i class="fa fa-circle-o"></i> Buscar Equipo</a></li>
+            <li class="treeview">
+              <a href="#"><i class="fa fa-user"></i> Ver por Status
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><?= $this->Html->Link('<i class="fa fa-circle-o"></i> En Reparacion', ['controller' => 'Equipos', 'action' => 'reparando'], ['escape' => false]); ?></li>
+                <li><?= $this->Html->Link('<i class="fa fa-circle-o"></i> Reparados', ['controller' => 'Equipos', 'action' => 'reparados'], ['escape' => false]); ?></li>
+                <li><?= $this->Html->Link('<i class="fa fa-circle-o"></i> Entregados', ['controller' => 'Equipos', 'action' => 'entregados'], ['escape' => false]); ?></li>
+              </ul>
+            </li>
           </ul>
         </li>
         <li class="treeview">

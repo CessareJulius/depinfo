@@ -109,6 +109,7 @@ class DetalleRegistroEquiposController extends AppController
         $detalleRegistroEquipo = $this->DetalleRegistroEquipos->get($id, [
             'contain' => []
         ]);
+        //pj($detalleRegistroEquipo);die();
         if ($this->request->is(['patch', 'post', 'put'])) {
             $detalleRegistroEquipo = $this->DetalleRegistroEquipos->patchEntity($detalleRegistroEquipo, $this->request->getData());
             if ($this->DetalleRegistroEquipos->save($detalleRegistroEquipo)) {
@@ -118,9 +119,7 @@ class DetalleRegistroEquiposController extends AppController
             }
             $this->Flash->error(__('The detalle registro equipo could not be saved. Please, try again.'));
         }
-        $equipos = $this->DetalleRegistroEquipos->Equipos->find('list', ['limit' => 200]);
-        $registroEquipos = $this->DetalleRegistroEquipos->RegistroEquipos->find('list', ['limit' => 200]);
-        $this->set(compact('detalleRegistroEquipo', 'equipos', 'registroEquipos'));
+        $this->set(compact('detalleRegistroEquipo'));
         $this->set('_serialize', ['detalleRegistroEquipo']);
     }
 

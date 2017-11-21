@@ -70,8 +70,7 @@ class DetalleRegistroEquiposTable extends Table
 
         $validator
             ->scalar('reparacion')
-            ->requirePresence('reparacion', 'create')
-            ->notEmpty('reparacion');
+            ->requirePresence('reparacion', 'create');
 
         $validator
             ->scalar('status')

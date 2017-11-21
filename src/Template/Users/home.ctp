@@ -61,13 +61,13 @@
             <div class="col-lg-3 col-xs-6">
                 <div class="small-box bg-green">
                     <div class="inner">
-                        <h3>53</h3>
+                        <h3><?= $registroCount ?></h3>
                         <p>Registros creados </p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-clipboard"></i>
                     </div>
-                    <?= $this->Html->Link('Más Informacion <i class="fa fa-arrow-circle-right"></i>', ['controller' => 'Registros', 'action' => 'index'], ['class' => 'small-box-footer', 'escape' => false]); ?>
+                    <?= $this->Html->Link('Más Informacion <i class="fa fa-arrow-circle-right"></i>', ['controller' => 'DetalleRegistroEquipos', 'action' => 'index'], ['class' => 'small-box-footer', 'escape' => false]); ?>
                 </div>
             </div>
             <div class="col-lg-3 col-xs-6">
@@ -86,13 +86,13 @@
             <div class="col-lg-3 col-xs-6">
                 <div class="small-box bg-red">
                     <div class="inner">
-                        <h3>65</h3>
+                        <h3><?= $equip_EntCount ?></h3>
                         <p>Equipos Reparados y Entregados</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-android-laptop"></i>
                     </div>
-                    <a href="#" class="small-box-footer">Más Informacion <i class="fa fa-arrow-circle-right"></i></a>
+                    <?= $this->Html->Link('Más Informacion <i class="fa fa-arrow-circle-right"></i>', ['controller' => 'Equipos', 'action' => 'entregados'], ['class' => 'small-box-footer', 'escape' => false]); ?>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
@@ -110,13 +110,17 @@
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div id="info-box">
                         <span id="info-box-icon" class="bg-green">
-                            <?= $this->Html->Link("<i class='fa fa-group'></i>", 
-                            ['controller' => 'Sessions', 'action' => 'index'], 
-                            ['id' => 'bg-green', 'escape' => false]) ?> 
+                            <?php if ($sessCount == 0): ?>
+                                <i class='fa fa-group'></i>
+                            <?php else:
+                                echo $this->Html->Link("<i class='fa fa-group'></i>", 
+                                        ['controller' => 'Sessions', 'action' => 'index'], 
+                                        ['id' => 'bg-green', 'escape' => false]);
+                            endif ?> 
                         </span>
                         <div id="info-box-content" title="Empleados en Sesion">
                             <span class="info-box-text">Empleados en Sesion</span>
-                            <span class="info-box-number"><?php if ($sessCount == null) {echo "0";} else {echo $sessCount;} ?></span>
+                            <span class="info-box-number"><?php if ($sessCount == null || $sessCount == 0) {echo "0";} else {echo $sessCount;} ?></span>
                         </div>
                     </div>
                 </div>
@@ -140,22 +144,34 @@
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <div id="info-box">
                     <span id="info-box-icon" class="bg-yellow">
-                        <i class="fa fa-desktop"></i>
+                        <?php if ($equip_RepCount == 0): ?>
+                            <i class="fa fa-desktop"></i>
+                        <?php else:
+                            echo $this->Html->Link("<i class='fa fa-desktop'></i>", 
+                                    ['controller' => 'Equipos', 'action' => 'reparado'], 
+                                    ['id' => 'bg-green', 'escape' => false]);
+                        endif ?> 
                     </span>
                     <div id="info-box-content" title="Equipos por Retirar">
                         <span class="info-box-text">Equipos por Retirar</span>
-                        <span class="info-box-number">3</span>
+                        <span class="info-box-number"><?= $equip_RepCount ?></span>
                     </div>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <div id="info-box">
                     <span id="info-box-icon" class="bg-red">
-                        <i class="fa fa-laptop"></i>
+                        <?php if ($equip_EnRepCount == 0): ?>
+                            <i class="fa fa-desktop"></i>
+                        <?php else:
+                            echo $this->Html->Link("<i class='fa fa-laptop'></i>", 
+                                    ['controller' => 'Equipos', 'action' => 'reparando'], 
+                                    ['id' => 'bg-green', 'escape' => false]);
+                        endif ?> 
                     </span>
                     <div id="info-box-content" title="Equipos en Reparacion">
                         <span class="info-box-text">Equipos en Reparacion</span>
-                        <span class="info-box-number">5</span>
+                        <span class="info-box-number"><?= $equip_EnRepCount ?></span>
                     </div>
                 </div>
             </div>

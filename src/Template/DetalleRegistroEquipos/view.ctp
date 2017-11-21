@@ -91,7 +91,14 @@
                                     <dt>Status</dt>
                                         <dd>&nbsp;&nbsp;<?= $detalleRegistroEquipo->status ?></dd>
                                         <br>
-                                </dl>
+                                    
+                                    <dt>Creado</dt>
+                                        <dd>&nbsp;&nbsp;<?= $detalleRegistroEquipo->created->nice() ?></dd>
+                                        <br>
+
+                                    <dt>Modificado</dt>
+                                        <dd>&nbsp;&nbsp;<?= $detalleRegistroEquipo->modified->nice() ?></dd>
+                                        </dl>
                             </div>
                         </div>
                     </div>
@@ -127,6 +134,14 @@
                                     <dt>Telefono</dt>
                                         <dd>&nbsp;&nbsp;<?= $detalleRegistroEquipo->registro_equipo->persona->telefono ?></dd>
                                         <br>
+                                    
+                                    <dt>Creado</dt>
+                                        <dd>&nbsp;&nbsp;<?= $detalleRegistroEquipo->registro_equipo->persona->created->nice() ?></dd>
+                                        <br>
+
+                                    <dt>Modificado</dt>
+                                        <dd>&nbsp;&nbsp;<?= $detalleRegistroEquipo->registro_equipo->persona->modified->nice() ?></dd>
+                                        </dl>
                                 </dl>
                             </div>
                         </div>
@@ -163,6 +178,7 @@
                                     <dt>Modelo</dt>
                                         <dd>&nbsp;&nbsp;<?= $detalleRegistroEquipo->equipo->modelo ?></dd>
                                         <br>
+                                        
                                     <?php if ($detalleRegistroEquipo->equipo->departamento != null):?>
                                     <dt>Departamento</dt>
                                         <dd>&nbsp;&nbsp;<?= $detalleRegistroEquipo->equipo->departamento ?></dd>
@@ -172,6 +188,14 @@
                                     <dt>Status</dt>
                                         <dd>&nbsp;&nbsp;<?= $detalleRegistroEquipo->equipo->status ?></dd>
                                         <br>
+                                    
+                                    <dt>Creado</dt>
+                                        <dd>&nbsp;&nbsp;<?= $detalleRegistroEquipo->equipo->created->nice() ?></dd>
+                                        <br>
+
+                                    <dt>Modificado</dt>
+                                        <dd>&nbsp;&nbsp;<?= $detalleRegistroEquipo->equipo->modified->nice() ?></dd>
+                                        </dl>
                                 </dl>
                             </div>
                         </div>

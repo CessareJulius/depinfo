@@ -60,33 +60,27 @@ class EquiposTable extends Table
         $validator
             ->scalar('serial')
             ->requirePresence('serial', 'create')
-            ->notEmpty('serial')
+            ->notEmpty('serial', 'Ingrese el Serial del Equipo')
             ->add('serial', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
 
         $validator
             ->scalar('tipo')
             ->requirePresence('tipo', 'create')
-            ->notEmpty('tipo');
+            ->notEmpty('tipo', 'Ingrese el Tipo de Equipo');
 
         $validator
             ->scalar('marca')
             ->requirePresence('marca', 'create')
-            ->notEmpty('marca');
+            ->notEmpty('marca', 'Ingrese la marca del Equipo');
 
         $validator
             ->scalar('modelo')
             ->requirePresence('modelo', 'create')
-            ->notEmpty('modelo');
-
-        $validator
-            ->scalar('departamento')
-            ->requirePresence('departamento', 'create')
-            ->notEmpty('departamento');
+            ->notEmpty('modelo', 'Ingrese el modelo del Equipo');
         
         $validator
             ->scalar('status')
-            ->requirePresence('status', 'create')
-            ->notEmpty('status');
+            ->requirePresence('status', 'create');
 
         return $validator;
     }

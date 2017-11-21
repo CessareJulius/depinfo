@@ -1,9 +1,18 @@
-<?php
-/**
- * @var \App\View\AppView $this
- * @var \App\Model\Entity\DetalleRegistroEquipo[]|\Cake\Collection\CollectionInterface $detalleRegistroEquipos
- */
-?>
+<style>
+
+.labell {
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 100%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
+</style>
 
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -48,13 +57,21 @@
                                     <td><?= h($detalleRegistroEquipo->equipo->tipo) ?></td>
                                     <td><?= h($detalleRegistroEquipo->registro_equipo->persona->nombre." ".$detalleRegistroEquipo->registro_equipo->persona->apellido) ?></td>
                                     <td><?= h($detalleRegistroEquipo->registro_equipo->user->persona->nombre." ".$detalleRegistroEquipo->registro_equipo->user->persona->apellido) ?></td>
-                                    <td><?= h($detalleRegistroEquipo->status) ?></td>
+                                    <td>
+                                        <?php 
+                                            if($detalleRegistroEquipo->status == 'activo'){
+                                                echo "<center><label class='labell label-success'>Activo</label></center>";
+                                            }else{
+                                            echo "<center><label class='labell label-warning'>Anulado</label></center>";
+                                            };
+                                        ?>
+                                    </td>
                                     <td class="actions">
                                     <center>
                                         <?= $this->Html->link(__('Ver'), ['action' => 'view', $detalleRegistroEquipo->id], ['Class' => 'btn btn-info btn-sm']) ?>
                                         <?= $this->Html->link(__('Editar'), ['action' => 'edit', $detalleRegistroEquipo->id], ['Class' => 'btn btn-primary btn-sm']) ?>
                                         <?php if ($current_user['role'] == 'admin') {
-                                            echo $this->Form->postLink(__('Eliminar'), ['action' => 'delete', $detalleRegistroEquipo->id],['Class' => 'btn btn-danger btn-sm'], ['confirm' => __('Esta seguro que desea borrar este detalleRegistroEquipo # {0}?', $detalleRegistroEquipo->id)]);
+                                            echo $this->Form->postLink(__('Anular'), ['action' => 'anular', $detalleRegistroEquipo->id],['Class' => 'btn btn-danger btn-sm'], ['confirm' => __('Esta seguro que desea Anular este Registro # {0}?', $detalleRegistroEquipo->id)]);
                                         } ?>
                                     </center>
                                     </td>
