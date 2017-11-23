@@ -12,6 +12,8 @@ use App\Controller\AppController;
  */
 class DetalleRegistroEquiposController extends AppController
 {
+    public $personaCliente = [];
+
     public function isAuthorized($user) { //pj($user);die();
         
 
@@ -81,6 +83,63 @@ class DetalleRegistroEquiposController extends AppController
      */
     public function add()
     {
+        $formCedula = true;
+        $detalleRegistroEquipo = $this->DetalleRegistroEquipos->newEntity();
+        $this->loadModel("Personas");
+        
+        if ($this->request->is('post')) {
+            //pj($this->request->data['Personas']['cedula']);die();
+
+            // ------ pregunto si viene algun dato del form
+            if (isset($this->request->data)) {
+                //pj($this->request->data);die();
+
+                // ------ pregunto si viene un form con button de nombre buscarCedula 
+                if (isset($this->request->data['buscarCedula']) && $this->request->data['buscarCedula'] == 'bCedula') {
+                    //pj($this->request->data);die();
+                    $cedula = $this->request->data['cedula'];
+
+                    $cliente = $this->Personas->find('all', [
+                        'conditions' => [
+                            'cedula' => $cedula
+                        ]
+                    ]);
+                    //pj($cliente);die();
+                    $countClient = $cliente->count();
+                    $formCedula = false;
+                    if ($countClient > 0) {
+                        foreach ($cliente as $value) {}
+                        $id = $value['id'];
+                        $cliente = $this->Personas->get($id);
+                        $this->personaCliente = $cliente;
+                        $this->Flash->warning("El Cliente con esa Cedula ya esta registrado. Por favor complete los datos del Equipo");
+                        $this->set(compact('formCedula', 'countClient', 'cliente', 'detalleRegistroEquipo'));
+                    } else {
+                        $countClient = 0;
+                        $this->Flash->warning("Cliente Nuevo. Por favor complete ambos Formularios");
+                        $this->set(compact('formCedula', 'countClient', 'cliente', 'detalleRegistroEquipo'));
+                    }
+                    //pj($cliente);die();
+                } 
+                
+                if (isset($this->request->data['crearRegistro']) && $this->request->data['crearRegistro'] == 'cRegistro') {
+
+                    $persona = $this->validateCedula($this->request->data['Personas']['cedula']);
+
+                    if (isset($this->request->data['Personas']['cedula']) && $this->request->data['Personas']['cedula'] == $persona['cedula']) {
+                        //$this->request->data['Personas'] = $persona;
+                        $this->saveRegistro($this->request->data(), $persona['id']);
+                        //pj($persona['id']);die();
+                        //pj($this->request->data);die();
+                    } else {
+                        $this->saveRegistro($this->request->data(), $this->savePersona($this->request->data()));
+                        //pj($cedula);die();
+                    } 
+                }
+            }
+        }
+        $this->set(compact('formCedula', 'detalleRegistroEquipo'));
+        /*
         $detalleRegistroEquipo = $this->DetalleRegistroEquipos->newEntity();
         if ($this->request->is('post')) {
             $detalleRegistroEquipo = $this->DetalleRegistroEquipos->patchEntity($detalleRegistroEquipo, $this->request->getData());
@@ -95,6 +154,87 @@ class DetalleRegistroEquiposController extends AppController
         $registroEquipos = $this->DetalleRegistroEquipos->RegistroEquipos->find('list', ['limit' => 200]);
         $this->set(compact('detalleRegistroEquipo', 'equipos', 'registroEquipos'));
         $this->set('_serialize', ['detalleRegistroEquipo']);
+        */
+    }
+    public function validateCedula($cedula) {
+        $this->loadModel("Personas");
+        $cliente = $this->Personas->find('all', [
+            'conditions' => [
+                'cedula' => $cedula
+            ]
+        ]);
+        if ($cliente->count() > 0) {
+            foreach ($cliente as $key => $value) {}
+            $persona = $value;
+        } else {
+            $persona = 0;
+        }
+        return $persona;
+    }
+    public function savePersona($data) {
+        //$this->loadModel('Users');
+        //$user = $this->Auth->user();
+        //pj($user['id']);die();
+        $this->loadModel('Personas');
+        $data['Personas']['status'] = 2;
+        $persona = $this->Personas->newEntity();
+        $persona = $this->Personas->patchEntity($persona, $data);
+        //pj($persona);die();
+        if ($this->Personas->save($persona)) {
+            $id = $persona->id;
+            return $id;
+        }
+        $this->Flash->error(__('El Cliente no pudo ser creado. Por Favor, intente nuevamente.'));
+    }
+
+    public function saveRegistro($data, $id) {
+
+        // ------ agregar los datos del equipo
+        if ($data['Equipos']['departamento'] == "") {
+            $data['Equipos']['departamento'] = null;
+        }
+
+        $this->loadModel('Equipos');
+        $data['Equipos']['status'] = 'reparando';
+        $equipo = $this->Equipos->newEntity();
+        $equipo = $this->Equipos->patchEntity($equipo, $data);
+
+        if ($this->Equipos->save($equipo)) {
+            $equipo_id = $equipo->id;
+
+            // -------- agregar los datos del registroEquipo
+            $user = $this->Auth->user();
+            $this->loadModel('RegistroEquipos');
+            $data['RegistroEquipos']['persona_id'] = $id;
+            $data['RegistroEquipos']['user_id'] = $user['id'];
+            $registroEquipo = $this->RegistroEquipos->newEntity();
+            $registroEquipo = $this->RegistroEquipos->patchEntity($registroEquipo, $data);
+    
+            if ($this->RegistroEquipos->save($registroEquipo)) {
+                $registroEquipo_id = $registroEquipo->id;
+    
+                // -------- agregar los datos del registroEquipo
+
+                $detalleRegistroEquipo = $this->DetalleRegistroEquipos->newEntity();
+                $detalleRegistroEquipo->status = 'activo';
+                $detalleRegistroEquipo->falla = $data['DetalleRegistroEquipos']['falla'];
+                $detalleRegistroEquipo->reparacion = null;
+                $detalleRegistroEquipo->equipo_id = $equipo_id;
+                $detalleRegistroEquipo->registro_equipos_id = $registroEquipo_id;
+
+                if ($this->DetalleRegistroEquipos->save($detalleRegistroEquipo)) {
+                    $this->Flash->success(__('Se han registrado los datos exitosamente.'));
+    
+                    return $this->redirect(['action' => 'index']);
+                }
+                $this->Flash->error(__('El registro no pudo ser creado. Por favor, intente nuevamente.'));   
+            }
+            $this->Flash->error(__('No se pudo crear en RegistroEquipo. Por Favor, intente nuevamente.'));
+
+        }
+        $this->Flash->error(__('El Equipo no pudo ser creado. Por Favor, intente nuevamente.'));
+            
+        //pj($id);die();
     }
 
     /**

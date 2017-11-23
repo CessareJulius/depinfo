@@ -49,11 +49,10 @@ class UsersController extends AppController
                 
                 $countData = $sessExist->count();
                 if ($countData > 0) {
-
                     foreach ($sessExist as $value) {}
                     if ($value['id']) {
-                        $this->Flash->error("Este usuario tiene una session activa, 
-                        de ser un error comuniquese con el administrador");
+                        $this->Auth->setUser($user);
+                        return $this->redirect($this->Auth->redirectUrl());
                     }
                 } elseif ($countData == 0) {
                     
