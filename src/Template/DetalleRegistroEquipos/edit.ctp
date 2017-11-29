@@ -87,7 +87,7 @@
                                         <br>
                                 <?php 
                                     } else {
-                                        echo $this->Form->control("reparacion", ['label' => 'Fallas', 'class' => 'form-control', 'rows' => 3]);
+                                        echo $this->Form->control("reparacion", ['label' => 'Reparaciones', 'class' => 'form-control', 'rows' => 3]);
                                     }
                                 ?>
                             </div>

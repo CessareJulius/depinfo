@@ -10,8 +10,8 @@
         margin-left: 10px;
         font-size: 14px;
     }
-    dt > #editButton {
-        margin-left: 40%;
+    div > #editButton {
+        margin-left: 10%;
     }
 </style>
 
@@ -54,15 +54,7 @@
                         <div class="box box-info direct-chat direct-chat-info">
                             <div class="box-header with-border">
                                 <h3 class="box-title">Datos del Registro</h3>
-                            </div>
-                            <div class="box-body">
-                                <dl class="dl-contain" >
-                                    <dt>Codigo</dt>
-                                        <dd>&nbsp;&nbsp;<?= $detalleRegistroEquipo->registro_equipo->Codigo ?></dd>
-                                        <br>
-                                    
-                                    <dt>Falla
-                                        <?= $this->Html->link(__('Editar Falla'), [
+                                <?= $this->Html->link(__('Editar'), [
                                                 'controller' => 'DetalleRegistroEquipos',
                                                 'action' => 'edit', $detalleRegistroEquipo->id
                                             ], [
@@ -70,7 +62,14 @@
                                                 'Class' => 'btn btn-primary btn-sm'
                                             ]) 
                                         ?>
-                                    </dt>
+                            </div>
+                            <div class="box-body">
+                                <dl class="dl-contain" >
+                                    <dt>Codigo</dt>
+                                        <dd>&nbsp;&nbsp;<?= $detalleRegistroEquipo->registro_equipo->Codigo ?></dd>
+                                        <br>
+                                    
+                                    <dt>Falla</dt>
                                         <dd>&nbsp;&nbsp;<?= $detalleRegistroEquipo->falla ?></dd>
                                         <br>
 
@@ -112,7 +111,7 @@
                                         'action' => 'edit', $detalleRegistroEquipo->registro_equipo->persona->id
                                     ], 
                                     [
-                                        'style' => 'margin-left: 12px;',
+                                        'style' => 'margin-left: 15%;',
                                         'Class' => 'btn btn-primary btn-sm'
                                     ]) 
                                 ?>
@@ -156,7 +155,7 @@
                                         'action' => 'edit', $detalleRegistroEquipo->equipo->id
                                     ], 
                                     [
-                                        'style' => 'margin-left: 12px;',
+                                        'style' => 'margin-left: 15%;',
                                         'Class' => 'btn btn-primary btn-sm'
                                     ]) 
                                 ?>

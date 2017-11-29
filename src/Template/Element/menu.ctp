@@ -24,7 +24,9 @@
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
-        <li class="header"><center>MENU</center></li>
+        
+        <li class="header"><center style="color: floralwhite; ">MENU</center></li>
+        <li><?= $this->Html->Link('<i class="ion ion-home text-aqua"></i> <span>INICIO</span>', ['controller' => 'Users', 'action' => "home"], ['escape' => false]) ?></li>  
         <li class="treeview">
           <a href="#">
             <i class="fa fa-user text-aqua"></i> <span>Clientes</span>
@@ -150,7 +152,7 @@
             </li>
           </ul>
         </li>
-        <li class="header"><center>OPCIONES</center></li>
+        <li class="header"><center style="color: floralwhite; ">OPCIONES</center></li>
         <?php $id = $current_user['id']; ?>
         <li><?= $this->Html->Link('<i class="ion ion-person text-aqua"></i> <span>Perfil</span>', ['controller' => 'Users', 'action' => "profile/$id"], ['escape' => false]) ?></li>
         <li><a href="#"><i class="ion ion-wrench text-yellow"></i> <span>Configuracion</span></a></li>

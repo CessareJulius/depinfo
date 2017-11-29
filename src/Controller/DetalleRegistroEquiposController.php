@@ -123,7 +123,7 @@ class DetalleRegistroEquiposController extends AppController
                 } 
                 
                 if (isset($this->request->data['crearRegistro']) && $this->request->data['crearRegistro'] == 'cRegistro') {
-
+                    //pj($this->request->data);die();
                     $persona = $this->validateCedula($this->request->data['Personas']['cedula']);
 
                     if (isset($this->request->data['Personas']['cedula']) && $this->request->data['Personas']['cedula'] == $persona['cedula']) {

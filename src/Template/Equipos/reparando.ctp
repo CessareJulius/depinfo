@@ -59,7 +59,7 @@
                                     </td>
                                     <td class="actions">
                                         <center>
-                                            <?= $this->Html->link(__('Agregar Reparaciones'), ['action' => '', $equipos_EnRep->id], ['Class' => 'btn btn-warning btn-sm']) ?>
+                                            <?= $this->Html->link(__('Agregar Reparaciones'), ['DetalleRegistroEquipos', 'action' => 'addRep', $equipos_EnRep->id], ['Class' => 'btn btn-warning btn-sm']) ?>
                                         </center>
                                     </td>
                                 </tr>
