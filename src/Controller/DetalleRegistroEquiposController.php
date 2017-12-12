@@ -303,6 +303,18 @@ class DetalleRegistroEquiposController extends AppController
         $this->set('_serialize', ['detalleRegistroEquipo']);
     }
 
+    public function addReparacion($id)
+    {
+        $add_Reparacion = $this->DetalleRegistroEquipos->get($id, [
+            'contain' => []
+        ]);
+
+        if ($this->request->is(['patch', 'post', 'put'])){
+
+        }
+        $this->set(compact('formCedula', 'add_Reparacion'));
+    }
+
     public function anular($id)
     {
         $registro = $this->DetalleRegistroEquipos->get($id, [

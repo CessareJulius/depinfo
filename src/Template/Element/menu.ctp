@@ -100,7 +100,7 @@
               </a>
               <ul class="treeview-menu">
                 <li><?= $this->Html->Link('<i class="fa fa-circle-o"></i> En Reparacion', ['controller' => 'Equipos', 'action' => 'reparando'], ['escape' => false]); ?></li>
-                <li><?= $this->Html->Link('<i class="fa fa-circle-o"></i> Reparados', ['controller' => 'Equipos', 'action' => 'reparados'], ['escape' => false]); ?></li>
+                <li><?= $this->Html->Link('<i class="fa fa-circle-o"></i> Reparados sin Entregar', ['controller' => 'Equipos', 'action' => 'reparados'], ['escape' => false]); ?></li>
                 <li><?= $this->Html->Link('<i class="fa fa-circle-o"></i> Entregados', ['controller' => 'Equipos', 'action' => 'entregados'], ['escape' => false]); ?></li>
               </ul>
             </li>

@@ -86,13 +86,13 @@
             <div class="col-lg-3 col-xs-6">
                 <div class="small-box bg-red">
                     <div class="inner">
-                        <h3><?= $equip_EntCount ?></h3>
-                        <p>Equipos Reparados y Entregados</p>
+                        <h3><?= $registros_Anulados_Count ?></h3>
+                        <p>Registros Anulados</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-android-laptop"></i>
                     </div>
-                    <?= $this->Html->Link('Más Informacion <i class="fa fa-arrow-circle-right"></i>', ['controller' => 'Equipos', 'action' => 'entregados'], ['class' => 'small-box-footer', 'escape' => false]); ?>
+                    <?= $this->Html->Link('Más Informacion <i class="fa fa-arrow-circle-right"></i>', ['controller' => 'detalleRegistroEquipos', 'action' => 'registrosAnulados'], ['class' => 'small-box-footer', 'escape' => false]); ?>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
@@ -148,12 +148,12 @@
                             <i class="fa fa-desktop"></i>
                         <?php else:
                             echo $this->Html->Link("<i class='fa fa-desktop'></i>", 
-                                    ['controller' => 'Equipos', 'action' => 'reparado'], 
+                                    ['controller' => 'Equipos', 'action' => 'reparados'], 
                                     ['id' => 'bg-green', 'escape' => false]);
                         endif ?> 
                     </span>
-                    <div id="info-box-content" title="Equipos por Retirar">
-                        <span class="info-box-text">Equipos por Retirar</span>
+                    <div id="info-box-content" title="Equipos por Entregar">
+                        <span class="info-box-text">Equipos por Entregar</span>
                         <span class="info-box-number"><?= $equip_RepCount ?></span>
                     </div>
                 </div>

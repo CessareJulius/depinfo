@@ -40,7 +40,7 @@ class EquiposTable extends Table
 
         $this->addBehavior('Timestamp');
 
-        $this->hasMany('DetalleRegistroEquipos', [
+        $this->hasOne('DetalleRegistroEquipos', [
             'foreignKey' => 'equipo_id'
         ]);
     }

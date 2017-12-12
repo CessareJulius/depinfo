@@ -160,17 +160,18 @@ class UsersController extends AppController
             }
             //pj($equip_RepCount);die();
             
-            // ------- Equipos Reparados
-            $Equipos_Ent = $this->Equipos->find('all', [
+            // ------- Registros Anulados
+            $this->loadModel('DetalleRegistroEquipos');
+            $registroAnulados = $this->DetalleRegistroEquipos->find('all', [
                 'conditions' => [
-                    'status' => "entregado"
+                    'status' => 'anulado'
                 ]
             ]);
-            $equip_EntCount = $Equipos_Ent->count();
-            if ($equip_EntCount > 0 ) {
+            $registros_Anulados_Count = $registroAnulados->count();
+            if ($registros_Anulados_Count > 0 ) {
                 
             } else {
-                $equip_EntCount = 0;
+                $registros_Anulados_Count = 0;
             }
             //pj($equip_EntCount);die(); 
 
@@ -187,7 +188,7 @@ class UsersController extends AppController
         */
         //pj($clientCount);die();
 
-        $this->set(compact('clientCount', 'registroCount', 'empCount', 'sessCount', 'equip_EnRepCount', 'equip_RepCount', 'equip_EntCount'));
+        $this->set(compact('clientCount', 'registroCount', 'empCount', 'sessCount', 'equip_EnRepCount', 'equip_RepCount', 'registros_Anulados_Count'));
     }
 
     public function index()

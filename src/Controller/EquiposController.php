@@ -42,7 +42,7 @@ class EquiposController extends AppController
         $equipos_EnRep = $this->Equipos->find('all', [
             'contain' => ['DetalleRegistroEquipos'],
             'conditions' => [
-                'status' => "reparando"
+                'Equipos.status' => "reparando"
             ]
         ]);
         //pj($equipos_EnRep);die();
@@ -52,27 +52,47 @@ class EquiposController extends AppController
     }
 
     public function reparados() {
-        $equipos_Rep = $this->Equipos->find('all', [
+        $equipos_Reparados = $this->Equipos->find('all', [
+            'contain' => [
+                'DetalleRegistroEquipos'
+            ],
             'conditions' => [
-                'status' => "reparado"
+                'Equipos.status' => "reparado"
             ]
         ]);
-        //pj($equipos_Rep);die();
+        //pj($equipos_Reparados);die();
 
-        $this->set(compact('equipos_Rep'));
-        $this->set('_serialize', ['equipos_Rep']);
+        $this->set(compact('equipos_Reparados'));
+        $this->set('_serialize', ['equipos_Reparados']);
     }
 
     public function entregados() {
-        $equipos_Ent = $this->Equipos->find('all', [
+        $equipos_Entregados = $this->Equipos->find('all', [
+            'contain' => [
+                'DetalleRegistroEquipos'
+            ],
             'conditions' => [
-                'status' => "entregado"
+                'Equipos.status' => "entregado"
             ]
         ]);
-        pj($equipos_Ent);die();
+        //pj($equipos_Ent);die();
 
-        $this->set(compact('equipos_Ent'));
-        $this->set('_serialize', ['equipos_Ent']);
+        $this->set(compact('equipos_Entregados'));
+        $this->set('_serialize', ['equipos_Entregados']);
+    }
+
+    public function entregarEquipo($id)
+    {
+        $equipo = $this->Equipos->get($id, [
+            'contain' => []
+        ]);
+        $equipo->status = 'entregado';
+        if ($this->Equipos->save($equipo)) {
+            $this->Flash->success(__('Se ha cambiado el status del equipo a entregado.'));
+            return $this->redirect(['action' => 'index']);
+        } else {
+            $this->Flash->error("No se pudo cambiar el status del equipo. Por Favor, intente nuevamente");
+        }
     }
 
     /**
@@ -156,9 +176,9 @@ class EquiposController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $equipo = $this->Equipos->get($id);
         if ($this->Equipos->delete($equipo)) {
-            $this->Flash->success(__('The equipo has been deleted.'));
+            $this->Flash->success(__('El equipo ha sido borrado exitosamente.'));
         } else {
-            $this->Flash->error(__('The equipo could not be deleted. Please, try again.'));
+            $this->Flash->error(__('El equipo no pudo ser borrado. Por favor intente nuevamente.'));
         }
 
         return $this->redirect(['action' => 'index']);

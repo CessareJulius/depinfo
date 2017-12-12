@@ -18232,3 +18232,534 @@ Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
 
 
 
+2017-12-12 17:33:13 Notice: Notice (8): Undefined variable: equipos_EnRep in [/var/www/html/depinfo/src/Template/Equipos/reparados.ctp, line 44]
+Request URL: /equipos/reparados
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+include - APP/Template/Equipos/reparados.ctp, line 44
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-12-12 17:35:29 Notice: Notice (8): Undefined variable: equipos_EnRep in [/var/www/html/depinfo/src/Template/Equipos/reparados.ctp, line 44]
+Request URL: /equipos/reparados
+Referer URL: http://localhost/depinfo/users/home
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+include - APP/Template/Equipos/reparados.ctp, line 44
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-12-12 17:44:49 Notice: Notice (8): Undefined variable: equipos_EnRep in [/var/www/html/depinfo/src/Template/Equipos/reparados.ctp, line 44]
+Request URL: /equipos/reparados
+Referer URL: http://localhost/depinfo/users/home
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+include - APP/Template/Equipos/reparados.ctp, line 44
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-12-12 17:59:22 Notice: Notice (8): Undefined variable: Equipo_Reparados in [/var/www/html/depinfo/src/Template/Equipos/reparados.ctp, line 44]
+Request URL: /equipos/reparados
+Referer URL: http://localhost/depinfo/users/home
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+include - APP/Template/Equipos/reparados.ctp, line 44
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-12-12 17:59:41 Notice: Notice (8): Undefined variable: equipo_Reparados in [/var/www/html/depinfo/src/Template/Equipos/reparados.ctp, line 44]
+Request URL: /equipos/reparados
+Referer URL: http://localhost/depinfo/users/home
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+include - APP/Template/Equipos/reparados.ctp, line 44
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-12-12 19:28:20 Notice: Notice (8): Trying to get property of non-object in [/var/www/html/depinfo/src/Template/Equipos/reparados.ctp, line 47]
+Request URL: /equipos/reparados
+Referer URL: http://localhost/depinfo/equipos/reparando
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+include - APP/Template/Equipos/reparados.ctp, line 47
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-12-12 19:29:14 Notice: Notice (8): Trying to get property of non-object in [/var/www/html/depinfo/src/Template/Equipos/reparados.ctp, line 47]
+Request URL: /equipos/reparados
+Referer URL: http://localhost/depinfo/equipos/reparando
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+include - APP/Template/Equipos/reparados.ctp, line 47
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-12-12 19:29:31 Notice: Notice (8): Trying to get property of non-object in [/var/www/html/depinfo/src/Template/Equipos/reparados.ctp, line 47]
+Request URL: /equipos/reparados
+Referer URL: http://localhost/depinfo/equipos/reparando
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+include - APP/Template/Equipos/reparados.ctp, line 47
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-12-12 19:29:59 Notice: Notice (8): Trying to get property of non-object in [/var/www/html/depinfo/src/Template/Equipos/reparados.ctp, line 47]
+Request URL: /equipos/reparados
+Referer URL: http://localhost/depinfo/equipos/reparando
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+include - APP/Template/Equipos/reparados.ctp, line 47
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-12-12 19:30:07 Notice: Notice (8): Trying to get property of non-object in [/var/www/html/depinfo/src/Template/Equipos/reparados.ctp, line 47]
+Request URL: /equipos/reparados
+Referer URL: http://localhost/depinfo/equipos/reparando
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+include - APP/Template/Equipos/reparados.ctp, line 47
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-12-12 19:32:05 Notice: Notice (8): Trying to get property of non-object in [/var/www/html/depinfo/src/Template/Equipos/reparados.ctp, line 47]
+Request URL: /equipos/reparados
+Referer URL: http://localhost/depinfo/equipos/reparando
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+include - APP/Template/Equipos/reparados.ctp, line 47
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-12-12 19:32:36 Notice: Notice (8): Trying to get property of non-object in [/var/www/html/depinfo/src/Template/Equipos/reparados.ctp, line 47]
+Request URL: /equipos/reparados
+Referer URL: http://localhost/depinfo/equipos/reparando
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+include - APP/Template/Equipos/reparados.ctp, line 47
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-12-12 19:45:55 Notice: Notice (8): Trying to get property of non-object in [/var/www/html/depinfo/src/Template/Equipos/reparados.ctp, line 47]
+Request URL: /equipos/reparados
+Referer URL: http://localhost/depinfo/detalle-registro-equipos
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+include - APP/Template/Equipos/reparados.ctp, line 47
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-12-12 19:47:18 Notice: Notice (8): Trying to get property of non-object in [/var/www/html/depinfo/src/Template/Equipos/reparados.ctp, line 47]
+Request URL: /equipos/reparados
+Referer URL: http://localhost/depinfo/detalle-registro-equipos
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+include - APP/Template/Equipos/reparados.ctp, line 47
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-12-12 19:50:17 Notice: Notice (8): Trying to get property of non-object in [/var/www/html/depinfo/src/Template/Equipos/reparados.ctp, line 47]
+Request URL: /equipos/reparados
+Referer URL: http://localhost/depinfo/detalle-registro-equipos
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+include - APP/Template/Equipos/reparados.ctp, line 47
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-12-12 20:45:17 Notice: Notice (8): Undefined variable: equipos_Reparados in [/var/www/html/depinfo/src/Template/Equipos/entregados.ctp, line 43]
+Request URL: /equipos/entregados
+Referer URL: http://localhost/depinfo/equipos/reparados
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+include - APP/Template/Equipos/entregados.ctp, line 43
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-12-12 20:47:06 Notice: Notice (8): Undefined variable: equipos_Reparados in [/var/www/html/depinfo/src/Template/Equipos/entregados.ctp, line 43]
+Request URL: /equipos/entregados
+Referer URL: http://localhost/depinfo/equipos/reparados
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+include - APP/Template/Equipos/entregados.ctp, line 43
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-12-12 20:48:15 Notice: Notice (8): Trying to get property of non-object in [/var/www/html/depinfo/src/Template/Equipos/entregados.ctp, line 53]
+Request URL: /equipos/entregados
+Referer URL: http://localhost/depinfo/equipos/reparados
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+include - APP/Template/Equipos/entregados.ctp, line 53
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+
+2017-12-12 20:48:15 Notice: Notice (8): Trying to get property of non-object in [/var/www/html/depinfo/src/Template/Equipos/entregados.ctp, line 54]
+Request URL: /equipos/entregados
+Referer URL: http://localhost/depinfo/equipos/reparados
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+include - APP/Template/Equipos/entregados.ctp, line 54
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1196
+Cake\View\View::_render() - CORE/src/View/View.php, line 1157
+Cake\View\View::render() - CORE/src/View/View.php, line 765
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 103
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 106
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 95
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+DebugKit\Middleware\DebugKitMiddleware::__invoke() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 81
+[main] - ROOT/webroot/index.php, line 40
+
+
+

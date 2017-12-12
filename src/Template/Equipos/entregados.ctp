@@ -14,7 +14,7 @@
             <li><i class="fa fa-home"></i>
                 <?= $this->Html->Link('Inicio', ['controller' => 'Users', 'action' => 'home']); ?>
             </li>
-            <li class="active">Equipos</li>
+            <li class="active">Equipos Reparados</li>
         </ol>
     </section>
 
@@ -24,7 +24,7 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <center><h1 class="box-title">Equipos en Reparacion</h1></center>
+                        <center><h1 class="box-title">Equipos Entregados</h1></center>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
@@ -34,34 +34,25 @@
                                     <th>ID</th>
                                     <th>SERIAL</th>
                                     <th>TIPO</th>
-                                    <th>MARCA</th>
-                                    <th>MODELO</th>
-                                    <th>DEPARTAMENTO</th>
-                                    <th><center>ACCION</center></th>
+                                    <th>FALLA</th>
+                                    <th>REPARACIÓN</th>
+                                    <th><center>FECHA DE ENTREGA</center></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach($equipos_EnRep as $equipos_EnRep): ?>
+                                <?php foreach($equipos_Entregados as $equipo_Entregado): ?>
                                 <tr>
-                                    <td><?= $this->Number->format($equipos_EnRep->id) ?></td>
-                                    <td><?= h($equipos_EnRep->serial) ?></td>
-                                    <td><?= h($equipos_EnRep->tipo) ?></td>
-                                    <td><?= h($equipos_EnRep->marca) ?></td>
-                                    <td><?= h($equipos_EnRep->modelo) ?></td>
-                                    <td>
-                                        <?php 
-                                            if ($equipos_EnRep->departamento == null ) {
-                                                echo "No posee";
-                                            } else {
-                                                echo $equipos_EnRep->departamento;
-                                            }
-                                        ?>
+                                    <td><?= $this->Number->format($equipo_Entregado->id) ?></td>
+                                    <td><?php echo $this->Html->Link($equipo_Entregado->serial, 
+                                        [
+                                            'controller' => 'Equipos',
+                                            'action' => 'view/'.$equipo_Entregado->id
+                                        ]); ?>
                                     </td>
-                                    <td class="actions">
-                                        <center>
-                                            <?= $this->Html->link(__('Agregar Reparaciones'), ['action' => '', $equipos_EnRep->id], ['Class' => 'btn btn-warning btn-sm']) ?>
-                                        </center>
-                                    </td>
+                                    <td><?= h($equipo_Entregado->tipo) ?></td>
+                                    <td><?= h($equipo_Entregado->detalle_registro_equipo->falla) ?></td>
+                                    <td><?= h($equipo_Entregado->detalle_registro_equipo->reparacion) ?></td>
+                                    <td><center><?= $equipo_Entregado->modified->nice() ?></center></td>
                                 </tr>
                                 <?php endforeach; ?>
                             </tbody>
