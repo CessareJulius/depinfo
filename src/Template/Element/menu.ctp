@@ -70,7 +70,17 @@
           <ul class="treeview-menu">
             <li><?= $this->Html->Link('<i class="fa fa-plus"></i> Nuevo Registro', ['controller' => 'DetalleRegistroEquipos', 'action' => 'add'], ['escape' => false]); ?></li>
             <li><?= $this->Html->Link('<i class="fa fa-navicon"></i> Ver Todos', ['controller' => 'DetalleRegistroEquipos', 'action' => 'index'], ['escape' => false]); ?></li>
-            <li><a href="../UI/buttons.html"><i class="fa fa-circle-o"></i> Buscar Registro</a></li>
+            <li class="treeview">
+              <a href="#"><i class="fa fa-user"></i> Ver por Status
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><?= $this->Html->Link('<i class="fa fa-circle-o"></i> Registros Activos', ['controller' => 'DetalleRegistroEquipos', 'action' => 'registrosActivos'], ['escape' => false]); ?></li>
+                <li><?= $this->Html->Link('<i class="fa fa-circle-o"></i> Registros Anulados', ['controller' => 'DetalleRegistroEquipos', 'action' => 'registrosAnulados'], ['escape' => false]); ?></li>
+              </ul>
+            </li>
           </ul>
         </li>
         <li class="treeview">

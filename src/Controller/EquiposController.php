@@ -57,7 +57,7 @@ class EquiposController extends AppController
                 'status' => "reparado"
             ]
         ]);
-        pj($equipos_Rep);die();
+        //pj($equipos_Rep);die();
 
         $this->set(compact('equipos_Rep'));
         $this->set('_serialize', ['equipos_Rep']);

@@ -91,18 +91,6 @@
                                     }
                                 ?>
                             </div>
-                            <div class="form-group col-xs-5">
-                                <label>Status</label>
-                                <select name="status" class="form-control select2" style="width: 100%;">
-                                    <?php if($detalleRegistroEquipo->status == 'activo'){ ?>
-                                        <option value="activo" selected="selected">Activo</option>
-                                        <option value="anulado">Anulado</option>
-                                    <?php }else{ ?>
-                                        <option value="activo">Activo</option>
-                                        <option value="anulado" selected="selected">Anulado</option>
-                                    <?php } ?>
-                                </select>
-                            </div>
                         </div>
                         <div class="box-footer">
                             <?php

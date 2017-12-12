@@ -76,6 +76,46 @@ class DetalleRegistroEquiposController extends AppController
         $this->set('_serialize', ['detalleRegistroEquipo']);
     }
 
+    public function registrosActivos()
+    {
+        $registrosActivos = $this->DetalleRegistroEquipos->find('all', [
+            'contain' => [
+                'Equipos', 
+                'RegistroEquipos' => [
+                    'Personas',
+                    'Users' => [
+                        'Personas'
+                    ]
+                ]
+            ],
+            'conditions' => [
+                'DetalleRegistroEquipos.status' => "activo"
+            ]
+        ]);
+        //pj($registrosActivos);die();
+        $this->set('registrosActivos', $registrosActivos);
+    }
+
+    public function registrosAnulados()
+    {
+        $registrosAnulados = $this->DetalleRegistroEquipos->find('all', [
+            'contain' => [
+                'Equipos', 
+                'RegistroEquipos' => [
+                    'Personas',
+                    'Users' => [
+                        'Personas'
+                    ]
+                ]
+            ],
+            'conditions' => [
+                'DetalleRegistroEquipos.status' => "anulado"
+            ]
+        ]);
+        //pj($registrosAnulados);die();
+        $this->set('registrosAnulados', $registrosAnulados);
+    }
+
     /**
      * Add method
      *
@@ -261,6 +301,34 @@ class DetalleRegistroEquiposController extends AppController
         }
         $this->set(compact('detalleRegistroEquipo'));
         $this->set('_serialize', ['detalleRegistroEquipo']);
+    }
+
+    public function anular($id)
+    {
+        $registro = $this->DetalleRegistroEquipos->get($id, [
+            'contain' => []
+        ]);
+        $registro->status = 'anulado';
+        if ($this->DetalleRegistroEquipos->save($registro)) {
+            $this->Flash->success(__('Se han anulado el registro exitosamente.'));
+            return $this->redirect(['action' => 'index']);
+        } else {
+            $this->Flash->error("No se pudo anular el registro. Por Favor, intente nuevamente");
+        }
+    }
+
+    public function activar($id)
+    {
+        $registro = $this->DetalleRegistroEquipos->get($id, [
+            'contain' => []
+        ]);
+        $registro->status = 'activo';
+        if ($this->DetalleRegistroEquipos->save($registro)) {
+            $this->Flash->success(__('Se han activado el registro exitosamente.'));
+            return $this->redirect(['action' => 'index']);
+        } else {
+            $this->Flash->error("No se pudo activar el registro. Por Favor, intente nuevamente");
+        }
     }
 
     /**
