@@ -78,13 +78,12 @@
                             </div>
                             <div class="form-group col-xs-5">
                                 <?php if ($detalleRegistroEquipo->reparacion == null ) { ?>
-                                        <div class="input required">
-                                            <label>Reparaciones</label>
+                                    <div class="input required">
+                                        <label>Reparaciones</label>
                                 <?php 
                                         echo $this->Html->Link("<i class='fa fa-reply'>&nbsp;</i>Agregar Reparaciones", ['controller' => '','action' => ''], ['id' => 'btnAddRep', 'class' => 'btn btn-info', 'escape' => false]);
                                 ?> 
-                                        </div>
-                                        <br>
+                                    </div>
                                 <?php 
                                     } else {
                                         echo $this->Form->control("reparacion", ['label' => 'Reparaciones', 'class' => 'form-control', 'rows' => 3]);

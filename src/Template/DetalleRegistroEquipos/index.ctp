@@ -69,7 +69,9 @@
                                     <td class="actions">
                                     <center>
                                         <?= $this->Html->link(__('Ver'), ['action' => 'view', $detalleRegistroEquipo->id], ['Class' => 'btn btn-info btn-sm']) ?>
-                                        <?= $this->Html->link(__('Editar'), ['action' => 'edit', $detalleRegistroEquipo->id], ['Class' => 'btn btn-primary btn-sm']) ?>
+                                        <?php if($detalleRegistroEquipo->status == 'activo'){
+                                            echo $this->Html->link(__('Editar'), ['action' => 'edit', $detalleRegistroEquipo->id], ['Class' => 'btn btn-primary btn-sm']);
+                                        } ?>
                                         <?php if ($current_user['role'] == 'admin') {
                                             if ($detalleRegistroEquipo->status == 'anulado') {
                                                 echo $this->Form->postLink(__('Activar'), ['action' => 'activar', $detalleRegistroEquipo->id],['Class' => 'btn btn-warning btn-sm'], ['confirm' => __('Esta seguro que desea Activar este Registro # {0}?', $detalleRegistroEquipo->id)]);
