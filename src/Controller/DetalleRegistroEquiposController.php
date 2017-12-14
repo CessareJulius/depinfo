@@ -305,14 +305,32 @@ class DetalleRegistroEquiposController extends AppController
 
     public function addReparacion($id)
     {
-        $add_Reparacion = $this->DetalleRegistroEquipos->get($id, [
+        $addReparacion = $this->DetalleRegistroEquipos->get($id, [
             'contain' => []
         ]);
-
+        $this->loadModel('Equipos');
+        //pj($equipo);die();
+        
         if ($this->request->is(['patch', 'post', 'put'])){
+            $addReparacion = $this->DetalleRegistroEquipos->patchEntity($addReparacion, $this->request->getData());
+            if ($this->DetalleRegistroEquipos->save($addReparacion)) {
+                
+                $equipo = $this->Equipos->get($addReparacion->equipo_id, [
+                    'contain' => []
+                ]);
+                $equipo->status = 'reparado';
+                if ($this->Equipos->save($equipo)) {
 
+                    $this->Flash->success(__('Se ha agregado la reparacion exitosamente.'));
+
+                    return $this->redirect(['action' => 'index']);
+                } else {
+                    $this->Flash->error("No se pudo cambiar el status del equipo. Por Favor, intente nuevamente");
+                }
+            }
+            $this->Flash->error(__('The detalle registro equipo could not be saved. Please, try again.'));
         }
-        $this->set(compact('formCedula', 'add_Reparacion'));
+        $this->set('addReparacion', $addReparacion);
     }
 
     public function anular($id)

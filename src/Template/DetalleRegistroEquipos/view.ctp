@@ -80,7 +80,8 @@
                                     <?php else: ?>
                                     <dt>Reparacion</dt><center>
                                         <?= $this->Html->link(__('Agregar Reparacion'), [
-                                                'action' => ''
+                                                'controller' => 'DetalleRegistroEquipos',
+                                                'action' => 'addReparacion',$detalleRegistroEquipo->id
                                             ], [
                                                 'Class' => 'btn btn-warning btn-sm'
                                             ]) 
