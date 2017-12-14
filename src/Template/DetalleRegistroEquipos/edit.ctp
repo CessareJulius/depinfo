@@ -81,7 +81,7 @@
                                     <div class="input required">
                                         <label>Reparaciones</label>
                                 <?php 
-                                        echo $this->Html->Link("<i class='fa fa-reply'>&nbsp;</i>Agregar Reparaciones", ['controller' => '','action' => ''], ['id' => 'btnAddRep', 'class' => 'btn btn-info', 'escape' => false]);
+                                        echo $this->Html->Link("<i class='fa fa-reply'>&nbsp;</i>Agregar Reparaciones", ['controller' => 'DetalleRegistroEquipos','action' => 'addReparacion', $detalleRegistroEquipo->id], ['id' => 'btnAddRep', 'class' => 'btn btn-info', 'escape' => false]);
                                 ?> 
                                     </div>
                                 <?php 

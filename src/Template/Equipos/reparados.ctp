@@ -36,6 +36,7 @@
                                     <th>TIPO</th>
                                     <th>FALLA</th>
                                     <th>REPARACIÓN</th>
+                                    <th>FECHA DE REPARACIÓN</th>
                                     <th><center>ACCION</center></th>
                                 </tr>
                             </thead>
@@ -52,6 +53,7 @@
                                     <td><?= h($equipo_Reparado->tipo) ?></td>
                                     <td><?= h($equipo_Reparado->detalle_registro_equipo->falla) ?></td>
                                     <td><?= h($equipo_Reparado->detalle_registro_equipo->reparacion) ?></td>
+                                    <td><center><?= $equipo_Reparado->modified->nice() ?></center></td>
                                     <td class="actions">
                                         <center>
                                             <?= $this->Html->link(__('Entregar'), ['action' => 'entregarEquipo', $equipo_Reparado->id], ['Class' => 'btn btn-success btn-sm']) ?>
