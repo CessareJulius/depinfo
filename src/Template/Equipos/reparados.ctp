@@ -43,16 +43,41 @@
                             <tbody>
                                 <?php foreach($equipos_Reparados as $equipo_Reparado): ?>
                                 <tr>
-                                    <td><?= $this->Number->format($equipo_Reparado->id) ?></td>
+                                    <td>
+                                        <?php 
+                                            echo $this->Html->link(__($equipo_Reparado->id), [
+                                                        'controller' => 'DetalleRegistroEquipos',
+                                                        'action' => 'view',$equipo_Reparado->detalle_registro_equipo->id
+                                                    ]);
+                                        ?>
+                                        
+                                    </td>
+
                                     <td><?php echo $this->Html->Link($equipo_Reparado->serial, 
                                         [
-                                            'controller' => 'Equipos',
-                                            'action' => 'view/'.$equipo_Reparado->id
+                                            'action' => 'view',$equipo_Reparado->id
                                         ]); ?>
                                     </td>
+
                                     <td><?= h($equipo_Reparado->tipo) ?></td>
-                                    <td><?= h($equipo_Reparado->detalle_registro_equipo->falla) ?></td>
-                                    <td><?= h($equipo_Reparado->detalle_registro_equipo->reparacion) ?></td>
+
+                                    <td>
+                                        <?php 
+                                            echo $this->Html->link(__($equipo_Reparado->detalle_registro_equipo->falla), [
+                                                        'controller' => 'DetalleRegistroEquipos',
+                                                        'action' => 'edit',$equipo_Reparado->detalle_registro_equipo->id
+                                                    ]);
+                                        ?>
+                                    </td>
+
+                                    <td>
+                                        <?php 
+                                            echo $this->Html->link(__($equipo_Reparado->detalle_registro_equipo->reparacion), [
+                                                        'controller' => 'DetalleRegistroEquipos',
+                                                        'action' => 'edit',$equipo_Reparado->detalle_registro_equipo->id
+                                                    ]);
+                                        ?>     
+                                    </td>
                                     <td><center><?= $equipo_Reparado->modified->nice() ?></center></td>
                                     <td class="actions">
                                         <center>

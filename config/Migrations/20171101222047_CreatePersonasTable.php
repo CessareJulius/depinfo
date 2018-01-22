@@ -13,10 +13,11 @@ class CreatePersonasTable extends AbstractMigration
     public function change()
     {
         $table = $this->table('personas');
-        $table->addColumn('cedula', 'integer')
+        $table->addColumn('cedula', 'string', array('limit' => 10))
               ->addColumn('nombre', 'string', array('limit' => 100))
               ->addColumn('apellido', 'string', array('limit' => 100))
-              ->addColumn('telefono', 'biginteger')
+              ->addColumn('telefono', 'string', array('limit' => 20))
+              ->addColumn('status', 'integer', array('limit' => 2))
               ->addColumn('created', 'datetime')
               ->addColumn('modified', 'datetime')
               ->create();

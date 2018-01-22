@@ -17,7 +17,7 @@
     <!-- Content Header (Page header) -->
       <?= $this->Flash->render() ?> 
         <section class="content-header">
-            <h1>Bienvenido<small>Esta es la pagina de inicio</small></h1>
+            <h1>Bienvenido<small>Esta es la pagina de empleados</small></h1>
             <ol class="breadcrumb">
                 <li><i class="fa fa-home"></i>
                     <?= $this->Html->Link('Inicio', ['controller' => 'Users', 'action' => 'home']); ?>

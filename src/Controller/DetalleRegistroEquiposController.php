@@ -19,7 +19,7 @@ class DetalleRegistroEquiposController extends AppController
 
         if (isset($user['role']) and $user['role'] === 'user') {
 
-            if (in_array($this->request->action, ['index','add', 'view', 'edit'])) {
+            if (in_array($this->request->action, ['index','add', 'view', 'edit', 'registrosActivos','registrosAnulados', 'addReparacion', 'anular'])) {
 
                 return true;
             }
@@ -34,17 +34,20 @@ class DetalleRegistroEquiposController extends AppController
      */
     public function index()
     {
-        $this->paginate = [
-            'contain' => [
-                'Equipos', 
-                'RegistroEquipos' => [
-                    'Personas',
-                    'Users' => [
-                        'Personas'
+            $this->paginate = [
+                'contain' => [
+                    'Equipos', 
+                    'RegistroEquipos' => [
+                        'Personas',
+                        'Users' => [
+                            'Personas'
+                        ]
                     ]
                 ]
-            ]
-        ];
+            ];
+
+        
+        
         $detalleRegistroEquipos = $this->paginate($this->DetalleRegistroEquipos);
         //pj($detalleRegistroEquipos);die();
         $this->set(compact('detalleRegistroEquipos'));
@@ -293,11 +296,11 @@ class DetalleRegistroEquiposController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $detalleRegistroEquipo = $this->DetalleRegistroEquipos->patchEntity($detalleRegistroEquipo, $this->request->getData());
             if ($this->DetalleRegistroEquipos->save($detalleRegistroEquipo)) {
-                $this->Flash->success(__('The detalle registro equipo has been saved.'));
+                $this->Flash->success(__('El Registro a sido modificado exitosamente.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The detalle registro equipo could not be saved. Please, try again.'));
+            $this->Flash->error(__('El registro no pudo ser modificado. Por Favor, Intente nuevamente.'));
         }
         $this->set(compact('detalleRegistroEquipo'));
         $this->set('_serialize', ['detalleRegistroEquipo']);
@@ -325,7 +328,7 @@ class DetalleRegistroEquiposController extends AppController
 
                     return $this->redirect(['action' => 'index']);
                 } else {
-                    $this->Flash->error("No se pudo cambiar el status del equipo. Por Favor, intente nuevamente");
+                    $this->Flash->error("No se pudo agregar la reparacion. Por Favor, intente nuevamente");
                 }
             }
             $this->Flash->error(__('The detalle registro equipo could not be saved. Please, try again.'));
@@ -340,7 +343,7 @@ class DetalleRegistroEquiposController extends AppController
         ]);
         $registro->status = 'anulado';
         if ($this->DetalleRegistroEquipos->save($registro)) {
-            $this->Flash->success(__('Se han anulado el registro exitosamente.'));
+            $this->Flash->success(__('Se ha anulado el registro exitosamente.'));
             return $this->redirect(['action' => 'index']);
         } else {
             $this->Flash->error("No se pudo anular el registro. Por Favor, intente nuevamente");

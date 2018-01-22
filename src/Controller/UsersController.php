@@ -120,16 +120,16 @@ class UsersController extends AppController
             }
             //pj($sessCount);die();
 
-            // ------- Registros Creados
-            $this->loadModel('DetalleRegistroEquipos');
-            $registroEquipos = $this->DetalleRegistroEquipos->find('all');
-            $registroCount = $registroEquipos->count();
-            if ($registroCount > 0 ) {
+            // ------- Equipos Registrados
+            $this->loadModel('Equipos');
+            $Equipos = $this->Equipos->find('all');
+            $equiposCount = $Equipos->count();
+            if ($equiposCount > 0 ) {
                 
             } else {
-                $registroCount = 0;
+                $equiposCount = 0;
             }
-            //pj($registroEquipos);die();
+            //pj($Equipos);die();
 
             // ------- Equipos en Reparacion 
             $this->loadModel('Equipos');
@@ -188,7 +188,7 @@ class UsersController extends AppController
         */
         //pj($clientCount);die();
 
-        $this->set(compact('clientCount', 'registroCount', 'empCount', 'sessCount', 'equip_EnRepCount', 'equip_RepCount', 'registros_Anulados_Count'));
+        $this->set(compact('clientCount', 'equiposCount', 'empCount', 'sessCount', 'equip_EnRepCount', 'equip_RepCount', 'registros_Anulados_Count'));
     }
 
     public function index()

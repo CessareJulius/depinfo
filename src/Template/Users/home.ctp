@@ -49,7 +49,7 @@
                 <div class="small-box bg-aqua">
                     <div class="inner">
                         <h3><?= $clientCount ?></h3>
-                        <p>Clientes Registrados Actualmente</p>
+                        <p>Personas Registradas Actualmente</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-ios-people"></i>
@@ -61,13 +61,13 @@
             <div class="col-lg-3 col-xs-6">
                 <div class="small-box bg-green">
                     <div class="inner">
-                        <h3><?= $registroCount ?></h3>
-                        <p>Registros creados </p>
+                        <h3><?= $equiposCount ?></h3>
+                        <p>Equipos Registrados </p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-clipboard"></i>
                     </div>
-                    <?= $this->Html->Link('Más Informacion <i class="fa fa-arrow-circle-right"></i>', ['controller' => 'DetalleRegistroEquipos', 'action' => 'index'], ['class' => 'small-box-footer', 'escape' => false]); ?>
+                    <?= $this->Html->Link('Más Informacion <i class="fa fa-arrow-circle-right"></i>', ['controller' => 'Equipos', 'action' => 'index'], ['class' => 'small-box-footer', 'escape' => false]); ?>
                 </div>
             </div>
             <div class="col-lg-3 col-xs-6">

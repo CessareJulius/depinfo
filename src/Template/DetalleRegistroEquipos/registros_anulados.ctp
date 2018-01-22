@@ -23,7 +23,7 @@
             <li><i class="fa fa-home"></i>
                 <?= $this->Html->Link('Inicio', ['controller' => 'Users', 'action' => 'home']); ?>
             </li>
-            <li class="active">Registros Activos</li>
+            <li class="active">Registros Anulados</li>
         </ol>
     </section>
 
@@ -33,7 +33,7 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <center><h1 class="box-title">Lista de Registros Activos</h1></center>
+                        <center><h1 class="box-title">Lista de Registros Anulados</h1></center>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
@@ -58,11 +58,13 @@
                                     <td><?= h($registroAnulado->registro_equipo->user->persona->nombre." ".$registroAnulado->registro_equipo->user->persona->apellido) ?></td>
                                     <td class="actions">
                                     <center>
-                                        <?= $this->Html->link(__('Ver'), ['action' => 'view', $registroAnulado->id], ['Class' => 'btn btn-info btn-sm']) ?>
-                                        <?= $this->Html->link(__('Editar'), ['action' => 'edit', $registroAnulado->id], ['Class' => 'btn btn-primary btn-sm']) ?>
-                                        <?php if ($current_user['role'] == 'admin') {
-                                            echo $this->Form->postLink(__('Activar'), ['action' => 'activar', $registroAnulado->id],['Class' => 'btn btn-warning btn-sm'], ['confirm' => __('Esta seguro que desea Activar este Registro # {0}?', $registroAnulado->id)]);
-                                        } ?>
+                                        <?php 
+                                            echo $this->Html->link(__('Ver'), ['action' => 'view', $registroAnulado->id], ['Class' => 'btn btn-info btn-sm']); 
+                                            echo "&nbsp;";
+                                            if ($current_user['role'] == 'admin') {
+                                                echo $this->Form->postLink(__('Activar'), ['action' => 'activar', $registroAnulado->id],['Class' => 'btn btn-warning btn-sm'], ['confirm' => __('Esta seguro que desea Activar este Registro # {0}?', $registroAnulado->id)]);
+                                            } 
+                                        ?>
                                     </center>
                                     </td>
                                 </tr>

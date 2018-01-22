@@ -29,7 +29,7 @@
         <li><?= $this->Html->Link('<i class="ion ion-home text-aqua"></i> <span>INICIO</span>', ['controller' => 'Users', 'action' => "home"], ['escape' => false]) ?></li>  
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-user text-aqua"></i> <span>Clientes</span>
+            <i class="fa fa-user text-aqua"></i> <span>Personas</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -55,7 +55,7 @@
           <ul class="treeview-menu">
             <li><?= $this->Html->Link('<i class="fa fa-user-plus"></i> Agregar Nuevo', ['controller' => 'Users', 'action' => 'add'], ['escape' => false]); ?></li>
             <li><?= $this->Html->Link('<i class="fa fa-navicon"></i> Ver Todos', ['controller' => 'Users', 'action' => 'index'], ['escape' => false]); ?></li>
-            <li><a href="../charts/flot.html"><i class="fa fa-search"></i> Buscar Empleado</a></li>
+            
           </ul>
         </li>
         <?php endif ?>

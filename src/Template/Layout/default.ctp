@@ -47,7 +47,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         '../template/datatables.net/js/jquery.dataTables',
         '../template/datatables.net-bs/js/dataTables.bootstrap.min', 
         '../template/jquery-slimscroll/jquery.slimscroll.min',
-        '../template/plugins/iCheck/icheck.min', 
         '../template/fastclick/lib/fastclick']) ?>
 
     <?= $this->Html->script([

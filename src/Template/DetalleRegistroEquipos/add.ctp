@@ -51,18 +51,18 @@
                     <div id="editEmp" class="col-xs-6">
                         <div class="box box-info">
                             <div class="box-header with-border">
-                                <center><h3 class="box-title"><i class="fa fa-male"> Ingrese la Cedula del Cliente</i></h3></center>
+                                <center><h3 class="box-title"><i class="fa fa-male"> Ingrese la Cedula de la Persona</i></h3></center>
                             </div>
                             <?php 
                                 echo $this->Form->create($formCedula, ['class' => 'form-horizontal']) 
                             ?>
                                 <div class="box-body">
                                     <div class="form-group">
-                                        <label for="cedula" class="col-sm-2 control-label">Cedula/Rif</label>
+                                        <label for="cedula" class="col-sm-2 control-label">Cedula</label>
                                         <div class="col-sm-10">
                                             <?=
                                                 $this->Form->input('cedula', ['class' => 'form-control', 'placeholder' => 'Cedula',
-                                                    'label' => false, 'required', 'autofocus'])
+                                                    'label' => false, 'required', 'autofocus', 'type' => 'number'])
                                             ?>
                                         </div>
                                     </div>

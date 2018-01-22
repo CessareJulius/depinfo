@@ -59,10 +59,16 @@
                                     <td class="actions">
                                     <center>
                                         <?= $this->Html->link(__('Ver'), ['action' => 'view', $registroActivo->id], ['Class' => 'btn btn-info btn-sm']) ?>
-                                        <?= $this->Html->link(__('Editar'), ['action' => 'edit', $registroActivo->id], ['Class' => 'btn btn-primary btn-sm']) ?>
-                                        <?php if ($current_user['role'] == 'admin') {
+                                        <?php
+                                            if ($current_user['role'] == 'admin' || ($registroActivo->registro_equipo->user->id == $current_user['id'])) {
+
+                                                echo $this->Html->link(__('Editar'), ['action' => 'edit', $registroActivo->id], ['Class' => 'btn btn-primary btn-sm']); 
+                                            }
+
+                                            if ($current_user['role'] == 'admin') {
                                             echo $this->Form->postLink(__('Anular'), ['action' => 'anular', $registroActivo->id],['Class' => 'btn btn-danger btn-sm'], ['confirm' => __('Esta seguro que desea Anular este Registro # {0}?', $registroActivo->id)]);
-                                        } ?>
+                                            } 
+                                        ?>
                                     </center>
                                     </td>
                                 </tr>

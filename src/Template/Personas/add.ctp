@@ -17,7 +17,7 @@
 <div class="content-wrapper">
 <?= $this->Flash->render() ?>
     <section class="content-header">
-        <center><h3><i class="fa fa-user-plus"> Crear Nuevo Cliente</i></h3></center>
+        <center><h3><i class="fa fa-user-plus"> Crear Nueva Persona</i></h3></center>
         <ol class="breadcrumb">
             <li>
               <?= $this->Html->Link('<i class="fa fa-home"></i> Inicio', 

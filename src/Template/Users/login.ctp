@@ -1,6 +1,6 @@
 <div class="login-box">
 	<div class="login-logo">
-    	<a href="../../index2.html"><b>Dep</b>INFO</a>
+    	<a href="../../index2.html"><b>DME</b>ITM</a>
 	</div>
   	<!-- /.login-logo -->
 	<div class="login-box-body">

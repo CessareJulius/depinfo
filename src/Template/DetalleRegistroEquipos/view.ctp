@@ -18,7 +18,14 @@
 <div class="content-wrapper">
     <section class="content-header">
         <center>
-            <h3><i class="fa fa-male"> Datos del Registro</i></h3>
+            <h3>
+                <i class="fa fa-male"> Datos del Registro</i>
+            <?php
+
+                echo $this->Html->Link("<i class='fa fa-reply'>&nbsp;</i>Volver", ['action' => 'index'], ['id' => 'btnVolEmp', 'class' => 'btn btn-info', 'escape' => false]);
+
+            ?>
+            </h3>
         </center>
         <ol class="breadcrumb">
             <li>
@@ -54,14 +61,18 @@
                         <div class="box box-info direct-chat direct-chat-info">
                             <div class="box-header with-border">
                                 <h3 class="box-title">Datos del Registro</h3>
-                                <?= $this->Html->link(__('Editar'), [
-                                                'controller' => 'DetalleRegistroEquipos',
-                                                'action' => 'edit', $detalleRegistroEquipo->id
-                                            ], [
-                                                'id' => 'editButton',
-                                                'Class' => 'btn btn-primary btn-sm'
-                                            ]) 
-                                        ?>
+                                <?php
+                                    if (($current_user['role'] == 'admin' || $detalleRegistroEquipo->registro_equipo->user->id == $current_user['id']) && $detalleRegistroEquipo->status == 'activo') {
+
+                                        echo $this->Html->link(__('Editar'), [
+                                                        'controller' => 'DetalleRegistroEquipos',
+                                                        'action' => 'edit', $detalleRegistroEquipo->id
+                                                    ], [
+                                                        'id' => 'editButton',
+                                                        'Class' => 'btn btn-primary btn-sm'
+                                                    ]); 
+                                    }
+                                ?>
                             </div>
                             <div class="box-body">
                                 <dl class="dl-contain" >
@@ -79,12 +90,17 @@
                                         <br>
                                     <?php else: ?>
                                     <dt>Reparacion</dt><center>
-                                        <?= $this->Html->link(__('Agregar Reparacion'), [
-                                                'controller' => 'DetalleRegistroEquipos',
-                                                'action' => 'addReparacion',$detalleRegistroEquipo->id
-                                            ], [
-                                                'Class' => 'btn btn-warning btn-sm'
-                                            ]) 
+                                        <?php
+                                            if (($current_user['role'] == 'admin' || $detalleRegistroEquipo->registro_equipo->user->id == $current_user['id']) && $detalleRegistroEquipo->status == 'activo') {
+
+                                                echo $this->Html->link(__('Agregar Reparacion'), [
+                                                        'action' => 'addReparacion',$detalleRegistroEquipo->id
+                                                    ], [
+                                                        'Class' => 'btn btn-warning btn-sm'
+                                                    ]);
+                                            } else {
+                                                echo "<dd>Imposible modificar mientras el registro este desactivado</dd>";
+                                            }
                                         ?></center>
                                     <?php endif ?>
 
@@ -106,15 +122,19 @@
                         <div class="box box-info direct-chat direct-chat-info">
                             <div class="box-header with-border">
                                 <h3 class="box-title">Datos del Cliente</h3>
-                                <?= $this->Html->link(__('Editar'), 
-                                    [
-                                        'controller' => 'Personas',
-                                        'action' => 'edit', $detalleRegistroEquipo->registro_equipo->persona->id
-                                    ], 
-                                    [
-                                        'style' => 'margin-left: 15%;',
-                                        'Class' => 'btn btn-primary btn-sm'
-                                    ]) 
+                                <?php
+                                    if (($current_user['role'] == 'admin' || $detalleRegistroEquipo->registro_equipo->user->id == $current_user['id']) && $detalleRegistroEquipo->status == 'activo') {
+
+                                        echo $this->Html->link(__('Editar'), 
+                                            [
+                                                'controller' => 'Personas',
+                                                'action' => 'edit', $detalleRegistroEquipo->registro_equipo->persona->id
+                                            ], 
+                                            [
+                                                'style' => 'margin-left: 15%;',
+                                                'Class' => 'btn btn-primary btn-sm'
+                                            ]); 
+                                    }
                                 ?>
                             </div>
                             <div class="box-body">
@@ -150,15 +170,19 @@
                         <div class="box box-info direct-chat direct-chat-info">
                             <div class="box-header with-border">
                                 <h3 class="box-title">Datos del Equipo</h3>
-                                <?= $this->Html->link(__('Editar'), 
-                                    [
-                                        'controller' => 'Equipos',
-                                        'action' => 'edit', $detalleRegistroEquipo->equipo->id
-                                    ], 
-                                    [
-                                        'style' => 'margin-left: 15%;',
-                                        'Class' => 'btn btn-primary btn-sm'
-                                    ]) 
+                                <?php
+                                    if (($current_user['role'] == 'admin' || $detalleRegistroEquipo->registro_equipo->user->id == $current_user['id']) && $detalleRegistroEquipo->status == 'activo') {
+
+                                        echo $this->Html->link(__('Editar'), 
+                                            [
+                                                'controller' => 'Equipos',
+                                                'action' => 'edit', $detalleRegistroEquipo->equipo->id
+                                            ], 
+                                            [
+                                                'style' => 'margin-left: 15%;',
+                                                'Class' => 'btn btn-primary btn-sm'
+                                            ]);
+                                    }
                                 ?>
                                     </div>
                             <div class="box-body">
@@ -200,6 +224,7 @@
                             </div>
                         </div>
                     </div>
+                    <?php if($current_user['role'] != 'user'): ?>
                     <div class="col-md-4">
                         <div class="box box-info direct-chat direct-chat-info">
                             <div class="box-header with-border">
@@ -222,6 +247,7 @@
                             </div>
                         </div>
                     </div>
+                    <?php endif ?>
                 </div>
             </div>
         </div>

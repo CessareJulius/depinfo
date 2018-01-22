@@ -2,7 +2,7 @@
     <!-- Content Header (Page header) -->
     <?= $this->Flash->render() ?> 
         <section class="content-header">
-            <h1>Bienvenido<small>Esta es la pagina de inicio</small></h1>
+            <h1>Bienvenido<small>Esta es la pagina de personas</small></h1>
             <ol class="breadcrumb">
                 <li><i class="fa fa-home"></i>
                     <?= $this->Html->Link('Inicio', ['controller' => 'Users', 'action' => 'home']); ?>
@@ -17,7 +17,7 @@
       <div class="col-xs-12">
         <div class="box">
           <div class="box-header">
-            <center><h1 class="box-title">Lista de Clientes</h1></center>
+            <center><h1 class="box-title">Lista de Personas</h1></center>
           </div>
           <!-- /.box-header -->
           <div class="box-body">

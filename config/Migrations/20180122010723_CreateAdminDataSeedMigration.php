@@ -2,7 +2,7 @@
 use Migrations\AbstractMigration;
 use Cake\Auth\DefaultPasswordHasher;
 
-class CreateAdminSeedMigration extends AbstractMigration
+class CreateAdminDataSeedMigration extends AbstractMigration
 {
     public function up()
     {
@@ -12,11 +12,12 @@ class CreateAdminSeedMigration extends AbstractMigration
         $populator->addEntity('Users', 1, [
             "role" => "admin", 
             "cargo" => "administrador",
-            "usuario" => "cessare",
+            "usuario" => "admin",
             "clave" => function() {
                 $hasher = new DefaultPasswordHasher();
-                return $hasher->hash("cesar20149");
+                return $hasher->hash("admin");
             },
+            "turno" => 1,
             "active" => 1,
             "created" => function () use ($faker){
                 return $faker->dateTimeBetween($startDate = "now", $endDate = "now");
@@ -24,8 +25,7 @@ class CreateAdminSeedMigration extends AbstractMigration
             "modified" => function () use ($faker){
                 return $faker->dateTimeBetween($startDate = "now", $endDate = "now");
             },
-            "per_id" => 1,
-            "tur_id" => 1
+            "per_id" => 1
         ]);
         $populator->execute();
     }

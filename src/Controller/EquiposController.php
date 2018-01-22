@@ -16,7 +16,7 @@ class EquiposController extends AppController
 
         if (isset($user['role']) and $user['role'] === 'user') {
 
-            if (in_array($this->request->action, ['index', 'view', 'edit', 'reparando'])) {
+            if (in_array($this->request->action, ['index', 'view', 'edit', 'reparando', 'reparados', 'entregados'])) {
 
                 return true;
             }
@@ -40,7 +40,11 @@ class EquiposController extends AppController
 
     public function reparando() {
         $equipos_EnRep = $this->Equipos->find('all', [
-            'contain' => ['DetalleRegistroEquipos'],
+            'contain' => [
+                'DetalleRegistroEquipos' => [
+                    'RegistroEquipos'
+                ]
+            ],
             'conditions' => [
                 'Equipos.status' => "reparando"
             ]
