@@ -12,6 +12,12 @@ use Composer\EventDispatcher\Event;
  */
 class UsersController extends AppController
 {
+    /*public function initialize()
+    {
+        parent::initialize();
+        $this->loadComponent('RequestHandler');
+    }*/
+
     public function isAuthorized($user) { //pj($user);die();
         
 
@@ -202,16 +208,43 @@ class UsersController extends AppController
         //$users = $this->Users->find('all');
         $users = $this->paginate($this->Users);
         //pj($users);die();
+
+        $this->viewBuilder()->options([
+            'pdfConfig' => [
+                'orientation' => 'portrait',
+                'filename' => 'Users.pdf'
+            ]
+        ]);
+
         $this->set('users', $users);
     }
 
-    public function view($id = null)
+    public function view($id = null, $pdf = false)
     {
         $user = $this->Users->get($id, [
             'contain' => ['Personas']
         ]);
-            
+        /* Para definir nuevos paths ir a config/paths*/
+        //echo ENGINE_PDF ."<br>";
         //pj($user);die();
+
+        if ($pdf) {
+            $this->viewBuilder()
+                ->className('Dompdf.Pdf')
+                ->layout('Dompdf.default')
+                ->options([
+                        'config' => [
+                            'filename' => 'User_' . $user->persona->cedula . '.pdf',
+                            'size' => 'Letter',
+                            'paginate' => [
+                                'x' => 550,
+                                'y' => 5,
+                            ],
+                            'render' => 'browser',
+                            //'render' => 'download',
+                        ]
+                    ]);
+        }
     
         $this->set('user', $user);
         $this->set('_serialize', ['user']);

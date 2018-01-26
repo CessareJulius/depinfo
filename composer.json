@@ -13,7 +13,8 @@
         "josegonzalez/dotenv": "2.*",
         "fzaninotto/faker": "^1.7",
         "FriendsOfCake/CakePdf": "^3.2",
-        "sentry/sentry": "^1.8"
+        "sentry/sentry": "^1.8",
+        "daoandco/cakephp-dompdf": "^1.2"
     },
     "require-dev": {
         "psy/psysh": "@stable",

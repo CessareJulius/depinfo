@@ -1,7 +1,7 @@
 <header class="main-header">
     <!-- Logo -->
     <?= $this->Html->Link(
-        "<span class='logo-mini'><b>DM</b>IF</span><span class='logo-lg'><b>DME</b>ITM</span>", 
+        "<span class='logo-mini'><b>DM</b>EF</span><span class='logo-lg'><b>DME</b>ITM</span>", 
         [
             'controller' => 'Users', 'action' => 'home'
         ], 

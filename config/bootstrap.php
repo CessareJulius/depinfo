@@ -215,5 +215,24 @@ Type::build('timestamp')
 if (Configure::read('debug')) {
     Plugin::load('DebugKit', ['bootstrap' => true]);
 }
+Plugin::load('Dompdf');
+//Plugin::load('CakePdf', ['bootstrap' => true]);
 Plugin::loadAll();
 //Plugin::load('bootstrapUI');
+
+/*Configure::write('CakePdf', [
+    'engine' => [
+        'className' => 'CakePdf.WkHtmlToPdf',
+        'binary' => ENGINE_PDF . 'wkhtmltopdf',
+        'options' => [
+            'print-media-type' => false,
+            'outline' => true,
+            'dpi' => 96,
+            'margin-top' => 30,
+            'margin-left' => 10,
+            'margin-bottom' => 10,
+            'page-size' => 'Letter',
+        ],
+    ],
+    'download' => false
+]);*/
