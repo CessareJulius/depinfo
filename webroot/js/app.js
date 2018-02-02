@@ -1,4 +1,4 @@
-$(document).ready(function(){
+/*$(document).ready(function(){
 
 	var hora = ()=> {
 		let time = new Date(),
@@ -45,7 +45,7 @@ $(document).ready(function(){
 	
 	input.value = pass1.join('')+'-'+pass2.join('')+'-'+pass3.join('')+'-'+pass4.join('')
 	
-})
+})*/
 // 69Jos123_e$f4#
 // 47Kci884¡c&f7_
 // AB5-98Y0R-9HG12-12

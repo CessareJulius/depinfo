@@ -1,3 +1,9 @@
+<script>
+  $(function () {
+    console.log($('#example1').DataTable().context[0])
+  })
+</script>
+
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <?= $this->Flash->render() ?> 

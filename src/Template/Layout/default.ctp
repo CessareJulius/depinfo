@@ -39,7 +39,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
 
     <?= $this->Html->script([
-        'jquery.min', 
+        'jquery.min',
+        'app', 
         '../template/bootstrap/dist/js/bootstrap.min']) ?>
 
     <?= $this->Html->script([
@@ -93,7 +94,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </script>
     <script>
         $(function () {
-            $('#example1').DataTable()
+            $('#example1').DataTable().context[0].oLanguage.sSearch = "Buscar";
             $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
                 checkboxClass: 'icheckbox_flat-green',
                 radioClass   : 'iradio_flat-green'
